@@ -1,0 +1,164 @@
+.form-section {
+    margin-bottom : $global-margin * 3;
+}
+
+input::placeholder {
+    font-style : italic;
+}
+
+label {
+    //font-weight: bold;
+    &.lead {
+        font-weight   : bold;
+        margin-bottom : $global-margin / 2;
+    }
+
+    //font-size     : $lead-font-size;
+
+    > input {
+        &[type=text] {
+            margin-top : 1rem;
+        }
+    }
+
+    > input {
+        &[type=file],
+        &[type=checkbox],
+        &[type=radio] {
+            margin-bottom : 0;
+        }
+    }
+
+    @include breakpoint(medium) {
+        font-size : $form-label-font-size
+    }
+
+    margin-bottom : $global-margin;
+}
+
+legend {
+    font-size     : $form-label-font-size;
+    font-weight   : bold;
+    margin-bottom : $global-margin;
+}
+
+fieldset {
+    .callout {
+        width : 80%;
+
+        > label {
+            //margin:0 $global-margin;
+            display     : flex;
+            align-items : center;
+            cursor      : pointer;
+
+            > input {
+                margin-right : 1 * $global-margin;
+                cursor       : pointer;
+                //margin: 0 $global-margin;
+            }
+        }
+    }
+
+    label {
+        line-height : 1;
+        font-size   : 16px;
+        @include breakpoint(medium) {
+            font-size : 20px;
+        }
+    }
+
+    input, span {
+        display : inline-block;
+        vertical-align: middle;
+    }
+
+    span {
+        margin-top: 2px;
+    }
+    margin-bottom : $global-margin;
+}
+
+
+.switch {
+    margin-top    : .5rem;
+    margin-bottom : 2rem;
+}
+
+input {
+    &.zip-field {
+        width : 100px;
+    }
+
+    &[type=radio] {
+        //vertical-align : top;
+    }
+
+    &.error {
+        border-color : red !important;
+    }
+}
+
+input[readonly] {
+    &.vue-datepicker {
+
+        cursor     : pointer;
+        background : $input-background;
+    }
+}
+
+select {
+    padding-top    : 0;
+    padding-bottom : 0;
+
+    font-size      : 16px;
+    @include breakpoint(medium) {
+        font-size : 20px;
+    }
+}
+
+.registration-container {
+    .button,
+    button {
+        min-width  : 0;
+        text-align : left;
+        min-height : 55px;
+
+        @include breakpoint(small only) {
+
+            min-height : 55px;
+            &.submit {
+                width : auto;
+                span {
+                    display : inline-block;
+                }
+            }
+            &.back {
+                width            : auto;
+                background-color : get-color(tertiary);
+            }
+
+        }
+
+        &.back {
+            background-color : get-color(tertiary);
+        }
+
+        @include breakpoint(medium) {
+            width : auto;
+        }
+    }
+
+    .callout {
+        //padding: 2rem 4rem;
+    }
+}
+
+form {
+    .lead {
+        font-size : 20px;
+    }
+}
+
+
+

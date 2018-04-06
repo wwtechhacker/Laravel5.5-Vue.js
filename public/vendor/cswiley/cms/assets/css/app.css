@@ -1,0 +1,61 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.4.4-rc1
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+#cms-wrap .top-bar {
+    background-color : white;
+}
+
+#cms-wrap .top-bar .dropdown.menu {
+    background-color : white;
+}
+
+#cms-wrap .top-bar .dropdown.menu a,
+#cms-wrap .top-bar .dropdown.menu a:hover
+{
+    color : black;
+    background-color: transparent;
+}
+
+.top-bar ul.menu.submenu {
+    min-width        : 300px;
+    background-color : #fff;
+}
+
+ul.menu li {
+    margin-bottom : 0;
+}
+
+ul.menu ul.submenu {
+    padding : 15px 0 10px 0;
+}
+
+ul.menu ul.submenu > li:hover {
+    background-color : rgba(0, 0, 0, 0.05);
+}
+
+ul.menu.page-menu li {
+    margin-bottom : 1rem;
+}
+
+.cms-json .list .card-outline {
+    border : 1px solid black;
+}
+
+.cms-json ul.list ul.list .card-outline {
+    border : 1px solid #aaa;
+}
+
+.cms-json h1, .cms-json h2, .cms-json h3, .cms-json h4, .cms-json h5 {
+    font-family : "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.cms-json .title {
+    padding : 30px 0;
+}
+
+.cms-json .button.large {
+    font-size : 22px;
+}

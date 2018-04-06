@@ -1,0 +1,85 @@
+
+#admin-container {
+    button,
+    .button {
+        min-width : 0;
+    }
+
+    th {
+        white-space : nowrap;
+        a {
+            font-size   : 14px;
+            font-family : $body-font-family;
+            font-weight : normal;
+        }
+    }
+
+    td {
+        input {
+            margin : 0;
+        }
+    }
+
+    th, td {
+        font-family: arial, helvetica, sans-serif;
+        @include breakpoint(small only) {
+            font-size : 14px;
+        }
+    }
+
+    .filter-block {
+        display        : inline-block;
+        vertical-align : top;
+        margin-right   : 1rem;
+
+        select,
+        input,
+        .button {
+            margin : 0;
+
+        }
+    }
+
+    table {
+        th {
+            a.selected {
+                &.desc {
+                    &:after {
+                        content                 : "\f0de";
+                        font-family             : FontAwesome;
+                        speak                   : none;
+                        display                 : inline-block;
+                        padding                 : 0;
+                        top                     : 5px;
+                        left                    : 4px;
+                        line-height             : 10px;
+                        position                : relative;
+                        vertical-align          : top;
+                        -webkit-font-smoothing  : antialiased;
+                        -moz-osx-font-smoothing : grayscale;
+                        text-decoration         : none !important;
+                        color                   : #444;
+                    }
+                }
+                &.asc {
+                    &:after {
+                        content                 : "\f0dd";
+                        font-family             : FontAwesome;
+                        speak                   : none;
+                        display                 : inline-block;
+                        padding                 : 0;
+                        top                     : -3px;
+                        left                    : 4px;
+                        line-height             : 10px;
+                        position                : relative;
+                        vertical-align          : top;
+                        -webkit-font-smoothing  : antialiased;
+                        -moz-osx-font-smoothing : grayscale;
+                        text-decoration         : none !important;
+                        color                   : #444;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+
+body.resources {
+    .hero-bg {
+        background-color : get-color(purple);
+    }
+    .hero-content {
+        @include breakpoint(medium) {
+            background: url("/images/Resources-BG.png");
+            background-position: 50%;
+            background-size: cover;
+        }
+    }
+
+    .headline {
+        line-height : 1.50;
+        font-size   : 2rem;
+        @extend .HelveticaNeueLTStd-75-Bd;
+    }
+
+    .required-text {
+        background-color : rgba(0, 138, 200, .2);
+        text-align       : center;
+        p {
+            font-size   : .9rem;
+            line-height : 1.2rem;
+        }
+
+    }
+
+    .content {
+        min-height : 700px;
+        @include breakpoint(medium) {
+            min-height : 1200px;
+            .required-text {
+                margin-top : 600px;
+            }
+        }
+    }
+}

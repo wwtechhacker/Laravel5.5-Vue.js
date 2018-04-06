@@ -1,0 +1,452 @@
+/* Pledge */
+
+button.age,
+button.gender,
+div.button.age,
+div.button.gender,
+div.button.beverage,
+div.button.selector,
+div.button.recommendation,
+.button.selector {
+	cursor:pointer;
+}
+
+.share-on{
+	/*padding: 15px;*/
+	padding: 12px 0;
+}
+.share-on h3{
+	/*color: #fff;*/
+	color: #1fb7e8;
+	text-transform: uppercase;
+}
+.return-ryb{
+	margin: 20px;
+	color: #fff;
+	border: none;
+	font-size: 14px;
+	font-family: "proxima-nova";
+}
+/* End Pledge */
+
+/* Modal Override */
+.close{
+    position: absolute;
+    right: 20px;
+    top: 0;
+    font-size: 24px;
+}
+/* EndModal Override */
+
+/* Diseases */
+.disease-image {
+	min-height: auto !important;
+}
+.disease-image img{
+	display: block !important;
+}
+/* End Diseases */
+
+/* Icon & button fixes */
+.icon{
+/*
+	width: 3.5rem;
+*/
+}
+/*button.age .icon,*/
+/*button.gender .icon,*/
+/*div.button.age .icon,*/
+/*div.button.gender .icon {*/
+	/*width: 32%;*/
+/*}*/
+
+/*button.beverage .beverage-name .text span,*/
+/*button.selector .beverage-name .text span, */
+/*div.button.beverage .beverage-name .text span, */
+/*div.button.selector .beverage-name .text span, */
+/*button.beverage .beverage-name .text span.smaller, */
+/*button.selector .beverage-name .text span.smaller, */
+/*div.button.beverage .beverage-name .text span.smaller, */
+/*div.button.selector .beverage-name .text span.smaller{*/
+	/*font-size: 1rem;*/
+/*}*/
+
+div.button.beverage .beverage-name,
+button.beverage.selected .beverage-name,
+button.selector.selected .beverage-name,
+div.button.beverage.selected .beverage-name,
+div.button.selector .beverage-name,
+div.button.selector.selected .beverage-name,
+div.button.recommendation .beverage-name,
+div.button.recommendation.selected .beverage-name {
+	/*max-width: 50% !important;*/
+}
+
+.modal div.button.beverage .beverage-name {
+	max-width: 100% !important;
+}
+
+/*.modal div.button.beverage:hover {*/
+	/*background-color: white;*/
+	/*border-color: white;*/
+	/*color: */
+/*}*/
+
+button.beverage .beverage-attributes,
+button.selector .beverage-attributes,
+div.button.beverage .beverage-attributes,
+div.button.selector .beverage-attributes {
+	/*max-width: 50% !important;*/
+	max-width: 0;
+}
+
+/*button.beverage .beverage-name .text, button.selector .beverage-name .text,*/
+/*button.recommendation .beverage-name .text,*/
+/*div.button.beverage .beverage-name .text,*/
+/*div.button.selector .beverage-name .text,*/
+/*div.button.recommendation .beverage-name .text {*/
+	/*width: 60%;*/
+/*}*/
+
+button.beverage.selected .beverage-attributes .beverage-quantity .quantity input,
+button.selector.selected .beverage-attributes .beverage-quantity .quantity input,
+div.button.beverage.selected .beverage-attributes .beverage-quantity .quantity input,
+div.button.selector.selected .beverage-attributes .beverage-quantity .quantity input,
+button.beverage.selected .beverage-attributes .beverage-size .size .select2-container--default .select2-selection--single .select2-selection__rendered,
+button.selector.selected .beverage-attributes .beverage-size .size .select2-container--default .select2-selection--single .select2-selection__rendered,
+div.button.beverage.selected .beverage-attributes .beverage-size .size .select2-container--default .select2-selection--single .select2-selection__rendered,
+div.button.selector.selected .beverage-attributes .beverage-size .size .select2-container--default .select2-selection--single .select2-selection__rendered{
+	height: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.quantity-up,
+.quantity-down,
+.size-up,
+.size-down{
+	font-size: 0.9rem;
+	line-height: 1rem;
+}
+button.beverage,
+button.selector,
+div.button.beverage,
+div.button.selector{
+	margin: 0.2rem 0;
+	padding: 0 1rem;
+}
+button.beverage,
+button.selector,
+button.recommendation,
+div.button.beverage,
+div.button.selector,
+div.button.recommendation {
+	margin: 0.2rem 0;
+	padding: 0 1rem;
+	/*min-height: 0;*/
+}
+/*button.beverage .beverage-name .text span,*/
+/*button.selector .beverage-name .text span,*/
+/*button.recommendation .beverage-name .text span, div.button.beverage .beverage-name .text span,*/
+/*div.button.selector .beverage-name .text span,*/
+/*div.button.recommendation .beverage-name .text span{*/
+	/*font-size: 1rem;*/
+    /*font-weight: 900;*/
+    /*line-height: 1rem;*/
+/*}*/
+
+button.beverage .beverage-name .text span.sub,
+button.selector .beverage-name .text span.sub,
+button.recommendation .beverage-name .text span.sub,
+div.button.beverage .beverage-name .text span.sub,
+div.button.selector .beverage-name .text span.sub,
+div.button.recommendation .beverage-name .text span.sub{
+	font-size: 1rem;
+}
+button.gender .text,
+div.button.gender .text{
+	text-align: center;	
+}
+
+
+.modal button.beverage,
+.modal div.button.beverage {
+
+}
+
+.selection-text{
+	height: 38px;
+}
+/*#section11 h2.selection-text {*/
+    /*font-size: 1rem;*/
+/*}*/
+.water-fruit .beverage-name .text{
+	width: 80%;
+}
+
+/* Icon & Button Mobile Overrides */
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+	.icon, button.age .icon, button.gender .icon, div.button.age .icon, div.button.gender .icon {
+		width: auto;
+	}
+	button.beverage .beverage-name .text span,
+	button.selector .beverage-name .text span,
+	div.button.beverage .beverage-name .text span,
+	div.button.selector .beverage-name .text span,
+	button.beverage .beverage-name .text span.smaller,
+	button.selector .beverage-name .text span.smaller,
+	div.button.beverage .beverage-name .text span.smaller,
+	div.button.selector .beverage-name .text span.smaller{
+		font-size: 1rem;
+	}
+	button.beverage,
+	button.selector,
+	div.button.beverage,
+	div.button.selector {
+	    min-height: 3rem;
+	}
+
+	button.beverage .beverage-attributes,
+	div.button.beverage .beverage-attributes {
+		max-width: 50%;
+	}
+
+	button.selector .beverage-attributes,
+	div.button.selector .beverage-attributes {
+		max-width: 0;
+	}
+
+	button.beverage.selected .beverage-attributes .beverage-quantity .quantity input,
+	button.selector.selected .beverage-attributes .beverage-quantity .quantity input,
+	div.button.beverage.selected .beverage-attributes .beverage-quantity .quantity input,
+	div.button.selector.selected .beverage-attributes .beverage-quantity .quantity input,
+	button.beverage.selected .beverage-attributes .beverage-size .size .select2-container--default .select2-selection--single .select2-selection__rendered,
+	button.selector.selected .beverage-attributes .beverage-size .size .select2-container--default .select2-selection--single .select2-selection__rendered,
+	div.button.beverage.selected .beverage-attributes .beverage-size .size .select2-container--default .select2-selection--single .select2-selection__rendered,
+	div.button.selector.selected .beverage-attributes .beverage-size .size .select2-container--default .select2-selection--single .select2-selection__rendered{
+		height: 1.5rem;
+	    font-size: 1.2rem;
+	    line-height: 1.5rem;
+	}
+	.quantity-up,
+	.quantity-down,
+	.size-up,
+	.size-down{
+		font-size: 0.9rem !important;
+		line-height: 1rem !important;
+	}
+	button.beverage,
+	button.selector,
+	div.button.beverage,
+	div.button.selector{
+		margin: 0.2rem 0;
+		padding: 0.5rem 1rem;
+	}
+	button.beverage .beverage-name .text span.sub,
+	button.selector .beverage-name .text span.sub,
+	button.recommendation .beverage-name .text span.sub,
+	div.button.beverage .beverage-name .text span.sub,
+	div.button.selector .beverage-name .text span.sub,
+	div.button.recommendation .beverage-name .text span.sub{
+		width: 200px !important;
+		font-size: 0.8rem !important;
+	}
+	button.age,
+	button.gender,
+	div.button.age,
+	div.button.gender {
+	    min-height: 2rem;
+    }
+	button.beverage .beverage-name .text,
+	button.selector .beverage-name .text,
+	button.recommendation .beverage-name .text,
+	div.button.beverage .beverage-name .text,
+	div.button.selector .beverage-name .text,
+	div.button.recommendation .beverage-name .text{
+		width: 2px;
+	}
+	button.beverage .beverage-name .text span,
+	button.selector .beverage-name .text span,
+	div.button.beverage .beverage-name .text span,
+	div.button.selector .beverage-name .text span,
+	button.beverage .beverage-name .text span.smaller,
+	button.selector .beverage-name .text span.smaller,
+	div.button.beverage .beverage-name .text span.smaller,
+	div.button.selector .beverage-name .text span.smaller{
+		font-size: 0.5em;
+	}
+}
+/* End Icons & Buttons */
+
+/* Email Form */
+#email-form{
+
+}
+#email-form input{
+	font-family: "league-gothic" !important;
+	font-size: 1rem;
+}
+#email-form .email-submit{
+	background-color: transparent !important;
+	border: 2px solid #fff !important;
+	color: #fff !important;
+	font-family: "league-gothic" !important;
+	padding: 10px;
+	margin: 10px;
+}
+/* End Email Form */
+
+/* Video Mobile Overrides */
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+	#video-modal{
+		max-width: 100%;
+	}
+}
+/* End Video Mobile Overrides */
+
+/* Review */
+.sugar-count h4 span{
+	padding-top: 5px;
+	font-size: 20px;
+}
+/* End Review */
+
+/*#section10 .sugar-amt {*/
+	/*padding: 25px 0 8px 0;*/
+/*}*/
+/*@media screen and (min-width: 992px) {*/
+	/*#section10 .sugar-amt {*/
+		/*padding: 0;*/
+		/*position: absolute;*/
+		/*right: 0;*/
+		/*top: 50%;*/
+		/*height: 100px;*/
+		/*margin-top: -50px;*/
+	/*}*/
+/*}*/
+
+
+
+/* Review Mobile Overrides */
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+	/*.consumed-beverage {*/
+	    /*height: auto;*/
+	    /*margin-left: 0.5rem;*/
+	    /*width: 2rem;*/
+		/*margin-top: 10px;*/
+	/*}*/
+	/*.sugar-amt {*/
+		/*padding: 25px 0;*/
+	/*}*/
+	/*.consumed-beverage.icon-xl {*/
+		/*width: 4rem;*/
+		/*display: inline-block;*/
+		/*float: none;*/
+	/*}*/
+	/*.consumed-beverage.icon-bg {*/
+		/*width: 3rem;*/
+	/*}*/
+	/*.consumed-beverage.icon-md {*/
+		/*width: 3rem;*/
+	/*}*/
+	/*.consumed-beverage.icon-sm {*/
+		/*width: 2rem;*/
+	/*}*/
+	/*.consumed-beverage.icon-xs {*/
+		/*width: 1.3rem;*/
+	/*}*/
+
+	h2.equals{
+		/*width: 100%;*/
+		/*float: none;*/
+		display: inline-block;
+		font-size: 2rem;
+
+	}
+	.sugar-count{
+		/*float: none;*/
+		padding: 10px 5px;
+	}
+	.sugar-count h2 {
+		text-align: center;
+		/*font-size: 2rem;*/
+	}
+	.sugar-count h4 {
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.bad h2 {
+		font-size: 1.3rem;
+		line-height: 1.2;
+	}
+	.good h2 {
+	    font-size: 1.3rem;
+		line-height: 1.2;
+	}
+	#section12 h4 {
+		font-size: 13px;
+	}
+}
+/* End Review Mobile Overrides */
+
+/* Age Button Tablet Override */
+@media screen and (min-width: 39.00em) and (max-width: 56.9375em) {
+	button.age,
+	div.button.age{
+		font-size: 1rem !important;
+		padding: 0.5rem !important;
+	}
+	button.age .text span,
+	button.gender .text span,
+	div.button.age .text span,
+	div.button.gender .text span{
+		font-size: 2rem !important;
+	}
+	button.age .text span.sub,
+	button.gender .text span.sub,
+	div.button.age .text span.sub,
+	div.button.gender .text span.sub{
+		font-size: 0.5rem !important;
+	}
+	.bad h2 {
+		font-size: 2rem;
+		line-height: 1.2;
+	}
+	.good h2 {
+		font-size: 2rem;
+		line-height: 1.2;
+	}
+	#section12 h4 {
+		font-size: 12px;
+	}
+}
+/* End Age Button Tablet Override */
+
+/* Age Button Mobile Override */
+@media screen and (min-width: 49.9379em) {
+	button.age, div.button.age{
+
+	}
+}
+/*End Age Button Mobile Override */
+
+/* Landscape Mobile */
+.landscape {
+	display: none;
+}
+@media screen and (min-width: 0em) and (max-width: 49.313em) and (orientation: landscape) {
+	.landscape {
+		display: table;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+	}
+	.landscape h1{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+
+/* End Landscape Mobile */

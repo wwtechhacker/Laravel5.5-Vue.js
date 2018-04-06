@@ -1,0 +1,203 @@
+/* Sugar swap */
+#section11 .sugar-count {
+    margin-top: 15px;
+    background-color: transparent;
+    position: relative;
+    /*margin-left: -200px;*/
+    /*width: 423px;*/
+    /*left: 50%;*/
+    padding: 0;
+}
+
+button.recommendation.active,
+button.recommendation:hover,
+button.selector.active,
+button.selector:hover,
+div.button.recommendation.active,
+div.button.recommendation:hover {
+    /*background-color: transparent !important;
+    border-color: transparent !important;*/
+}
+
+/*div.button.selector.active,*/
+/*div.button.selector:hover,*/
+/*div.button.selector.selected:hover,*/
+/*div.button.selector.selected:active,*/
+/*div.button.recommendation:hover,*/
+/*div.button.recommendation:active,*/
+/*div.button.beverage.active,*/
+/*div.button.beverage:hover {*/
+    /*background-color: #1fb7e8 !important;*/
+    /*border-color: #1fb7e8 !important;*/
+/*}*/
+
+div.button.recommendation .close {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, .4);
+    position:absolute;
+    top: 8px;
+    right: 30px;
+}
+
+@media screen and (max-width : 39.9375em) and (min-width : 0em) {
+    div.button.recommendation .close {
+        margin-right : 0;
+        font-size: 1.5rem;
+        right: 20px;
+        /*display:none;*/
+    }
+}
+
+div.button.recommendation .close:hover {
+    color: rgba(255, 255, 255, .8);
+}
+
+div.button.beverage .close {
+    display:none;
+}
+
+#section11 .spacer {
+    /*height: 10px;*/
+}
+
+#section11 .selection-text {
+    margin-bottom: 0;
+    margin-top: 0;
+    height: auto;
+}
+
+#section11 #savings-total {
+    font-size: 3rem;
+}
+
+#section11 .recommendation .beverage-name {
+    max-width: 100% !important;
+}
+
+#section11 .recommendation .beverage-name .icon,
+#section11 .beverage .beverage-name .icon,
+#section11 .selector .beverage-name .icon {
+    width: 2.8rem !important;
+}
+
+#section11 .recommendation .beverage-name.placeholder .icon {
+    visibility: hidden;
+    margin: 0;
+    width: 0 !important;
+}
+
+div.button.recommendation .beverage-name.placeholder {
+    width: 100%;
+    max-width: 100% !important;
+}
+div.button.recommendation .beverage-name.placeholder .text {
+    width: 100% !important;
+    text-align:center;
+}
+
+ul#beverage-recommendations li:before {
+    font-family: FontAwesome;
+    /*content: "\f0ec";*/
+    content: "\f07e";
+    color: black;
+    position: absolute;
+    left: -10px;
+    margin-top: 1rem;
+    height: 5px;
+    font-size: 21px;
+}
+
+ul#beverage-recommendations div.button,
+ul#beverage-selections div.button {
+    min-height: 0;
+}
+
+
+@media screen and (max-width: 39.9375em) and (min-width: 0em) {
+    button.beverage .beverage-name .text span, button.selector .beverage-name .text span, button.recommendation .beverage-name .text span, div.button.beverage .beverage-name .text span, div.button.selector .beverage-name .text span, div.button.recommendation .beverage-name .text span {
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    div.button.selector .beverage-name .text span.sub,
+    div.button.beverage .beverage-name .text span.sub {
+        font-size: 1rem !important;
+        width: 100% !important;
+    }
+
+    button.beverage .beverage-name .text span.sub,
+    button.selector .beverage-name .text span.sub,
+    button.recommendation .beverage-name .text span.sub,
+    div.button.beverage .beverage-name .text span.sub,
+    div.button.selector .beverage-name .text span.sub,
+    div.button.recommendation .beverage-name .text span.sub {
+        width: auto !important;
+        font-size:  16px !important;
+        display: none;
+    }
+
+    #section11 #savings-total {
+        /*font-size: 3rem;*/
+    }
+
+    ul#beverage-selections li,
+    ul#beverage-recommendations li {
+        height: 55px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    #section11 .recommendation .beverage-name .icon,
+    #section11 .beverage .beverage-name .icon,
+    #section11 .selector .beverage-name .icon {
+        /*width: 24px !important;*/
+    }
+
+    #section11 .recommendation .beverage-name.placeholder .icon {
+        width: 0 !important;
+    }
+
+    #section11 .recommendation .beverage-name.placeholder {
+        max-width: 100% !important;
+        margin-top: 0;
+        /*padding-top: 10px;*/
+    }
+
+    #section11 .recommendation .beverage-name {
+        max-width: 100% !important;
+    }
+
+
+    ul#beverage-recommendations li:before {
+        margin-top: 18px;
+        font-size: 17px;
+        left: -9px;
+    }
+
+    #section11 .recommendation .beverage-name, #section11 .beverage .beverage-name, #section11 .selector .beverage-name {
+        height: auto;
+        max-width: 100% !important;
+        margin-top: 0;
+        padding-top: 3px;
+    }
+
+    div.button.selector .beverage-name .text,
+    div.button.beverage .beverage-name .text {
+        width: 100%;
+    }
+
+    #section11 .recommendation .beverage-name, #section11 .beverage .beverage-name, #section11 .selector .beverage-name {
+        height: 50px;
+        overflow:hidden;
+    }
+
+    #section11 div.button.beverage.selected .beverage-name {
+        max-width: 100% !important;
+    }
+
+    /*#section11 h2 {*/
+        /*font-size: 1.1rem;*/
+    /*}*/
+}
+
+

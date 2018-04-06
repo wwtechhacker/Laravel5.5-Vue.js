@@ -1,0 +1,52 @@
+.HelveticaNeueLTStd-95-Blk {
+    font-family: 'HelveticaNeueLTStd-95-Blk';
+}
+
+.HelveticaNeueLTStd-77-BdCn {
+    font-family: 'HelveticaNeueLTStd-77-BdCn';
+}
+
+.HelveticaNeueLTStd-75-Bd {
+    font-family: 'HelveticaNeueLTStd-75-Bd';
+}
+
+.HelveticaNeueLTStd-65-Md {
+    font-family: 'HelveticaNeueLTStd-65-Md';
+}
+
+.HelveticaNeueLTStd-47-LtCn {
+    font-family: 'HelveticaNeueLTStd-47-LtCn';
+}
+
+.HelveticaNeueLTStd-Cn {
+    font-family: 'HelveticaNeueLTStd-Cn';
+}
+
+.HelveticaNeueLTStd-Roman {
+    font-family: 'HelveticaNeueLTStd-Roman';
+}
+
+.itc-officina-sans-bold {
+    font-family: 'itc-officina-sans-bold';
+}
+
+
+.fullpage-wrapper {
+    .h3, h3 {
+        @extend .HelveticaNeueLTStd-Roman;
+    }
+}
+
+
+
+button {
+     @extend .itc-officina-sans-bold;
+    &.circle-cta, &.healthy-btn {
+        @extend .HelveticaNeueLTStd-77-BdCn;
+    }
+}
+.btn {
+    &.share, &.go-recipes {
+        @extend .HelveticaNeueLTStd-77-BdCn;
+    }
+}

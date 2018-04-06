@@ -1,0 +1,64 @@
+
+section {
+    padding : 4 * $global-padding 0;
+    @include breakpoint(medium) {
+        padding : 5 * $global-padding 0;
+    }
+}
+
+.content,
+.footer {
+    position:relative;
+    top: 73px;
+    @include breakpoint(medium) {
+        top: 97px;
+    }
+}
+
+
+.fixed-header {
+    top: 0;
+    position:fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    height: 73px;
+    @include breakpoint(medium) {
+        height: 97px;
+    }
+}
+.title-bar {
+    height : 73px;
+    @include breakpoint(medium) {
+        height: 97px;
+    }
+}
+
+.carousel-wrapper {
+    width    : 50%;
+    position : relative;
+    margin   : 0 auto;
+}
+
+.VueCarousel-navigation-prev {
+    left : -40% !important;
+
+}
+
+.VueCarousel-navigation-next {
+    right : -40% !important;
+
+}
+
+.VueCarousel-navigation-button {
+    transform : none !important;
+}
+
+.VueCarousel-slide {
+    opacity : .3;
+
+    &.selected {
+        opacity : 1;
+    }
+}

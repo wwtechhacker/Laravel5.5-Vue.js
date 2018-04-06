@@ -1,0 +1,31 @@
+// Settings
+@import "settings";
+@import "variables";
+@import "mixins";
+
+// Foundation
+@import "../../../node_modules/foundation-sites/scss/foundation";
+@import "../../../node_modules/timepicker/jquery.timepicker.css";
+// @include foundation-everything();
+@include foundation-everything(true, true);
+@import "foundation-base";
+// Custom building blocks for foundation
+@import "./building-blocks/blocks";
+
+@import "admin";
+@import "fonts";
+@import "typography";
+@import "button";
+@import "cards";
+@import "layout";
+@import "footer";
+@import "menu";
+@import "heros";
+@import "forms";
+@import "map";
+
+
+// Pages
+@import "./pages/home";
+@import "./pages/registration";
+@import "./pages/resources";

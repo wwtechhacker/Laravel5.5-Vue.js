@@ -1,0 +1,49 @@
+{
+    "hero" : {
+        "name": "<span class=\"text-nowrap\">Belly of the Beast IV</span>",
+        "date": "February 24th 2018",
+        "venue": "7:00PM @ The Avenue 619",
+        "content": "6211 Imperial Ave, San Diego CA"
+    },
+    "navCards": [
+        {
+            "title"      : "Battles",
+            "imageSrc"   : "/images/battles.gif",
+            "imageAlt"   : "",
+            "content"    : " ",
+            "class" : "ga-nav-battles",
+            "buttons" : [
+                {
+                    "link" : "/resources",
+                    "content" : "watch"
+                }
+            ]
+        },
+        {
+            "title"      : "Store",
+            "imageSrc"   : "/images/home-orange.png",
+            "imageAlt"   : "",
+            "content"   : " ",
+            "class" : "ga-nav-store",
+            "buttons" : [
+                {
+                    "link" : "/",
+                    "content" : "Buy"
+                }
+            ]
+        },
+        {
+            "title"     : "Contact",
+            "imageSrc"  : "/images/home-green.png",
+            "imageAlt"  : "",
+            "content": " ",
+            "class": "ga-nav-contact",
+            "buttons": [
+                {
+                    "link": "/registration",
+                    "content": "message"
+                }
+            ]
+        }
+    ]
+}

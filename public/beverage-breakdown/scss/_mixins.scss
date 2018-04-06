@@ -1,0 +1,36 @@
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
+/* @include transition(all,2s,ease-out); */
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+  transition         : $what $time $how;
+}
+
+@mixin text-shadow($values) {
+  text-shadow         : $values
+}
+
+@mixin appearance($value) {
+  display: $value
+}
+
+@mixin breakpoint($value) {
+  $str: breakpoint($value);
+
+  // If $str is still an empty string, no media query is needed
+  @if $str == '' {
+    @content;
+  }
+
+  // Otherwise, wrap the content in a media query
+  @else {
+    @media screen and #{$str} {
+      @content;
+    }
+  }
+}

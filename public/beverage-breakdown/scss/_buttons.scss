@@ -1,0 +1,25 @@
+.control-button {
+    font-weight   : bold;
+    border        : 2px solid white;
+    border-radius : 2px;
+    display       : inline-block;
+    padding       : 10px 25px 7px;
+    margin        : 25px auto;
+    right         : 0;
+    cursor        : pointer;
+    &:hover, &:focus {
+        color            : $brand-darkorange;
+        border-color     : $brand-darkorange;
+        background-color : white;
+    }
+}
+
+.orange-to-white-hover {
+    color : white;
+    &:hover, &:focus {
+        color            : $brand-darkorange;
+        border-color     : $brand-darkorange;
+        background-color : white;
+    }
+}
+

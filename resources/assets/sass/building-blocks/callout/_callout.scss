@@ -1,0 +1,19 @@
+.callout {
+    &.left-border {
+        -webkit-box-shadow : 0 2px 10px rgba(0, 0, 0, 0.17);
+        box-shadow         : 0 2px 10px rgba(0, 0, 0, 0.17);
+        background-color: transparent;
+
+        @each $name, $color in $foundation-palette {
+            border-left: 3px solid $primary-color;
+            &.#{$name} {
+                border-left        : 3px solid $color;
+            }
+        }
+    }
+
+    &.outline {
+        background:transparent;
+
+    }
+}

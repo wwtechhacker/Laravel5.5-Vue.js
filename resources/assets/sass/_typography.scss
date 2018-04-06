@@ -1,0 +1,71 @@
+
+.lead {
+    @include breakpoint(medium) {
+        font-size: 22px;
+    }
+}
+
+.proxima-nova {
+    font-family: 'proxima-nova';
+}
+
+.HelveticaNeueLTStd-95-Blk {
+    font-family: 'HelveticaNeueLTStd-95-Blk';
+}
+
+.HelveticaNeueLTStd-75-Bd {
+    font-family: 'HelveticaNeueLTStd-75-Bd';
+}
+
+.HelveticaNeueLTStd-77-BdCn {
+    font-family: 'HelveticaNeueLTStd-77-BdCn';
+}
+
+.HelveticaNeueLTStd-65-Md {
+    font-family: 'HelveticaNeueLTStd-65-Md';
+}
+
+.HelveticaNeueLTStd-47-LtCn {
+    font-family: 'HelveticaNeueLTStd-47-LtCn';
+}
+
+.HelveticaNeueLTStd-Cn {
+    font-family: 'HelveticaNeueLTStd-Cn';
+}
+
+.HelveticaNeueLTStd-Roman {
+    font-family: 'HelveticaNeueLTStd-Roman';
+}
+
+.itc-officina-sans-bold {
+    font-family: 'itc-officina-sans-bold';
+}
+
+
+
+
+.h1, h1,.h2, h2, .h3, h3, .h4, h4, .headline {
+    @extend .HelveticaNeueLTStd-95-Blk;
+}
+
+p.text-white {
+    @extend .HelveticaNeueLTStd-65-Md;
+}
+
+
+.lead, p {
+    @extend .HelveticaNeueLTStd-Roman;
+}
+
+
+/*button*/
+.button {
+    @extend .itc-officina-sans-bold;
+}
+
+
+/*button*/
+label, fieldset, input, [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+    @extend .proxima-nova;
+    //font-size: 14px;
+}

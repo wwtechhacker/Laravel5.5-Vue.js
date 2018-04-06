@@ -1,0 +1,26 @@
+{
+    "hero" : {
+        "title"   : "Check out and download these Rethink Your Drink Day resources for your future events.",
+        "content" : ""
+    },
+    "navCards": [
+        {
+            "title"     : "",
+            "imageSrc"  : "",
+            "imageAlt"  : "",
+            "content"   : " "
+        },
+        {
+            "title"      : "",
+            "imageSrc"   : "",
+            "imageAlt"   : "",
+            "content"    : " "
+        },
+        {
+            "title"      : "",
+            "imageSrc"   : "",
+            "imageAlt"   : "",
+            "content"    : " "
+        }
+    ]
+}

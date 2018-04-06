@@ -1,0 +1,87 @@
+$menu-border: $medium-gray !default;
+
+.list {
+    @extend .menu;
+}
+
+.menu,
+.list {
+    .badge {
+        display:inline-block;
+        height: auto;
+        width: auto;
+        vertical-align: middle;
+    }
+
+    &.icon-menu:not(.vertical) {
+        > li {
+            margin-bottom: $global-margin;
+        }
+    }
+
+    &.bordered {
+        border: 1px solid $menu-border;
+    }
+
+    &.divider {
+        > li,
+        > .item {
+            border-bottom: 1px solid $menu-border;
+        }
+    }
+
+    &.item {
+        padding : $global-padding/2 0;
+        &.divider {
+            border-bottom: 1px solid $menu-border;
+        }
+    }
+
+    &.item,
+    > li,
+    .item {
+        > span {
+            display:inline-block;
+        }
+
+        .icon-left {
+            margin-right: $global-margin;
+        }
+        .icon-right {
+            margin-left : $global-margin;
+        }
+
+        i,
+        .content {
+            display:inline-block;
+            vertical-align: middle;
+        }
+
+        .content {
+            > .header {
+                font-weight : bold;
+            }
+        }
+
+        .card,
+        .callout {
+            margin: 0;
+        }
+    }
+
+    &.vertical {
+        > li,
+        > .item {
+            a {
+                text-align:left;
+            }
+        }
+
+        &.align-middle {
+            > li {
+                display:flex;
+                align-items:center;
+            }
+        }
+    }
+}

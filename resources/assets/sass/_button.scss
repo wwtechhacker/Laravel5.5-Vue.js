@@ -1,0 +1,18 @@
+.button,
+button {
+    min-width: 150px;
+    text-transform: uppercase;
+    &.secondary {
+        color: white;
+
+        &.link,
+        &:active,
+        &:visited,
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+
+

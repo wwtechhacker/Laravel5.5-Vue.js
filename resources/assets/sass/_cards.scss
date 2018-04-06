@@ -1,0 +1,33 @@
+.card {
+    .card-header {
+        margin-bottom : $global-margin * 3;
+    }
+
+    h1, h2, h3, h4, h5 {
+        width : 100%;
+    }
+
+    img {
+        margin-bottom : $global-margin * 1;
+    }
+
+    .card-footer {
+        margin-top : 1.5rem;
+        //padding: $global-padding * 2 0;
+    }
+
+    &.card-inverse {
+        h1, h2, h3, h4 {
+            color : white;
+        }
+
+        .card-header,
+        .card-section,
+        .card-footer {
+            background : transparent;
+        }
+    }
+}
+
+
+

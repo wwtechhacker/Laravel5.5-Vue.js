@@ -1,0 +1,78 @@
+
+.footer {
+    border-top: 3px solid get-color(secondary);
+    position         : relative;
+    background-color : $black;
+    // border-top: 5px $secondary-color;
+    // border-bottom: 5px $tertiary-color;
+    width            : 100%;
+    padding          : 20px 10px;
+    @include breakpoint(medium) {
+        padding : 20px 0;
+    }
+    min-width        : 320px;
+    img {
+        @include breakpoint(small) {
+            max-width: 20%;
+        }
+        @include breakpoint(medium) {
+            max-width: 10%;
+        }
+        @include breakpoint(large) {
+            max-width: 100%;
+        }
+    }
+    
+    svg {
+        font-size : 30px;
+        @include breakpoint(medium) {
+            font-size : 40px;
+        }
+    }
+    ul {
+        display            : flex;
+        justify-content    : flex-end;
+        margin-top         : 15px;
+        margin-bottom      : 0;
+        -webkit-transition : all 0.7s ease 0s;
+        -moz-transition    : all 0.7s ease 0s;
+        -o-transition      : all 0.7s ease 0s;
+        transition         : all 0.7s ease 0s;
+        li {
+            flex-grow  : 2;
+            text-align : center;
+            //display    : inline-block;
+            a {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .icons {
+        margin-top: 1rem;
+        @include breakpoint(large) {
+            margin-top: 2.5rem;
+            justify-content: left;
+            a:first-child {
+                padding: 0 1rem 0 0 ;
+            }
+        }
+        a {
+            font-size: 40px;
+            padding: 0 1rem;
+        }
+    }
+
+    .privacy-policy {
+        float        : right;
+        margin-right : 2 * $global-margin;
+    }
+
+    .associates {
+        a {
+            display:block;
+            padding : 10px;
+            text-align: center;
+        }
+    }
+}

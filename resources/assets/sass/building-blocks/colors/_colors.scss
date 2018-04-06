@@ -1,0 +1,43 @@
+$muted-color: $medium-gray !default;
+
+@each $name, $color in $foundation-palette {
+    .bg-#{$name} {
+        background-color : $color !important;
+    }
+
+    .text-#{$name} {
+        color : $color !important;
+    }
+}
+
+.bg-faded {
+    background-color : $muted-color !important;
+}
+
+.bg-transparent {
+    background-color : transparent !important;
+}
+
+.bg-black {
+    background-color : $black !important;
+}
+
+.bg-white {
+    background-color : $white !important;
+}
+
+.text-faded {
+    color : $muted-color !important;
+}
+
+.text-transparent {
+    color : transparent !important;
+}
+
+.text-white {
+    color: $white !important;
+}
+
+.text-black {
+    color : $black !important;
+}

@@ -1,0 +1,2223 @@
+// Menu Icon Color
+a.menu-icon {
+    &::after {
+        background         : $brand-blue;
+        -webkit-box-shadow : 0 7px 0 $brand-blue, 0 14px 0 $brand-blue;
+        box-shadow         : 0 7px 0 $brand-blue, 0 14px 0 $brand-blue;
+        height             : 3px;
+    }
+}
+
+#gradient {
+    background-size  : 100%;
+    /*background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1A4878), color-stop(100%, #111111));*/
+    background-image : -moz-linear-gradient(to bottom, $brand-lightblue-background 0%, white 15%, white 60%, $gradient-bottom);
+    background-image : -webkit-linear-gradient(to bottom, $brand-lightblue-background 0%, white 15%, white 60%, $gradient-bottom);
+    background-image : linear-gradient(to bottom, $brand-lightblue-background 0%, white 15%, white 60%, $gradient-bottom);
+    opacity          : .8;
+    height           : 100%;
+    width            : 100%;
+    position         : absolute;
+    z-index          : 0;
+}
+
+#gradient:before {
+    /*background: transparent url("../images/noise.png") repeat scroll top left;*/
+    bottom   : 0;
+    content  : '';
+    left     : 0;
+    position : absolute;
+    right    : 0;
+    top      : 0;
+}
+
+body {
+    background-color : $brand-lightblue-background;
+    background-image : linear-gradient($gradient-top, $gradient-bottom);
+
+    &:before {
+        background : transparent url('../images/noise.png') repeat scroll top left;
+        bottom     : 0;
+        content    : '';
+        left       : 0;
+        position   : absolute;
+        right      : 0;
+        top        : 0;
+    }
+
+    .context {
+        .child {
+            display : none;
+        }
+        .teen {
+            display : none;
+        }
+    }
+
+    &[data-context="child"] {
+        .context {
+            .child {
+                display : inline;
+                display : initial;
+            }
+            .adult {
+                display : none;
+            }
+        }
+    }
+
+    &[data-context="teen"] {
+        .context {
+            .child {
+                display : none;
+            }
+            .adult {
+                display : none;
+            }
+        }
+    }
+
+    &[data-context="adult"] {
+        .context {
+            .child {
+                display : none;
+            }
+            .adult {
+                display : inline;
+                display : initial;
+            }
+        }
+    }
+
+    &[data-review="good"] {
+        .bad {
+            display : none;
+        }
+        .good {
+            display : inline;
+            display : initial;
+        }
+    }
+
+    &[data-review="bad"] {
+        .bad {
+            display : inline;
+            display : initial;
+        }
+        .good {
+            display : none;
+        }
+    }
+}
+
+header {
+    left       : 0;
+    padding    : 1rem 0;
+    position   : fixed;
+    right      : 0;
+    text-align : center;
+    top        : 0;
+    z-index    : 1;
+
+    @include breakpoint(medium) {
+        z-index : 200;
+    }
+
+    .logo {
+        height : 70px;
+        width  : auto;
+        @include transition(max-height 0.5s ease-in-out);
+        @include breakpoint(small only) {
+            height : 50px;
+        }
+
+    }
+
+    &.big {
+        padding : 5vh 0 5vh;
+
+        .logo {
+            height     : 20vh;
+            max-height : 204px;
+            @include breakpoint(small only) {
+                height : 80px;
+            }
+        }
+    }
+
+    @include breakpoint(small only) {
+        padding : 0.5rem 0;
+    }
+
+}
+
+.section {
+    .spacer {
+        //height : 70px;
+        //        @include breakpoint(small only) {
+        //            height: 50px;
+        //        }
+    }
+
+    .row.options {
+        margin-top : 0;
+        max-height : 50vh;
+        overflow-y : auto;
+
+        @include breakpoint(medium) {
+            max-height : 60vh;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color : #fff;
+}
+
+h1 {
+    font-size      : 3rem;
+    font-weight    : 400;
+    letter-spacing : -0.03rem;
+    padding        : .35rem 0;
+    text-align     : center;
+    text-transform : none;
+    @include breakpoint(small only) {
+        font-size   : 2rem;
+        line-height : 1.85rem;
+    }
+
+    @include breakpoint(medium only) {
+        font-size : 2.5rem;
+    }
+
+    /*span {
+        @include text-shadow(0 2px 10px rgba(0, 0, 0, 0.35));
+    }*/
+
+}
+
+h2 {
+    color          : $white;
+    font-size      : 1.5rem;
+    font-weight    : 700;
+    margin         : 2rem 0;
+    text-align     : center;
+    text-transform : none;
+    @include breakpoint(small only) {
+        font-size : 1.2rem;
+        margin    : 0.5rem 0;
+    }
+
+    &.close {
+        a {
+            color : $white;
+        }
+        position : relative;
+        right    : 0;
+    }
+
+    &.equals {
+        float       : left;
+        font-size   : 4rem;
+        font-weight : 700;
+        //margin-right : 3rem;
+    }
+
+    &.review {
+        font-weight    : 500;
+        text-transform : none;
+
+        .heavy {
+            font-weight : 700;
+        }
+    }
+}
+
+h3 {
+    color          : black;
+    font-size      : 1.5rem;
+    font-weight    : 400;
+    text-transform : none;
+
+    @include breakpoint(small only) {
+        font-size : 1.3rem;
+    }
+}
+
+h4 {
+    color          : $white;
+    font-size      : 0.85rem;
+    font-weight    : 700;
+    margin         : 0.5rem 0;
+    text-align     : center;
+    text-transform : none;
+
+    a {
+        //color : $white;
+    }
+}
+
+.control {
+    cursor  : pointer;
+    outline : none;
+
+    @include breakpoint(small only) {
+        i.fa-3x {
+            font-size : 2em;
+        }
+    }
+
+    @include breakpoint(small only) {
+        margin-top : 0.3rem;
+        padding    : 0;
+    }
+}
+
+button,
+div.button {
+    color   : #fff;
+    outline : none;
+    opacity : 1;
+
+    &.age,
+    &.gender {
+        background-color : transparent;
+        border           : 2px solid $brand-blue;
+        cursor           : default;
+        display          : table;
+        margin           : 0.5rem 0;
+        min-height       : 5rem;
+        padding          : 0.25rem 1rem;
+        text-align       : center;
+        width            : 100%;
+        @include transition(background-color 0.2s ease-out, border 0.2s ease-out);
+
+        @include breakpoint(medium) {
+            min-height : 4.5rem;
+            padding    : 0.5rem 0.25rem 0.5rem 0.75rem;
+        }
+
+        @include breakpoint(large) {
+            min-height : 4rem;
+        }
+        .icon:before {
+            content  : '';
+            display  : block;
+            position : relative;
+            height   : 47px;
+            width    : 18px;
+        }
+        &#female {
+            .icon:before {
+                background-image : url("/beverage-breakdown/images/rethink/icon-female-adult.png");
+            }
+            &:hover, &.selected, &.active {
+                .icon:before {
+                    background-image : url("/beverage-breakdown/images/rethink/white-female.png");
+                }
+            }
+        }
+        &#male {
+            .icon:before {
+                background-image : url("/beverage-breakdown/images/rethink/icon-male-adult.png");
+            }
+            &:hover, &.selected, &.active {
+                .icon:before {
+                    background-image : url("/beverage-breakdown/images/rethink/white-male.png");
+                }
+            }
+        }
+        &#child {
+            .icon:before {
+                background-image : url("/beverage-breakdown/images/rethink/icon-child.png");
+                height           : 32px;
+                width            : 31px;
+            }
+            &:hover, &.selected, &.active {
+                .icon:before {
+                    background-image : url("/beverage-breakdown/images/rethink/white-child.png");
+                }
+            }
+        }
+        &#adult {
+            .icon:before {
+                background-image : url("/beverage-breakdown/images/rethink/icon-adults.png");
+                height           : 47px;
+                width            : 39px;
+            }
+            &:hover, &.selected, &.active {
+                .icon:before {
+                    background-image : url("/beverage-breakdown/images/rethink/white-adult.png");
+                }
+            }
+        }
+
+        .icon {
+            display        : inline-block;
+            vertical-align : middle;
+            margin-right   : 1rem;
+
+            @include breakpoint(small only) {
+                .fa-2x {
+                    font-size : 1.25em;
+                }
+                .fa-3x {
+                    font-size : 1.5em;
+                }
+                .fa-4x {
+                    font-size : 2em;
+                }
+            }
+        }
+
+        .text {
+            display        : inline-flex;
+            text-align     : left;
+            vertical-align : middle;
+            //width          : 50%;
+            width          : auto;
+            margin-left    : 5px;
+
+            @include breakpoint(medium) {
+                width : auto;
+            }
+
+            span {
+                display     : inherit;
+                font-size   : 2rem;
+                font-weight : 900;
+                line-height : 1.7rem;
+                @include breakpoint(small only) {
+                    font-size   : 1.5rem;
+                    line-height : 1.25rem;
+                }
+
+                &.sub {
+                    display        : block;
+                    font-size      : 1.1rem;
+                    line-height    : 1;
+                    vertical-align : top;
+
+                    @include breakpoint(small only) {
+                        font-size : 1rem;
+                    }
+                }
+
+                &.smaller {
+                    font-size   : 1.4rem;
+                    line-height : 1;
+                }
+            }
+        }
+
+        &.active,
+        &.focus,
+        &.selected,
+        &:hover {
+            background-color : $brand-blue;
+            border-color     : $mediumblue;
+            color            : white;
+
+        }
+
+        &.selected {
+            .beverage-name {
+                float : left;
+                width : 50%;
+            }
+
+            .beverage-attributes {
+                display : block;
+            }
+        }
+    }
+
+    &.age {
+        padding : 0.5rem 0;
+    }
+
+    &.beverage,
+    &.selector,
+    &.recommendation {
+        background-color : white;
+        border           : 2px solid get-color(primary);
+        cursor           : default;
+        display          : table;
+        margin           : 0.5rem 0;
+        min-height       : 8rem;
+        padding          : 0.25rem 0.75rem;
+        text-align       : center;
+        width            : 100%;
+        @include transition(background-color 0.2s ease-out, border 0.2s ease-out);
+
+        @include breakpoint(small only) {
+            min-height : 5rem;
+            padding    : 0.25rem 1rem;
+        }
+
+        .beverage-name {
+            text-align : left;
+
+            .icon {
+                display      : inline-block;
+                width        : 3.5rem;
+                text-align   : center;
+                margin-right : 1rem;
+
+                @include breakpoint(small only) {
+                    margin-right : 0rem;
+                    .fa-3x {
+                        font-size : 2em;
+                    }
+                    .fa-4x {
+                        font-size : 2.5em;
+                    }
+                }
+                @include breakpoint(medium) {
+                    width : 2.5rem;
+                }
+            }
+
+            .text {
+                display : inline-block;
+                span {
+                    display     : inherit;
+                    font-size   : 1rem;
+                    font-weight : 900;
+                    line-height : 1.2rem;
+
+                    @include breakpoint(medium) {
+                        font-size : 1.3rem;
+                    }
+
+                    &.sub {
+                        display        : block;
+                        font-size      : 1.1rem;
+                        line-height    : 1;
+                        vertical-align : top;
+
+                        @include breakpoint(small only) {
+                            font-size : 1rem;
+                        }
+                    }
+
+                    &.smaller {
+                        font-size   : 1.4rem;
+                        line-height : 1;
+                    }
+                }
+            }
+        }
+
+        .beverage-attributes {
+            display   : none;
+            float     : right;
+            max-width : 33%;
+        }
+
+        &.active,
+        &.selected,
+        &:hover {
+            background-color : $brand-blue;
+            border-color     : $mediumblue;
+            .text span {
+                color : white;
+            }
+
+            &.zero {
+                background-color : white;
+                border-color     : black;
+                .text span {
+                    color : black;
+                }
+            }
+        }
+
+        .beverage-name {
+            .text {
+                width : 100%;
+            }
+        }
+        &.selected {
+            .beverage-name {
+                max-width : 100%;
+
+                .text {
+                    width : 100%;
+                    @include breakpoint(medium) {
+                        width : 100%;
+                    }
+                }
+            }
+
+            .beverage-attributes {
+                //display : table-cell;
+
+                .beverage-quantity {
+                    float : left;
+                    width : 3rem;
+
+                    .quantity {
+                        border  : 2px solid $white;
+                        display : table;
+                        width   : 100%;
+
+                        input {
+                            background-color : transparent !important;
+                            border           : none;
+                            color            : $white;
+                            height           : 3rem;
+                            font-size        : 1.6rem;
+                            font-weight      : 900;
+                            line-height      : 3rem;
+                            margin           : 0;
+                            padding          : 0;
+                            text-align       : center;
+                            //@include appearance(none);
+                        }
+
+                        input[type="number"]::-webkit-outer-spin-button,
+                        input[type="number"]::-webkit-inner-spin-button {
+                            @include appearance(none);
+                        }
+                    }
+                }
+
+                .beverage-size {
+                    float       : left;
+                    margin-left : 0.5rem;
+
+                    .size {
+                        border  : 2px solid $white;
+                        display : table;
+
+                        .select2-container--default .select2-selection--single {
+                            background-color : transparent !important;
+                            border           : none;
+                            height           : auto;
+                            @include border-radius(0);
+
+                            .select2-selection__rendered {
+                                color       : $white;
+                                display     : block;
+                                font-size   : 1.8rem;
+                                font-weight : 900;
+                                height      : 3rem;
+                                line-height : 3rem;
+                                padding     : 0;
+                                text-align  : center;
+                            }
+
+                            .select2-selection__arrow {
+                                display : none;
+                            }
+                        }
+                    }
+
+                    .size-up {
+                    }
+                    .size-down {
+                    }
+                }
+            }
+        }
+    }
+
+    &.control {
+        background-color : transparent;
+
+        &.disabled {
+            cursor  : not-allowed;
+            opacity : 0.25;
+            @include transition(0.3s opacity ease-out);
+        }
+
+        .warning {
+            display  : none;
+            left     : 0;
+            position : fixed;
+            right    : 0;
+        }
+    }
+
+    &#start-over {
+        left     : 2%;
+        position : fixed;
+    }
+}
+
+.disease {
+    .disease-image {
+        background-color : $lightblue;
+        color            : $white;
+        display          : block;
+        padding          : 0;
+        text-align       : center;
+        width            : auto;
+
+        a {
+            color : $white;
+        }
+    }
+
+    h2 {
+        margin : 0.5rem 0;
+    }
+
+    p {
+        color     : $white;
+        font-size : 1.1rem;
+    }
+}
+
+.consumed-beverage {
+    height      : auto;
+    float       : right;
+    margin-left : 0.5rem;
+    width       : 3rem;
+
+    //@media (min-width: 450px) {
+    //    float: right;
+    //}
+    //
+    //@include breakpoint (medium) {
+    //    float: right;
+    //}
+}
+
+.sugar-count {
+    background-color : $brand-blue;
+    color            : $white;
+    float            : left;
+    padding          : 0.5rem 2rem;
+    text-align       : center;
+
+    h2, h4 {
+        @extend .HelveticaNeueLTStd-75-Bd;
+        font-size : 5rem;
+        margin    : 0;
+
+        //&.large {
+        //    font-size: 3.2rem;
+        //}
+        //&.x-large {
+        //    font-size: 3rem;
+        //}
+    }
+}
+
+h3 {
+    font-size : 18px;
+    @include breakpoint(medium) {
+        font-size : 1.3rem;
+    }
+}
+
+// Utility Class
+.center-row {
+    display        : flex;
+    align-items    : center;
+    flex-direction : column;
+    text-align     : center;
+
+    // fixing a bug for iOS Safari
+    // ticket: https://github.com/philipwalton/flexbugs/issues/173
+    // ticket: https://bugs.webkit.org/show_bug.cgi?id=137730
+    .column, .columns {
+        flex-basis: auto;
+    }
+}
+
+.center-column {
+    margin : 0 auto;
+}
+
+// General Section styles
+.section {
+    h1 {
+        margin      : 0;
+        padding     : 0;
+        font-family : itc-officina-sans-std-bold, sans-serif;
+    }
+    hr {
+        margin : 10px 0 20px 0;
+    }
+
+    h3 {
+        text-align    : center;
+        line-height   : 1.3;
+        margin-bottom : 1rem;
+    }
+    .control.back-button {
+        p {
+            color          : black;
+            text-transform : uppercase;
+            font-size      : 16px;
+            margin         : 0;
+
+            @include breakpoint(medium) {
+                font-size : 20px;
+            }
+        }
+        @include breakpoint(medium) {
+        }
+    }
+
+    .row {
+        &.selection-content {
+            padding-right : 0.5rem;
+            padding-left  : 0.5rem;
+
+            @include breakpoint(medium) {
+                padding-right : 1rem;
+                padding-left  : 1rem;
+            }
+        }
+    }
+
+    .beverage-name {
+        float     : none;
+        max-width : none;
+        width     : 100%;
+        .text {
+            span {
+                color : black;
+            }
+        }
+
+        @include breakpoint(medium) {
+            width : auto;
+        }
+    }
+    .beverage-attributes {
+        float      : none;
+        max-width  : none;
+        width      : 100%;
+        text-align : center;
+        font-size  : 15px;
+        color      : white;
+        margin-top : 5px;
+
+        .beverage-quantity,
+        .beverage-size {
+            display : none;
+        }
+
+        .quantity-and-size {
+            display : none;
+
+            @include breakpoint(large) {
+                display : none;
+            }
+        }
+    }
+
+    .beverage.selected {
+        .beverage-attributes {
+            .beverage-quantity,
+            .beverage-size {
+                display : block;
+            }
+        }
+    }
+
+    @include breakpoint(large) {
+        .beverage.selected {
+            .beverage-attributes {
+                .beverage-quantity,
+                .beverage-size {
+                    display : block;
+                }
+            }
+        }
+    }
+
+    .selector {
+        .quantity-and-size {
+            display : none;
+        }
+
+        &.selected {
+            .quantity-and-size {
+                display : block;
+            }
+        }
+    }
+
+    .page-control-div {
+        display         : flex;
+        flex-direction  : column;
+        justify-content : center;
+        align-items     : center;
+        margin-top      : 5px;
+
+        .back-button {
+            margin : 5px 30px;
+
+            @include breakpoint(medium) {
+                margin-top : 1rem;
+            }
+        }
+
+        @include breakpoint(medium) {
+            margin-top : 30px;
+        }
+        @include breakpoint(large) {
+            margin-top     : 0;
+            flex-direction : row-reverse;
+        }
+    }
+
+    // General Info Section styles
+    &.info-section {
+
+        .spacer {
+            display : none;
+        }
+
+        hr {
+            margin : 20px 0;
+        }
+
+        h1 {
+            font-size : 3rem;
+            margin    : 0;
+            color     : white;
+        }
+
+        h2 {
+            font-size   : 1.7rem;
+            margin      : 0;
+            line-height : 1.5;
+            color       : white;
+        }
+
+        .fp-tableCell {
+            background     : white;
+            padding        : 0 20px;
+            vertical-align : middle;
+            @include breakpoint(large) {
+                padding : 0 12vh;
+            }
+            @include breakpoint(xlarge) {
+                padding : 0 15vh;
+            }
+            @include breakpoint(xxlarge) {
+                padding : 0 30vh;
+            }
+        }
+        .info-content {
+            padding-top      : 40px;
+            height           : 80vh;
+            background-image : -moz-linear-gradient(to bottom, $brand-orange 0%, $brand-darkorange);
+            background-image : -webkit-linear-gradient(to bottom, $brand-orange 0%, $brand-darkorange);
+            background-image : linear-gradient(to bottom, $brand-orange 0%, $brand-darkorange);
+
+            @include breakpoint(medium) {
+                height : auto;
+            }
+
+            .main-column {
+                display        : flex;
+                flex-direction : column;
+                align-items    : center;
+                @include breakpoint(small only) {
+                    text-align : center;
+                }
+
+                .info-img {
+                    width               : 192px;
+                    height              : 180px;
+                    background-image    : url('../images/rethink/breakdown-1.png');
+                    background-repeat   : no-repeat;
+                    background-size     : 70%;
+                    background-position : 50% 50%;
+                    margin              : 20px 0;
+
+                    @include breakpoint(large) {
+                        width  : 300px;
+                        height : 250px;
+                    }
+                    @include breakpoint(small only) {
+                        display : none;
+                    }
+                }
+
+                .control {
+                    text-transform : uppercase;
+                    @extend .control-button;
+                    @extend .orange-to-white-hover;
+
+                }
+            }
+
+            .desktop-main {
+                display : none;
+
+                .right {
+                    text-align : center;
+                    .control {
+                        margin : 40px auto;
+                    }
+                }
+
+                @include breakpoint(medium) {
+                    display        : flex;
+                    flex-direction : row;
+                }
+            }
+            .mobile-main {
+                display         : flex;
+                justify-content : center;
+
+                h1 {
+                    font-size : 2.3rem;
+                }
+
+                @include breakpoint(medium) {
+                    display : none;
+                }
+            }
+        }
+
+        &.info-1 {
+            .info-content {
+                .info-img {
+                    background-image : url('../images/rethink/lg-sugary-drinks.png');
+                }
+            }
+        }
+        &.info-2 {
+            h2 {
+                line-height : 1;
+            }
+            .info-content {
+                .info-img {
+                    background-image : url('../images/rethink/two-water.png');
+                    margin           : 0;
+                }
+            }
+        }
+        &.info-3 {
+            .info-content {
+                .info-img {
+                    background-image : url('../images/rethink/energy-soda.png');
+                    margin           : 10px;
+                }
+            }
+        }
+    }
+}
+
+// FROM Pledge.css
+button.beverage,
+button.selector,
+div.button.beverage,
+div.button.selector {
+    min-height : 2rem;
+
+    @include breakpoint(medium) {
+        min-height : 3.5rem;
+    }
+    @include breakpoint(large) {
+        min-height : 3.7rem;
+    }
+}
+
+//.selector {
+//    .beverage-name {
+//        line-height: 2rem;
+//
+//        @include breakpoint(medium) {
+//            line-height : 3.5rem;
+//        }
+//        @include breakpoint (large) {
+//            line-height: 3.7rem;
+//        }
+//    }
+//}
+
+#start-over {
+    cursor     : pointer;
+    margin-top : 2rem;
+}
+
+// Section I - Landing Page
+#section1 {
+    background          : url('../images/rethink/c4c_bg_repeat.png');
+    background-repeat   : repeat-x;
+    background-position : 0 100%;
+    background-size     : 150%;
+
+    @include breakpoint(medium) {
+        background-size : 100%;
+    }
+
+    @include breakpoint(large) {
+        background-size : 80%;
+        .start-btn {
+            margin-top    : 30px;
+            margin-bottom : 30px;
+        }
+    }
+
+    .circle-cta {
+        //padding     : 30px 0;
+        font-size : 1.7rem;
+        //line-height : normal;
+
+        @include breakpoint(medium) {
+            //padding   : 36px 0;
+            font-size : 1.9rem;
+        }
+    }
+
+    h1 {
+        text-transform : uppercase;
+        border-bottom  : 0;
+        border-top     : 0;
+        margin         : 0;
+
+        &.whats-your {
+            color          : $brand-darkorange;
+            font-family    : itc-officina-sans-std-bold, sans-serif;
+            letter-spacing : 0.8rem;
+            font-size      : 1rem;
+            white-space    : nowrap;
+
+            @include breakpoint(medium) {
+                font-size      : 2.5rem;
+                letter-spacing : 1.5rem;
+            }
+            @include breakpoint(large) {
+                font-size      : 3.5rem;
+                letter-spacing : 2rem;
+            }
+        }
+    }
+
+    h3 {
+        line-height : 1.2;
+
+        @include breakpoint(small only) {
+            font-size : 1.2rem;
+        }
+    }
+
+    .logo {
+        position : relative;
+        img {
+            width     : 278px;
+            max-width : 85%;
+            height    : 80px;
+
+            @include breakpoint(medium) {
+                width  : 80%;
+                height : auto;
+            }
+        }
+        span.question-mark {
+            position       : relative;
+            vertical-align : bottom;
+            bottom         : 0;
+            font-size      : 45px;
+            line-height    : 25px;
+            color          : $brand-blue;
+            font-weight    : bold;
+
+            @include breakpoint(medium) {
+                position       : relative;
+                vertical-align : bottom;
+                bottom         : 0;
+                font-size      : 65px;
+                line-height    : 35px;
+            }
+            @include breakpoint(large) {
+                font-size   : 85px;
+                line-height : 55px;
+            }
+        }
+    }
+
+    hr {
+        margin : 38px 0;
+
+        @include breakpoint(large) {
+            margin : 30px 0;
+        }
+    }
+
+    .spacer {
+        height     : 20vh;
+        max-height : 204px;
+    }
+}
+
+// Section II - Gender and Age
+#section2 {
+    background          : url('../images/rethink/c4c_bg_repeat.png');
+    background-repeat   : repeat-x;
+    background-position : 0 100%;
+    background-size     : 150%;
+
+    @include breakpoint(medium) {
+        background-size : 100%;
+    }
+    @include breakpoint(large) {
+        background-size : 80%;
+    }
+
+    .spacer {
+        height : 23vh;
+    }
+
+    h1 {
+        margin         : 0;
+        padding-bottom : 0;
+    }
+
+    h3 {
+        color : black;
+    }
+
+    .section-content {
+        margin-top : 20px;
+    }
+
+    .choice-row {
+        padding : 0 10px;
+    }
+
+    .amp-row {
+        display         : flex;
+        justify-content : center;
+        margin          : 15px 0;
+        .amp {
+            color       : black;
+            font-size   : 20px;
+            font-weight : bold;
+
+            @include breakpoint(medium) {
+                font-size   : 30px;
+                padding-top : 7px;
+            }
+
+            @include breakpoint(large) {
+                font-size : 40px;
+            }
+        }
+    }
+    .control-row {
+        display : none;
+    }
+
+    button.age {
+        min-height : 4.3rem;
+    }
+}
+
+// Section 8 - Daily Drink Summary
+#section8 {
+    h3 {
+        padding : 0 25px;
+    }
+}
+
+#section12 {
+    @include breakpoint(small only) {
+        h2.context {
+            font-size : 0.8rem;
+            margin    : 0.25rem 0 !important;
+            padding   : 0.25rem 0 !important;
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width : 992px) {
+    #section10 #beverages-icons {
+        //padding : 20px;
+    }
+    #section10 .row.options {
+        padding-bottom : 15px;
+    }
+}
+
+/* mobile device */
+@media screen and (min-width : 0em) and (max-width : 39.9375em) {
+    #section10 .options.results {
+        margin : 10px 0 0px 0;
+
+        @include breakpoint(medium) {
+            margin : 30px 0 15px 0;
+        }
+    }
+}
+
+.brand-orange {
+    color : #F58026;
+}
+
+.brand-dark-orange {
+    color : #C7541B;
+}
+
+.brand-blue {
+    color : #0080B0;
+}
+
+.brand-lg-blue {
+    color : #00A4E4;
+}
+
+#section10 .sugar-result.no-drink .options {
+    border : 0;
+}
+
+.sugar-result.no-drink .sugar-amt {
+    display : none;
+}
+
+.sugar-result {
+    @extend .itc-officina-sans-bold;
+    @include breakpoint(small only) {
+        .section .row.options {
+            align-items : center;
+        }
+    }
+    .circle-div {
+        @extend .HelveticaNeueLTStd-75-Bd;
+    }
+
+}
+
+/* Navigation */
+#fp-nav {
+    display : none;
+
+    @include breakpoint(medium) {
+        display : block;
+    }
+
+    ul {
+        li {
+            margin : 15px 7px;
+
+            &:nth-child(1),
+            &:nth-child(4),
+            &:nth-child(6),
+            &:nth-child(8),
+            &:nth-child(10),
+            &:nth-child(11) {
+                display : none;
+            }
+
+            .fp-tooltip {
+                color   : black;
+                display : none;
+
+                @include breakpoint(large) {
+                    display : block;
+                }
+            }
+
+            a span {
+                margin                : -6px 0 0 -6px;
+                background            : transparent;
+                border                : 1px solid $brand-blue;
+                height                : 12px;
+                width                 : 12px;
+                border-radius         : 50%;
+                -moz-border-radius    : 50%;
+                -webkit-border-radius : 50%;
+
+                @include breakpoint(large) {
+                    height : 15px;
+                    width  : 15px;
+                }
+            }
+
+        }
+    }
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background : transparent;
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    background : $brand-blue;
+    background : linear-gradient(to bottom, $brand-lightblue 20%, $brand-blue);
+
+    @include breakpoint(large) {
+        height : 15px;
+        width  : 15px;
+    }
+}
+
+header {
+    background : white;
+    color      : black;
+    position   : fixed;
+    top        : 0;
+    width      : 100vw;
+    height     : 55px;
+
+    a {
+        display : block;
+    }
+
+    @include breakpoint(medium) {
+        height : 75px;
+    }
+
+    &.main-nav {
+        display         : flex;
+        align-items     : center;
+        flex-direction  : row;
+        justify-content : space-between;
+        padding         : 0 20px;
+
+        .logo {
+            height : 35px;
+            @include breakpoint(medium) {
+                height : 55px;
+            }
+        }
+    }
+
+    .header-link {
+        font-weight : bold;
+        font-family : $basic-font;
+        padding     : 0.7rem 1rem;
+
+        &:hover {
+            background-color : rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+
+button.move-to {
+    color : white;
+}
+
+h1 {
+    color : #0080B0;
+}
+
+a.skip-text {
+    text-decoration : underline;
+    font-weight     : bold;
+    color           : black;
+    &:hover, &:focus {
+        color : $mediumblue;
+    }
+
+    @include breakpoint(medium) {
+        i.fa {
+            display : none;
+        }
+    }
+}
+
+.choice-row {
+    justify-content : center;
+
+    .columns {
+        padding : 0 0.3rem;
+    }
+    .button {
+        border-radius      : 0;
+
+        -webkit-box-sizing : border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing    : border-box; /* Firefox, other Gecko */
+        box-sizing         : border-box;
+    }
+    &.options {
+        .button {
+            color : black;
+        }
+    }
+    button {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        border-radius   : 0;
+        color           : $brand-blue;
+        border-color    : $brand-blue;
+        background      : white;
+
+        &.active,
+        &.selected,
+        &:hover {
+            color : white;
+        }
+        .text {
+            text-align : center;
+            span {
+                line-height : 1;
+            }
+        }
+    }
+}
+
+// Drink selector button
+.beverage-name {
+    display         : flex;
+    justify-content : left;
+    align-items     : center;
+    line-height     : 2rem;
+
+    @include breakpoint(medium) {
+        line-height : 3.5rem;
+    }
+    @include breakpoint(large) {
+        line-height : 3.7rem;
+    }
+
+    .icon {
+        img {
+            height : 35px;
+
+            @include breakpoint(large) {
+                height : 45px;
+            }
+        }
+    }
+    .text {
+        text-align : left;
+    }
+}
+
+.hidden {
+    display : none !important;
+}
+
+button.circle-cta {
+    width            : 85px;
+    height           : 85px;
+    border-radius    : 50%;
+    background-color : $brand-orange;
+    background       : linear-gradient(to bottom, $brand-light-darkorange 20%, $brand-darkorange 80%, $brand-light-darkorange);
+    text-transform   : uppercase;
+    font-weight      : bold;
+    padding          : 0;
+    font-size        : 24px;
+    line-height      : 94px;
+    margin-top       : 0;
+    &:hover, &:focus {
+        background : linear-gradient(to bottom, $brand-light-darkorange 50%, $brand-light-darkorange);
+    }
+
+    @include breakpoint(medium) {
+        width       : 100px;
+        height      : 100px;
+        line-height : 109px;
+        margin-top  : 1rem;
+    }
+}
+
+.circle-div {
+    width         : 120px;
+    height        : 120px;
+    border-radius : 50%;
+    padding       : 0;
+    @include breakpoint(medium) {
+        width  : 160px;
+        height : 160px;
+    }
+}
+
+hr.gradient-hr {
+    background    : linear-gradient(to right, transparent 5%, $brand-blue 30%, $brand-blue 70%, transparent 95%);
+    width         : 100%;
+    height        : 5px;
+    border-bottom : 0;
+}
+
+@media (max-device-width : 375px) {
+    .fp-tableCell {
+        hr.gradient-hr {
+            display: none;
+        }
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    body #section11 {
+        h3 {
+             margin-bottom:.5rem;
+         }
+        h2 {
+            margin-bottom:.9rem;
+        }
+        .sugar-count h4 {
+            margin: 10px 0;
+        }
+        .sugar-count, .sugar-result {
+            margin-top: 0px;
+        }
+        .row.options {
+            max-height: 30vh;
+        }
+        .sugar-count .sugar-result span {
+           font-size: 12px;
+            &.teaspoons {
+                display:inline;
+            }
+        }
+    }
+
+}
+
+
+
+
+// SPACER
+.section {
+    .spacer {
+        height : 80px;
+
+        @include breakpoint(medium) {
+            height : 120px;
+        }
+
+        @media screen and (min-width: 64em) and (max-height: 650px)  {
+            height : 100px;
+        }
+
+        @include breakpoint(large) {
+            height : 170px;
+        }
+
+
+    }
+}
+
+.fp-tableCell {
+    vertical-align : top;
+}
+
+.endpage-ctas-col {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    flex-direction  : column;
+
+    .endpage-btn {
+        display        : inline-block;
+        width          : 180px;
+        background     : white;
+        color          : $brand-darkorange;
+        border         : 1px solid $brand-darkorange;
+        border-radius  : 5px;
+        text-align     : center;
+        padding        : 8px;
+        margin         : 5px;
+        text-transform : uppercase;
+
+        &:hover {
+            color      : white;
+            background : $brand-darkorange;
+        }
+    }
+    .go-recipes {
+        color           : $brand-darkorange;
+        text-decoration : underline;
+        font-weight     : bold;
+        font-size       : 1.2rem;
+        margin          : 15px 0;
+        display         : block;
+    }
+}
+
+// Section 10 - Summary
+#section10 {
+    .section {
+        .spacer {
+            height : 130px;
+        }
+    }
+
+    .icon-col {
+        padding-right: 0.7rem;
+        margin-right: 0.5rem;
+
+        @include breakpoint (medium) {
+            padding-right: 2rem;
+            margin-right: 0;
+        }
+    }
+
+    .page-title {
+        display         : flex;
+        flex-direction  : column;
+        justify-content : center;
+        align-items     : center;
+        margin-top      : 0;
+
+        .pre-title {
+            text-transform : uppercase;
+            color          : $brand-orange;
+            font-weight    : bold;
+            font-size      : 25px;
+            letter-spacing : 2rem;
+            padding-left: 2rem;
+        }
+        img {
+            width     : 80%;
+            max-width : 400px;
+        }
+    }
+
+    .disclaimer {
+        margin : 10px 0 0 0;
+
+        p {
+            margin : 0;
+        }
+
+        @include breakpoint(medium) {
+            margin : 20px 0;
+        }
+    }
+
+    .options.results {
+        border : 0;
+    }
+
+    .context-column {
+        padding : 10px 0;
+
+        .context {
+            h3 {
+                color       : black;
+                font-weight : 400;
+                font-size   : 15px;
+
+                @include breakpoint(medium) {
+                    font-size : 18px;
+                }
+            }
+        }
+    }
+
+
+
+    .sugar-amt {
+        display     : flex;
+        align-items : center;
+        padding: 5px 0;
+
+        @include breakpoint (medium) {
+            padding: 25px 0 8px 0;
+        }
+
+        &:before {
+            content   : '=';
+            display   : block;
+            position  : relative;
+            font-size : 80px;
+            left      : -17px;
+            @extend .itc-officina-sans-bold;
+
+        }
+
+        .equals {
+            color     : black;
+            font-size : 60px;
+            margin    : 0 2rem 0 0;
+        }
+
+        .sugar-count {
+            display         : flex;
+            flex-direction  : column;
+            justify-content : center;
+            padding         : 0;
+
+            &.circle-div {
+                width: 120px;
+                height: 120px;
+
+                @include breakpoint(medium) {
+                    width  : 160px;
+                    height : 160px;
+                }
+            }
+
+            h2 {
+                margin-top  : 1.3rem;
+                font-weight : 400;
+                font-size   : 55px;
+                line-height : .6;
+                //padding-left: 7px;
+
+                @include breakpoint(medium) {
+                    font-size  : 90px;
+                    margin-top : 1.5rem;
+                }
+
+                &.large {
+                    font-size : 3.2rem;
+                    padding-left: 0;
+                }
+                &.x-large {
+                    font-size : 3rem;
+                    padding-left: 0;
+                }
+
+            }
+            p {
+                font-size : 14px;
+                margin    : 0;
+                @include breakpoint(medium) {
+                    font-size : 18px;
+                }
+            }
+            h4 {
+                text-transform : capitalize;
+                font-weight    : 400;
+                line-height    : 0;
+            }
+        }
+    }
+
+    .user-control {
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+
+        button {
+            width          : 80%;
+            border-radius  : 0;
+            text-transform : uppercase;
+            font-size      : 22px;
+
+            @include breakpoint(medium) {
+                font-size : 25px;
+            }
+
+            &.healthy-btn {
+                padding          : 15px 10px 10px 10px;
+                background-color : $brand-darkorange;
+                font-weight      : bold;
+
+                &:hover {
+                    background-color : $brand-blue;
+                }
+            }
+            &.back-button {
+                margin-top : 10px;
+                color      : black;
+
+                @include breakpoint(medium) {
+                    margin-top : 20px;
+                }
+            }
+        }
+    }
+
+    #beverages-icons {
+        .consumed-beverage {
+            //height: auto;
+            //margin-left : 0.5rem;
+            margin-left: 0;
+            margin-top  : 10px;
+            width       : 4rem;
+
+            img {
+                height : 5rem;
+            }
+
+            &.icon-xl {
+                width      : 6rem;
+                margin-top : 25px;
+                img {
+                    height : 7rem;
+                }
+
+                @include breakpoint (medium) {
+                    width: 7rem;
+                    img {
+                        height: 8rem;
+                    }
+                }
+            }
+            &.icon-bg {
+                width : 3.5rem;
+                img {
+                    height : 4rem;
+                }
+
+                @include breakpoint(medium) {
+                    width : 5rem;
+                    img {
+                        height : 7rem;
+                    }
+                }
+            }
+            &.icon-md {
+                width : 3rem;
+                img {
+                    height : 3rem;
+                }
+
+                @include breakpoint(medium) {
+                    width : 6rem;
+                    img {
+                        height : 5rem;
+                    }
+                }
+                @include breakpoint(large) {
+                    width : 5.2rem;
+                    img {
+                        height : 7rem;
+                    }
+                }
+            }
+            &.icon-sm {
+                width : 2rem;
+                img {
+                    height : 3.5rem;
+                }
+
+                @include breakpoint(medium) {
+                    width : 4rem;
+                    img {
+                        height : 4.5rem;
+                    }
+                }
+                @include breakpoint(large) {
+                    width : 4.5rem;
+                    img {
+                        height : 5.5rem;
+                    }
+                }
+            }
+            &.icon-xs {
+                width : 2rem;
+                img {
+                    height : 2rem;
+                }
+                @include breakpoint(medium) {
+                    width : 4rem;
+                    img {
+                        height : 4.5rem;
+                    }
+                }
+                @include breakpoint(large) {
+                    width : 4.5rem;
+                    img {
+                        height : 5.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .endpage-ctas-col {
+        display : none;
+    }
+
+    .sugar-result {
+        &.no-drink {
+            display : none;
+        }
+    }
+
+    &.no-sugar {
+        .spacer {
+            height : 120px;
+
+            @include breakpoint (medium) {
+                height : 170px;
+            }
+        }
+        .user-control {
+            display : none;
+        }
+        .endpage-ctas-col {
+            display    : block;
+            text-align : center;
+        }
+        .swap-cta {
+            display : none;
+        }
+    }
+}
+
+div.button.recommendation.selected {
+    background-color : $brand-darkorange;
+    border-color     : $brand-orange;
+}
+
+#section11 {
+
+    #beverage-selections,
+    #beverage-recommendations {
+        overflow    : hidden;
+        margin-left : 0;
+
+        .beverage-name {
+            position: relative;
+        }
+    }
+
+    .beverage {
+        .beverage-attributes {
+            display : none;
+        }
+    }
+
+    .row.options {
+        max-height : 40vh;
+        @include breakpoint(medium) {
+            max-height : 42vh;
+        }
+        @media only screen and (max-height: 900px) {
+            max-height : 26vh;
+        }
+    }
+
+    .recommendation,
+    .beverage,
+    .selector {
+        padding : 0 0.25rem;
+
+        .beverage-name {
+            .icon {
+                width : 30% !important;
+            }
+
+            @include breakpoint(small only) {
+                height : 3rem;
+            }
+        }
+    }
+
+    #savings-total {
+        font-size : 3rem;
+    }
+
+}
+
+// Section 11 - Rethink Your Drink
+#section11 {
+    h2 {
+        font-size   : 1rem;
+        font-weight : bold;
+        @include breakpoint(small only) {
+            font-size : 0.8rem;
+        }
+
+        &.selection-text {
+            font-size : .9rem;
+            color     : $brand-blue;
+            padding   : 3px;
+        }
+    }
+    ul#beverage-selections {
+        div.button {
+            &.selected {
+                border-color : $brand-orange;
+            }
+        }
+    }
+    .title-column {
+        padding : 0 1rem;
+    }
+
+    h1 {
+        span {
+            text-transform : capitalize;
+        }
+        .context {
+            color : black;
+        }
+    }
+
+    h4 {
+        color : black;
+    }
+
+    .sugar-count {
+        float       : none;
+        margin-top  : 2rem;
+
+        width       : 100%;
+        margin-left : 0;
+        left        : 0;
+
+        @include breakpoint(small only) {
+            margin-top : 0;
+        }
+        .sugar-result {
+            font-size : 0;
+            @extend .itc-officina-sans-bold;
+
+
+            span, div {
+                font-size : 16px;
+
+                @include breakpoint(medium) {
+                    font-size : 24px;
+                }
+
+                &.teaspoons {
+                    display : block;
+                    @include breakpoint(medium) {
+                        display : inline-block;
+                    }
+                }
+            }
+
+        }
+
+        .sugar-count-column {
+            padding : 0 1rem;
+        }
+
+        #savings-total {
+            background-color : $brand-blue;
+            color            : white;
+            font-size        : 1.5rem;
+            display          : inline-block;
+
+            @include breakpoint(medium) {
+                font-size : 1.5rem;
+            }
+
+            &.circle-div {
+                width       : 50px;
+                height      : 50px;
+                line-height : 58px;
+                padding     : 0;
+                margin      : 0 .5rem;
+                > span {
+                    font-size : 30px;
+
+                    @include breakpoint(medium) {
+                        font-size : 40px;
+                    }
+                }
+                @include breakpoint(medium) {
+                    font-size   : 40px;
+                    width       : 80px;
+                    height      : 80px;
+                    line-height : 91px;
+                }
+            }
+        }
+
+        h4 {
+            text-transform : none;
+            font-size      : 3rem;
+            margin         : 20px 0 35px 0;
+            span {
+                font-size : 1.1rem;
+            }
+        }
+    }
+    .recommend-col {
+        position : relative;
+    }
+    .selection-column {
+        padding : 0 1rem;
+    }
+
+}
+
+#section12 {
+
+    .spacer {
+        height : 20vh;
+        @include breakpoint(large) {
+            height : 30vh;
+        }
+    }
+
+    .final-result-col {
+        text-align : center;
+    }
+    .circle-div {
+        @extend .HelveticaNeueLTStd-75-Bd;
+        display    : inline-block;
+        background : $brand-blue;
+
+        .summary-save-total {
+            margin-top: 2.5rem;
+            display:inline-block;
+            line-height : .7;
+            font-size   : 60px;
+            color       : white;
+            @include breakpoint(medium) {
+                margin-top: 4rem;
+            }
+        }
+
+        span {
+            color:white;
+        }
+
+        span.teaspoons {
+            display:block;
+        }
+
+        @include breakpoint (large) {
+            width  : 180px;
+            height : 180px;
+
+            .summary-save-total {
+                font-size   : 85px;
+            }
+        }
+    }
+
+    .final-summary {
+        margin : 25px 0;
+        p {
+            font-weight : bold;
+            font-size   : 1.2rem;
+
+            @include breakpoint (large) {
+                font-size : 1.6rem;
+            }
+        }
+    }
+
+    .endpage-ctas-col {
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        flex-direction  : column;
+
+        .endpage-btn {
+            display        : block;
+            width          : 180px;
+            background     : white;
+            color          : $brand-darkorange;
+            border         : 1px solid $brand-darkorange;
+            border-radius  : 5px;
+            text-align     : center;
+            padding        : 8px;
+            margin         : 5px;
+            text-transform : uppercase;
+
+            &:hover {
+                color      : white;
+                background : $brand-darkorange;
+            }
+        }
+        .go-recipes {
+            color           : $brand-darkorange;
+            text-decoration : underline;
+            font-weight     : bold;
+            font-size       : 1.2rem;
+            margin          : 15px 0;
+        }
+    }
+}

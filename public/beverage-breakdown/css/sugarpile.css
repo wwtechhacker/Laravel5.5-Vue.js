@@ -1,0 +1,52 @@
+#sugarpour {
+    background-color: white;
+    /*background-color: white;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#sugarpour img {
+    width: 555px;
+    height: 100%;
+    opacity: 0;
+}
+
+#sugarpile {
+    -webkit-transition: background-position 2s;
+    -moz-transition: background-position 2s;
+    -o-transition: background-position 2s;
+    transition: background-position 2s;
+    background-position: 50% 0px;
+    background-image: url('../images/sugar-pile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    display: none;
+    /*background-color: black;*/
+}
+
+
+
+
+body:before {
+    background: none;
+}
+
+span.highlight {
+    background-color: #fff;
+    display: inline-block;
+    padding: 0 10px;
+    color: #1fb7e8;
+}

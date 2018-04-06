@@ -1,0 +1,32 @@
+$facebook-blue : #3B5998 !default;
+$twitter-blue : #1DA1F2 !default;
+
+button,
+.button {
+    &.hollow {
+        &.white {
+            border : 1px solid white;
+        }
+    }
+}
+
+// Brand Buttons
+.button {
+    &.facebook {
+        background-color : $facebook-blue;
+        &:hover,
+        &:visited,
+        &:active {
+            background-color : darken($facebook-blue, 5%);
+        }
+    }
+    &.twitter {
+        background-color : $twitter-blue;
+        &:hover,
+        &:visited,
+        &:active {
+            background-color : darken($twitter-blue, 5%);
+        }
+    }
+
+}
