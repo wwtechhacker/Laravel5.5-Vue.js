@@ -37,16 +37,16 @@ class AppController extends Controller
         // @todo menu urls
         $menu = [
             [
-                'name' => 'Register an Event',
-                'url'  => '/registration',
-            ],
-            [
-                'name' => 'Beverage Breakdown',
-                'url'  => '/beverage-breakdown',
-            ],
-            [
-                'name' => 'Resources',
+                'name' => 'Battles',
                 'url'  => '/resources',
+            ],
+            [
+                'name' => 'Store',
+                'url'  => '/',
+            ],
+            [
+                'name' => 'Contact',
+                'url'  => '/registration',
             ]
         ];
 

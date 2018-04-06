@@ -8,7 +8,7 @@
     "navCards": [
         {
             "title"      : "Battles",
-            "imageSrc"   : "/images/battles.gif",
+            "imageSrc"   : "",
             "imageAlt"   : "",
             "content"    : " ",
             "class" : "ga-nav-battles",
@@ -21,7 +21,7 @@
         },
         {
             "title"      : "Store",
-            "imageSrc"   : "/images/home-orange.png",
+            "imageSrc"   : "",
             "imageAlt"   : "",
             "content"   : " ",
             "class" : "ga-nav-store",
@@ -34,7 +34,7 @@
         },
         {
             "title"     : "Contact",
-            "imageSrc"  : "/images/home-green.png",
+            "imageSrc"  : "",
             "imageAlt"  : "",
             "content": " ",
             "class": "ga-nav-contact",
