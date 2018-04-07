@@ -14,7 +14,7 @@
         <div class="large-2 large-offset-7 small-12 columns small-collapse">
             <div class="associates">
                 <a href="/" class="ga-footer-logo">
-                    <img src="/images/blank.png" data-interchange="[{{ asset('images/shotsfiredlogo_BW.png') }}, small]" alt="ShotsFired logo">
+                    <img src="/images/blank.png" data-interchange="[{{ asset('images/shotsFired_logoBW.png') }}, small]" alt="">
                 </a>
                 <!-- <a href="" class="text-underline show-for-medium">Privacy Policy</a> -->
             </div>

@@ -7,7 +7,7 @@
     <section class="ga-what-is-rethink">
         <div class="row">
             <div class="columns text-center large-8 medium-10 small-12 medium-centered">
-                <h3 data-scroll-target="find-a-local-event">Shots Fired <span class="text-nowrap">Battle Rap League</span></h3>
+                <h3 class="what-is" data-scroll-target="find-a-local-event">Shots Fired <br>Battle Rap League</h3>
                 <p class="lead">
                 Shots Fired has established itself as the leading San Diego rap battle platform, and has even reached out to other communities in Orange County, Inland Empire, Los Angeles, Fresno and San Jose.
                 </p>

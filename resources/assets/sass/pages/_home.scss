@@ -1,17 +1,20 @@
 body.home {
     .hero-content {
         background: url("/images/fire-bg.gif");
-        @include breakpoint(small only) { 
-            background-size: cover;
-            background-position: 132vw 71vh;
+        @include breakpoint(small) { 
+            background-position: 50%;
+            background-position-y: -20px;
+            // background-position: 135vw 65vh;
         }
-        @include breakpoint(375) { 
+        @include breakpoint(375px) { 
             background-size: cover;
             background-position: 127vw 80vh;
         }
         @include breakpoint(425px) { 
-            background-size: cover;
             background-position: 117vw 79vh;
+        }
+        @include breakpoint(550px) { 
+            background-position: 100vw 79vh;
         }
         @include breakpoint(medium) {
             background-position: 50%;
@@ -31,6 +34,11 @@ body.home {
             padding: 2.5rem 0;
         }
 
+    }
+    .what-is {
+        @include breakpoint(medium) {
+            white-space: nowrap !important;
+        }
     }
     .input-group-button {
         margin : 0 0 0 10px;
@@ -150,7 +158,7 @@ body.home {
                     @include breakpoint(medium) {
                         background: url("/images/push.gif");
                         background-size: cover;
-                        background-position-y: 6vh;
+                        background-position-y: 7vh;
                     }
                     @include breakpoint(large) {
                         background-position-y: 50px;
