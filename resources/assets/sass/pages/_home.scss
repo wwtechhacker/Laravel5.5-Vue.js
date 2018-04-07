@@ -1,10 +1,29 @@
 body.home {
     .hero-content {
-        @include breakpoint(medium) {
-            background: url("/images/fire-bg.gif");
-            // background-position: 50%;
+        background: url("/images/fire-bg.gif");
+        @include breakpoint(small only) { 
             background-size: cover;
-            box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.7);
+            background-position: 132vw 71vh;
+        }
+        @include breakpoint(375) { 
+            background-size: cover;
+            background-position: 127vw 80vh;
+        }
+        @include breakpoint(425px) { 
+            background-size: cover;
+            background-position: 117vw 79vh;
+        }
+        @include breakpoint(medium) {
+            background-position: 50%;
+            background-position-y: -120px;
+            background-size: contain;
+            // box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.4);
+        }
+        @include breakpoint(xlarge) {
+            background-position: 50%;
+            // background-position-y: -120px;
+            background-size: cover;
+            box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.3);
         }
     }
     .localEvent {
@@ -56,12 +75,6 @@ body.home {
                 object-position : 0 -90px;
             }
         }
-        .card-section {
-
-        }
-        .card-footer {
-
-        }
     }
 
     section.cards:before {
@@ -84,9 +97,22 @@ body.home {
             &:nth-child(1) {
                 .card {
                     background : linear-gradient(get-color(red), darken(get-color(red), 20%));
-                    @include breakpoint(large) {
-                        //background : linear-gradient(get-color(green), get-color(green) 50%, transparent);
+                    @include breakpoint(small) {
+                        background: url("/images/battles-mobile.png");
+                        background-size: cover;
+                        background-position-y: -104px;
+                    }
+                    @include breakpoint(375px) {
+                        background: url("/images/battles-mobile.png");
+                        background-size: cover;
+                        background-position-y: -155px;
+                    }
+                    @include breakpoint(medium) {
                         background: url("/images/battles.gif");
+                        background-size: cover;
+                        background-position-y: 50px;
+                    }
+                    @include breakpoint(large) {
                         background-size: cover;
                         background-position-y: 50px;
                         background-position-x: -150px;
@@ -96,12 +122,25 @@ body.home {
             &:nth-child(2) {
                 .card {
                     background : linear-gradient(get-color(red), darken(get-color(red), 20%));
-                    @include breakpoint(large) {
-                        //background : linear-gradient(get-color(orange), get-color(orange) 50%, transparent);
-                        background: url("/images/logo.gif");
+                    @include breakpoint(small) {
+                        background: url("/images/store-mobile.png");
                         background-size: cover;
-                        background-position-x: -190px;
-                        background-position-y: 77px;
+                        // background-position-y: -145px;
+                    }
+                    @include breakpoint(medium) {
+                        background-size: cover;
+                        background-position-y: 0px;
+                    }
+                    @include breakpoint(large) {
+                        background: url("/images/store-large.png");
+                        background-size: cover;
+                        background-position-x: -45px;
+                        background-position-y: 1px;
+                    }
+                    @include breakpoint(xlarge) {
+                        background-size: cover;
+                        background-position-x: -0px;
+                        background-position-y: 1px;
                     }
                 }
 
@@ -124,6 +163,9 @@ body.home {
             padding : 0 $global-padding;
         }
 
+    }
+    .headline {
+        margin-bottom: 0;
     }
     p {
         margin-bottom: 0rem;

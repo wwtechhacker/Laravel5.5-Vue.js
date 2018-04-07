@@ -4,7 +4,7 @@
             <div class="column small-12 align-self-middle">
                 <div class="card card-outline text-center">
                     <div>
-                        <img data-interchange="[/images/shotsfiredlogo-small.png, small], [/images/shotsfiredlogo-small.png, medium]" alt="">
+                        <img data-interchange="[/images/shotsfiredlogo-small.png, small]" alt="">
                     </div>
                 </div>
                 <div class="card-section text-center">

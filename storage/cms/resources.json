@@ -1,6 +1,7 @@
 {
     "hero" : {
-        "title"   : "Check out and download these Rethink Your Drink Day resources for your future events.",
+        "header": "Battles",
+        "title"   : "Check out the newest battle releases",
         "content" : ""
     },
     "navCards": [

@@ -5,9 +5,9 @@
                 <div class="card card-outline text-center">
                     <div class="row align-center">
                         <div class="column small-12  medium-10 large-7">
-                            <hr>
-                            <h1 class="text-white text-center">Resources</h1>
-                            <hr>
+                            <!-- <hr> -->
+                            <h1 class="text-white text-center">{{$header}}</h1>
+                            <!-- <hr> -->
                         </div>
                     </div>
                     <div class="row align-center">
