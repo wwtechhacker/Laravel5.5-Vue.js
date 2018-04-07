@@ -139,11 +139,20 @@ body.home {
             &:nth-child(3) {
                 .card {
                     background : linear-gradient(get-color(red), darken(get-color(red), 20%));
-
-                    @include breakpoint(large) {
-                        //background : linear-gradient(get-color(purple), get-color(purple) 50%, transparent);
+                    @include breakpoint(small) {
+                        background: url("/images/contact-mobile.png");
+                        background-size: cover;
+                        background-position-y: -175px;
+                    }
+                    @include breakpoint(425px) {
+                        background-position-y: -155px;
+                    }
+                    @include breakpoint(medium) {
                         background: url("/images/push.gif");
                         background-size: cover;
+                        background-position-y: 6vh;
+                    }
+                    @include breakpoint(large) {
                         background-position-y: 50px;
                     }
                 }
