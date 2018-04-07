@@ -101,8 +101,6 @@ body.home {
                         background-position-y: -104px;
                     }
                     @include breakpoint(375px) {
-                        background: url("/images/battles-mobile.png");
-                        background-size: cover;
                         background-position-y: -155px;
                     }
                     @include breakpoint(medium) {
@@ -111,8 +109,6 @@ body.home {
                         background-position-y: 50px;
                     }
                     @include breakpoint(large) {
-                        background-size: cover;
-                        background-position-y: 50px;
                         background-position-x: -150px;
                     }
                 }
@@ -123,10 +119,8 @@ body.home {
                     @include breakpoint(small) {
                         background: url("/images/store-mobile.png");
                         background-size: cover;
-                        // background-position-y: -145px;
                     }
                     @include breakpoint(medium) {
-                        background-size: cover;
                         background-position-y: 0px;
                     }
                     @include breakpoint(large) {
@@ -138,7 +132,6 @@ body.home {
                     @include breakpoint(xlarge) {
                         background-size: cover;
                         background-position-x: -0px;
-                        background-position-y: 1px;
                     }
                 }
 
@@ -146,6 +139,7 @@ body.home {
             &:nth-child(3) {
                 .card {
                     background : linear-gradient(get-color(red), darken(get-color(red), 20%));
+
                     @include breakpoint(large) {
                         //background : linear-gradient(get-color(purple), get-color(purple) 50%, transparent);
                         background: url("/images/push.gif");
