@@ -1,15 +1,31 @@
 
 .footer {
+    background: url("/images/fire-bg.gif");
+    @include breakpoint(small) {
+        background-position-y: 70px;
+        background-position-x: -50px;
+    }
+    @include breakpoint(375px) {
+        background-position-y: 70px;
+        background-position-x: -30px;
+    }
+    @include breakpoint(425px) {
+        background-position-y: 70px;
+        background-position-x: 0px;
+    }
+    @include breakpoint(medium) {
+        padding : 20px 0;
+        background-size: cover;
+    }
+    @include breakpoint(medium) {
+        padding : 20px 0;
+        background-position-y: -10px;
+    }
     border-top: 3px solid get-color(secondary);
     position         : relative;
     background-color : $black;
-    // border-top: 5px $secondary-color;
-    // border-bottom: 5px $tertiary-color;
     width            : 100%;
     padding          : 20px 10px;
-    @include breakpoint(medium) {
-        padding : 20px 0;
-    }
     min-width        : 320px;
     img {
         @include breakpoint(small) {
