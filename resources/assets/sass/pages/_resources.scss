@@ -1,11 +1,17 @@
 
 body.resources {
+    .title-bar {
+        background: url("/images/fire-bg.gif");
+        background-size: cover;
+        background-position-y: 25px;
+    }
     .hero-bg {
         background-color : get-color(purple);
     }
     .hero-content {
+        background: url("/images/localEvent.gif");
         @include breakpoint(medium) {
-            background: url("/images/Resources-BG.png");
+            padding: 12rem 0;
             background-position: 50%;
             background-size: cover;
             box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.4);
