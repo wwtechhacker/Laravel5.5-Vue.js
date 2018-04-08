@@ -8,11 +8,9 @@
         <div class="row">
             <div class="boxEvent column text-center small-12 medium-6 medium-push-6 align-self-middle">
                 <h4 class="text-black">
-                    Register for Rethink Your Drink Day by April 22nd
-                    to receive an Event-In-A-Box with everything you
-                    need to host your local event.*
+                    Battle, sponsor, or become a vendor for our upcoming events by completing the form below.
                 </h4>
-                <p class="registerText disclaimer">*while supplies last.</p>
+                <p class="registerText disclaimer">*Availability may change</p>
             </div>
             <div class="column small-12 medium-6 medium-pull-6">
                 <img src="/images/hero-registration-box.png" alt="Event In A Box">

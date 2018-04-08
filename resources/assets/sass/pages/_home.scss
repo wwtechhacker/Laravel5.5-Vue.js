@@ -2,7 +2,6 @@ body.home {
     .title-bar {
         background: url("/images/fire-bg.gif");
         background-size: cover;
-        // background-position-y: 25px;
         @include breakpoint(small) {
             background-position-y: 40px;
         }
