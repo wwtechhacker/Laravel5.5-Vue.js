@@ -25,33 +25,33 @@
                 <div class="row align-center">
                     <div class="small-12 medium-8 columns">
                         <fieldset>
-                            <legend>Do you want to battle, be a vendor, or sponor the next event? *</legend>
+                            <legend class="text-white">Do you want to battle, be a vendor, or sponor the next event? *</legend>
                             <label>
                                 <select name="kit_select" id="kit_select" v-model="kitSelect" required>
                                     <option value=""></option>
                                     <option value="Battle">Battle</option>
-                                    <option value="Sell">Sell</option>
+                                    <option value="Vendor">Vendor</option>
                                     <option value="Sponsor">Sponsor</option>
                                 </select>
                             </label>
                             <div v-show="enableKit('battle')">
-                                <label v-for="type in battleTypes">
+                                <label class="text-white" v-for = "type in battleTypes">
                                     <input type="radio" name="kit_type" v-model="data.kit_type" :value="type" required><span>{{type}}</span>
                                 </label>
                             </div>
-                            <div v-show="enableKit('sell')">
-                                <label v-for="type in sellTypes">
+                            <div v-show="enableKit('vendor')">
+                                <label v-for = "type in vendorTypes">
                                     <input type="radio" name="kit_type" v-model="data.kit_type" :value="type" required><span>{{type}}</span>
                                 </label>
                             </div>
                             <div v-show="enableKit('sponsor')">
-                                <label v-for="type in sponsorTypes">
+                                <label v-for = "type in sponsorTypes">
                                     <input type="radio" name="kit_type" v-model="data.kit_type" :value="type" required><span>{{type}}</span>
                                 </label>
                             </div>
                         </fieldset>
 
-                        <label class="font-bold">
+                        <label class="font-bold text-white">
                             Where did you hear about this event opportunity?
                             <input type="text" v-model="data.how_heard_about" required/>
                         </label>
@@ -379,7 +379,7 @@
                     'Intermediate',
                     'Pro',
                 ],
-                sellTypes      : [
+                vendorTypes      : [
                     'Food',
                     'Merchandise',
                     'Other'
