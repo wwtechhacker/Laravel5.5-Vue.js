@@ -1,5 +1,5 @@
 <div class="hero-bg">
-    <div class="hero-content bg-tertiary hero-overlay">
+    <div class="hero-content bg-tertiary">
         <div class="row">
             <div class="column small-12 align-self-middle">
                 <div class="card card-outline text-center">
