@@ -1,12 +1,13 @@
 {
     "hero" : {
-        "title"   : "Hosting a Statewide Day of Action is an easy, interactive way for local community-based organizations (dentist offices, schools, churches, etc) to educate their communities on how to live a healthy lifestyle.",
+        "page": "Shoot Us A Message",
+        "title"   : "Battle, sell, or sponsor the next event",
         "content" : ""
     },
     "form" : {
         "sections" : [
             {
-                "header"     : "Register Your Event",
+                "header"     : "Register Here",
                 "paragraphs" : [
                     "We will notify you once your application is accepted."
                 ]

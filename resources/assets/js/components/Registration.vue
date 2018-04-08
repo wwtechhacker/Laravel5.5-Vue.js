@@ -25,21 +25,27 @@
                 <div class="row align-center">
                     <div class="small-12 medium-8 columns">
                         <fieldset>
-                            <legend>Which best describes your organization? *</legend>
+                            <legend>Do you want to battle, be a vendor, or sponor the next event? *</legend>
                             <label>
                                 <select name="kit_select" id="kit_select" v-model="kitSelect" required>
                                     <option value=""></option>
-                                    <option value="SIA">State Implementing Agency (SIA) or subcontractor of one</option>
-                                    <option value="LIA">Local Implementing Agency (LIA) or subcontractor of one</option>
+                                    <option value="Battle">Battle</option>
+                                    <option value="Sell">Sell</option>
+                                    <option value="Sponsor">Sponsor</option>
                                 </select>
                             </label>
-                            <div v-show="enableKit('sia')">
-                                <label v-for="type in siaTypes">
+                            <div v-show="enableKit('battle')">
+                                <label v-for="type in battleTypes">
                                     <input type="radio" name="kit_type" v-model="data.kit_type" :value="type" required><span>{{type}}</span>
                                 </label>
                             </div>
-                            <div v-show="enableKit('lia')">
-                                <label v-for="type in liaTypes">
+                            <div v-show="enableKit('sell')">
+                                <label v-for="type in sellTypes">
+                                    <input type="radio" name="kit_type" v-model="data.kit_type" :value="type" required><span>{{type}}</span>
+                                </label>
+                            </div>
+                            <div v-show="enableKit('sponsor')">
+                                <label v-for="type in sponsorTypes">
                                     <input type="radio" name="kit_type" v-model="data.kit_type" :value="type" required><span>{{type}}</span>
                                 </label>
                             </div>
@@ -368,19 +374,20 @@
             data.open_to_public = data.open_to_public === '' ? 1 : 0;
 
             return {
-                siaTypes      : [
-                    'California Department of Aging',
-                    'California Department of Public Health',
-                    'California Department of Social Services',
-                    'UC CalFresh',
-                    'Subcontractor of state agency above'
+                battleTypes      : [
+                    'Novice',
+                    'Intermediate',
+                    'Pro',
                 ],
-                liaTypes      : [
-                    'Local Health Department (LHD)',
-                    'Catholic Charities of California (CCC)',
-                    'Area Agency on Aging (AAA)',
-                    'UC Cooperative Extension (UCCE)',
-                    'Non-SNAP-Ed Funded Community-Based Organization or Partner',
+                sellTypes      : [
+                    'Food',
+                    'Merchandise',
+                    'Other'
+                ],
+                sponsorTypes      : [
+                    'Bronze',
+                    'Silver',
+                    'Gold',
                     'Other'
                 ],
                 cms           : cms,
