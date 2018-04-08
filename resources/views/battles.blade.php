@@ -1,8 +1,8 @@
-@extends('layouts.site', ['bodyClass' => 'resources'])
+@extends('layouts.site', ['bodyClass' => 'battles'])
 
 @section ('content')
     <header>
-        @include('partials.hero-resources', $hero)
+        @include('partials.hero-battles', $hero)
     </header>
     <section>
     <h2 class="text-center">Coming Soon</h2>

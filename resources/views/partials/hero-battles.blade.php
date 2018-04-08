@@ -1,4 +1,4 @@
-<div class="hero-bg hero-resources">
+<div class="hero-bg hero-battles">
     <div class="hero-content">
         <div class="row">
             <div class="column small-12 align-self-middle">

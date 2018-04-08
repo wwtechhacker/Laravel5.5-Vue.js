@@ -38,7 +38,7 @@ class AppController extends Controller
         $menu = [
             [
                 'name' => 'Battles',
-                'url'  => '/resources',
+                'url'  => '/battles',
             ],
             [
                 'name' => 'Store',
