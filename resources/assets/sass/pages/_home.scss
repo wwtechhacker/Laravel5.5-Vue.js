@@ -14,7 +14,6 @@ body.home {
         @include breakpoint(small) { 
             background-position: 50%;
             background-position-y: -20px;
-            // background-position: 135vw 65vh;
         }
         @include breakpoint(375px) { 
             background-size: cover;
@@ -48,9 +47,6 @@ body.home {
         @include breakpoint(small only) {
             padding: 2.5rem 0;
         }
-    }
-    .eventOverlay {
-
     }
     .what-is {
         @include breakpoint(medium) {

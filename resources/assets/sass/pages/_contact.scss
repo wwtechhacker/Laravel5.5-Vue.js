@@ -13,14 +13,20 @@ body.contact {
         }
     }
     .hero-content {
-        @include breakpoint(large) {
-            background: url("/images/Register-BG.png");
-            background-position: 50%;
+        background: url("/images/contact-hero.png");
+        @include breakpoint(small) {
             background-size: cover;
+            background-position-x: -280px;
+            box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.4);
+        }
+        @include breakpoint(medium) {
+            padding: 8rem 0;
+        }
+        @include breakpoint(large) {
+            background-position: 50%;
         }
     }
     .hero-bg {
-        background-color : #4d8333;
         @include breakpoint(small only) {
             h1 {
                 font-size  : 2rem;
