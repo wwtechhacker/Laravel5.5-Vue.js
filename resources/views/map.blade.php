@@ -1,4 +1,4 @@
-@extends('layouts.site', ['bodyClass' => 'registration'])
+@extends('layouts.site', ['bodyClass' => 'contact'])
 
 @section('content')
 

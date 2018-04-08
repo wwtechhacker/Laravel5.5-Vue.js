@@ -1,0 +1,110 @@
+$hero-view-size-mobile : 60vh;
+$hero-view-size : 75vh;
+
+body.contact {
+    .hero-content {
+        @include breakpoint(large) {
+            background: url("/images/Register-BG.png");
+            background-position: 50%;
+            background-size: cover;
+        }
+    }
+    .hero-bg {
+        background-color : #4d8333;
+        @include breakpoint(small only) {
+            h1 {
+                font-size  : 2rem;
+                margin-top : 1.5rem;
+            }
+            hr {
+                margin : 1rem 0 1.7rem 0;
+            }
+        }
+
+    }
+    .input-group-button {
+        margin : 0 0 0 10px;
+        .button {
+            min-width     : 100px;
+            border-radius : 5px;
+        }
+    }
+    .headline {
+        font-size : 1.4rem;
+        @extend .HelveticaNeueLTStd-75-Bd;
+        @include breakpoint(small only) {
+            font-size : 1.35rem;
+        }
+        @include breakpoint(medium) {
+            line-height : 1.8;
+        }
+
+    }
+    .localEvent {
+        @include breakpoint(medium) {
+            padding : 1rem 0;
+        }
+        @include breakpoint(large) {
+            padding : 0;
+            h4 {
+                line-height : 1.5;
+            }
+            img {
+                max-width      : 105%;
+                margin-top     : -40px;
+                padding-bottom : 40px;
+            }
+        }
+
+    }
+
+    .formBG {
+        background-color : rgba(0, 138, 200, .2);
+        padding-top      : 0rem;
+
+        @include breakpoint(medium) {
+            padding-top : 2rem;
+        }
+    }
+    .generalTitle {
+        text-align  : center;
+        padding-top : 3rem;
+        .lead {
+            @extend .HelveticaNeueLTStd-75-Bd;
+            padding-bottom : 2rem;
+            @include breakpoint(medium) {
+                font-size      : 1.9rem;
+                padding-bottom : 4rem;
+            }
+            color          : $black;
+        }
+    }
+    .formHeader {
+        padding-top : 3rem;
+    }
+    .switch-inactive, .switch-active {
+        color : $black;
+    }
+    .switch-paddle {
+        background : $white;
+    }
+    .switch-paddle::after {
+        background : #b7b7b7;
+    }
+
+    .form-complete {
+        .callout {
+            padding : 3rem 2rem;
+        }
+        h4 {
+            margin-bottom : 2rem;
+            svg {
+                @include breakpoint(small only) {
+                    display:none;
+                }
+            }
+        }
+
+    }
+
+}

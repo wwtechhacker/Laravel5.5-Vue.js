@@ -46,7 +46,7 @@ class AppController extends Controller
             ],
             [
                 'name' => 'Contact',
-                'url'  => '/registration',
+                'url'  => '/contact',
             ]
         ];
 

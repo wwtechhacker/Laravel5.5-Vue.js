@@ -40,7 +40,7 @@
             "class": "ga-nav-contact",
             "buttons": [
                 {
-                    "link": "/registration",
+                    "link": "/contact",
                     "content": "message"
                 }
             ]
