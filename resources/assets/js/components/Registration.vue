@@ -40,12 +40,12 @@
                                 </label>
                             </div>
                             <div v-show="enableKit('vendor')">
-                                <label v-for = "type in vendorTypes">
+                                <label class="text-white" v-for = "type in vendorTypes">
                                     <input type="radio" name="kit_type" v-model="data.kit_type" :value="type" required><span>{{type}}</span>
                                 </label>
                             </div>
                             <div v-show="enableKit('sponsor')">
-                                <label v-for = "type in sponsorTypes">
+                                <label class="text-white" v-for = "type in sponsorTypes">
                                     <input type="radio" name="kit_type" v-model="data.kit_type" :value="type" required><span>{{type}}</span>
                                 </label>
                             </div>
@@ -91,7 +91,7 @@
                         <textarea
                                 placeholder="Please tell us more about your event. For example, is it part of a larger event in your community? Are you partnering with anyone else?"
                                 v-model="data.event_details" rows="5" id="event-details"></textarea>
-                        <label>Event open to the public?</label>
+                        <label class="text-white">Event open to the public?</label>
                         <div class="switch large">
                             <input class="switch-input" id="open_to_public" type="checkbox" v-model="data.open_to_public">
                             <label class="switch-paddle" for="open_to_public">
