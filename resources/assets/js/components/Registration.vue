@@ -299,7 +299,8 @@
     }
 
     function mailchimpRequest(data) {
-        var url = 'https://rescueagency.us9.list-manage.com/subscribe/post-json?u=cf08e6aa3d7ef4ad33c4e0a9d&amp;id=8d90d82829';
+        // Mailchimp Replacement
+        // var url = 'https://rescueagency.us9.list-manage.com/subscribe/post-json?u=cf08e6aa3d7ef4ad33c4e0a9d&amp;id=8d90d82829';
 
         $.ajax({
             url     : url,
