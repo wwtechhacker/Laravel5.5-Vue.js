@@ -28,5 +28,8 @@
     "vue": "^2.5.16",
     "vue-carousel": "^0.6.11",
     "vuejs-datepicker": "^0.9.9"
+  },
+  "dependencies": {
+    "ssri": "^6.0.0"
   }
 }
