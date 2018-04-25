@@ -1,0 +1,27 @@
+{
+    "hero" : {
+        "header": "Battles",
+        "title"   : "Check out the newest battle releases",
+        "content" : ""
+    },
+    "navCards": [
+        {
+            "title"     : "",
+            "imageSrc"  : "",
+            "imageAlt"  : "",
+            "content"   : " "
+        },
+        {
+            "title"      : "",
+            "imageSrc"   : "",
+            "imageAlt"   : "",
+            "content"    : " "
+        },
+        {
+            "title"      : "",
+            "imageSrc"   : "",
+            "imageAlt"   : "",
+            "content"    : " "
+        }
+    ]
+}
