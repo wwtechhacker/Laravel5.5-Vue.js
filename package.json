@@ -13,20 +13,23 @@
     "axios": "^0.17",
     "babel-loader": "^7.1.4",
     "bootstrap-sass": "^3.3.7",
-    "browser-sync": "^2.19.0",
+    "browser-sync": "^2.23.7",
     "browser-sync-webpack-plugin": "^1.2.0",
     "cross-env": "^5.1.4",
     "foundation-sites": "^6.4.4-rc1",
     "jquery": "^3.2",
     "laravel-mix": "^1.0",
-    "lodash": "^4.17.4",
-    "moment": "^2.22.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.1",
     "motion-ui": "^1.2.3",
     "svg.js": "^2.6.4",
     "timepicker": "^1.11.12",
     "url-search-params": "^0.10.0",
     "vue": "^2.5.16",
-    "vue-carousel": "^0.6.11",
+    "vue-carousel": "^0.6.15",
     "vuejs-datepicker": "^0.9.9"
+  },
+  "dependencies": {
+    "vue-template-compiler": "^2.5.16"
   }
 }
