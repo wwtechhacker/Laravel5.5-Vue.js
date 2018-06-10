@@ -1,7 +1,12 @@
 {
-    "/js/app.js": "/js/app.js?id=aef8ada66f9aba6a3623",
-    "/css/app.css": "/css/app.css?id=60ce5c3be472970c14f8",
-    "/beverage-breakdown/css/app.css": "/beverage-breakdown/css/app.css?id=5c79bcc20dfdff2d6dfe",
-    "/js/vendor.js": "/js/vendor.js?id=a70cf86e026456ba5ff1",
-    "/js/manifest.js": "/js/manifest.js?id=48fd312d54a664ab4c8d"
+    "/js/app.js": "/js/app.js?id=4ddb9fea1d60a1cef303",
+    "/css/app.css": "/css/app.css?id=9866a7ddf7c3501030f3",
+    "/beverage-breakdown/css/app.css": "/beverage-breakdown/css/app.css?id=f7b1215081f49467aec4",
+    "/js/app.js.map": "/js/app.js.map?id=a38f63373f75795124f7",
+    "/css/app.css.map": "/css/app.css.map?id=5fdaa0f7c288ac116445",
+    "/beverage-breakdown/css/app.css.map": "/beverage-breakdown/css/app.css.map?id=d4b2ae9d12eb3bd713f0",
+    "/js/vendor.js": "/js/vendor.js?id=6218db7ec1dcf67726d6",
+    "/js/vendor.js.map": "/js/vendor.js.map?id=4d111ef4e2edbae06ee2",
+    "/js/manifest.js": "/js/manifest.js?id=83df0cfbb0da99f3d8a1",
+    "/js/manifest.js.map": "/js/manifest.js.map?id=e7714e128b1c5453c36b"
 }
