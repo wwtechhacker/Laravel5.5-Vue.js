@@ -28,25 +28,34 @@
                 lng: -117.039478
             },
             mapTypeControl: false,
-            // cluster    : true,
-            // get        : false,
-            // infoWindow : false,
-            // post       : false,
-            // randomize  : false,
             scrollwheel: false,
-            zoom       : 19
+            zoom       : 10
         },
         locations  = [
-            {title: 'Conspiracy Theory @ MIF Studios', lat: 32.768380, lng: -117.039478}
+            {
+                title: 'Conspiracy Theory @ MIF Studios',
+                address: '7323 El Cajon Blvd Unit D',
+                info:  'La Mesa, CA 91942',
+                date: 'Saturday, June 23, 2018 @ 6:00PM',
+                lat: 32.768380, lng: -117.039478
+             }
         ];
 
 
     function bindInfoWindow(marker, location) {
-        var content = '<div class="poi-info-window" style="color: black"><div class="title full-width">' + location.title + '</div><div class="address">San Diego, CA</div></div>';
+        var $address    = $('<div>', {class: 'address'}).html('Event Address: '  + location.address ),
+           $date        = $('<div>', {class: 'date'}).html('Event Time: ' + location.date),
+           $info        = $('<p>', {class: 'details'}).html(location.info || ''),
+           $title       = $('<div>', {class: 'title'}).html(location.title),
+           $wrap        = $('<div>', {class: 'info-window'}),
+           $a           = $('<a>', {href: 'https://www.google.com/maps/dir//Studio+M.I.F,+7323+El+Cajon+Blvd+Unit+D,+La+Mesa,+CA+91942', target: '_blank'}),
+           $titleLink   = $a.append($title),
+           $addressLink = $a.append($address).append($info),
+           $infoWindow = $wrap.append($titleLink).append($addressLink).append($date);
 
         marker.addListener('click', function () {
             var infoWindow = new cache.maps.InfoWindow({
-                content: content
+                content: $infoWindow[0]
             });
             if (cache.infoWindow) {
                 cache.infoWindow.close();
