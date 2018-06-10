@@ -1,17 +1,17 @@
 <template>
     <div id="location-finder">
         <div class="row align-middle small-collapse large-uncollapse">
-            <div class="column small-12 medium-6">
-                <div class="map-container">
-                    <div id="map"></div>
-                </div>
-            </div>
             <div class="column text-center small-12 medium-6">
                 <h3>Attend Next<br>Local Event</h3>
                 <p class="lead">
                     Purchase tickets to <br>attend the next event near you.
                 </p>
                 <a href="https://cash.me/$ShotsFiredRap" class="button buyTickets" target="_blank">Buy Tickets</a>
+            </div>
+            <div class="column small-12 medium-6">
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
 
 
     function bindInfoWindow(marker, location) {
-        var $address    = $('<div>', {class: 'address'}).html('Event Address: '  + location.address ),
+        var $address    = $('<div>', {class: 'address'}).html(location.address ),
            $date        = $('<div>', {class: 'date'}).html('Event Time: ' + location.date),
            $info        = $('<p>', {class: 'details'}).html(location.info || ''),
            $title       = $('<div>', {class: 'title'}).html(location.title),
