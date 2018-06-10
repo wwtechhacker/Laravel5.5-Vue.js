@@ -35,210 +35,14 @@
         gtmEvents  = require('../gtm-events'),
         icon       = false,
         mapDefault = {
-            // virginia
-            center        : {
-                lat: 36.7783,
-                lng: -119.4179
+            // San Diego County
+            center: { 
+                lat: 32.711427, 
+                lng: -117.159930 
             },
             mapTypeControl: false,
             scrollwheel   : false,
-            zoom          : 6,
-            // styles        : [
-            //     {
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#f5f5f5"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "elementType": "labels.icon",
-            //         "stylers"    : [
-            //             {
-            //                 "visibility": "off"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#616161"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "elementType": "labels.text.stroke",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#f5f5f5"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "administrative.land_parcel",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#bdbdbd"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "administrative.province",
-            //         "elementType": "geometry.stroke",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#545454"
-            //             },
-            //             {
-            //                 "visibility": "on"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "administrative.province",
-            //         "elementType": "labels.text",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#a3a3a3"
-            //             },
-            //             {
-            //                 "visibility": "on"
-            //             },
-            //             {
-            //                 "weight": 1
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "administrative.province",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "visibility": "off"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "poi",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#eeeeee"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "poi",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#757575"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "poi.park",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#e5e5e5"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "poi.park",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#9e9e9e"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#ffffff"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road.arterial",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#757575"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road.highway",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#dadada"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road.highway",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#616161"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road.local",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#9e9e9e"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "transit.line",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#e5e5e5"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "transit.station",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#eeeeee"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "water",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#c9c9c9"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "water",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#9e9e9e"
-            //             }
-            //         ]
-            //     }
-            // ]
+            zoom          : 11,
         },
         locations  = [
             {title: 'sample 1', lat: 37.7877522, lng: -122.43823070000002},
@@ -321,7 +125,7 @@
     }
 
     function changeLocation(center) {
-        gtmEvents.log('home', 'click', 'rydd-link-searchevent');
+        gtmEvents.log('home', 'click', 'next-event');
         resetMap();
         // addMarker(center);
         setTimeout(function () {
@@ -360,13 +164,19 @@
     function initMap(selector) {
         var $el = $(selector);
 
-        $.when(fetchMarkers('/api/markers'), mapApi('AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0')).done(function (markers, maps) {
+        $.when(mapApi('AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0')).done(function (maps) {
             cache.maps = maps;
             cache.map  = new maps.Map($el[0], $.extend({}, mapDefault, {
-                // option overrides
             }));
-            setMarkers(markers);
         });
+
+        // $.when(fetchMarkers('/api/markers'), mapApi('AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0')).done(function (markers, maps) {
+        //     cache.maps = maps;
+        //     cache.map  = new maps.Map($el[0], $.extend({}, mapDefault, {
+        //         // option overrides
+        //     }));
+        //     setMarkers(markers);
+        // });
     }
 
     export default {
@@ -380,7 +190,7 @@
                     title  : '',
                     address: '',
                     info   : ''
-                }
+                },
             };
         },
         mounted() {
