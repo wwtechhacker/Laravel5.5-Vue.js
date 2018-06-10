@@ -2,21 +2,11 @@
     <div id="location-finder">
         <div class="row align-middle small-collapse large-uncollapse">
             <div class="column text-center small-12 medium-6">
-                <h3>Find A<br>Local Event</h3>
+                <h3>Attend Next<br>Local Event</h3>
                 <p class="lead">
-                    Enter your zip code to <br>find participating events near you.
-                        </p>
-                <div class="row align-center">
-                    <div class="column small-10 medium-12 large-8 xlarge-8">
-                        <div class="input-group">
-                            <input v-model="zip" id="zip" v-bind:class="{error: zipError}" class="input-group-field zip-field text-center" type="text" pattern="[0-9]{5}"
-                                   placeholder="Zip" v-on:keyup.enter="searchZip">
-                            <div class="input-group-button">
-                                <input v-on:click.prevent="searchZip" type="submit" class="button" value="Search">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    Purchase tickets to <br>attend the next event near you.
+                </p>
+                <a href="https://cash.me/$ShotsFiredRap" class="button buyTickets" target="_blank">Buy Tickets</a>
             </div>
             <div class="column small-12 medium-6">
                 <div class="map-container">
@@ -211,5 +201,7 @@
 
 
 <style scoped>
-
+    .buyTickets {
+        margin-top: 1em;
+    }
 </style>
