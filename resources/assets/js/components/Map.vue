@@ -17,43 +17,36 @@
     </div>
 </template>
 
-<script>
 
+<script>
     var mapApi     = require('../google-maps'),
         vue,
         cache      = {},
-        gtmEvents  = require('../gtm-events'),
-        icon       = false,
         mapDefault = {
-            // San Diego County
-            center: { 
-                lat: 32.711427, 
-                lng: -117.159930 
+            center     : {
+                lat: 32.768380,
+                lng: -117.039478
             },
             mapTypeControl: false,
-            scrollwheel   : false,
-            zoom          : 11,
+            // cluster    : true,
+            // get        : false,
+            // infoWindow : false,
+            // post       : false,
+            // randomize  : false,
+            scrollwheel: false,
+            zoom       : 19
         },
         locations  = [
-            {title: 'sample 1', lat: 37.7877522, lng: -122.43823070000002},
-            {title: 'sample 2', lat: 33.9511133, lng: -118.2497386},
-            {title: 'sample 3', lat: 34.1456654, lng: -118.1268976},
-            {title: 'sample 4', lat: 13.2066666, lng: -171.02208329999996},
-            {title: 'sample 5', lat: 33.9546403, lng: -117.39362819999997}
+            {title: 'Conspiracy Theory @ MIF Studios', lat: 32.768380, lng: -117.039478}
         ];
 
 
     function bindInfoWindow(marker, location) {
-        var $address    = $('<div>', {class: 'address'}).html('Event Address: ' + location.formattedAddress),
-            $date       = $('<div>', {class: 'date'}).html('Event Time: ' + [location.json.start, '-', location.json.end, ' ', location.json.day].join(' ')),
-            $info       = $('<p>', {class: 'details'}).html(location.json.info || ''),
-            $title      = $('<div>', {class: 'title'}).html(location.json.title),
-            $wrap       = $('<div>', {class: 'info-window'}),
-            $infoWindow = $wrap.append($title).append($info).append($address).append($date);
+        var content = '<div class="poi-info-window" style="color: black"><div class="title full-width">' + location.title + '</div><div class="address">San Diego, CA</div></div>';
 
         marker.addListener('click', function () {
             var infoWindow = new cache.maps.InfoWindow({
-                content: $infoWindow[0]
+                content: content
             });
             if (cache.infoWindow) {
                 cache.infoWindow.close();
@@ -63,59 +56,28 @@
         });
     }
 
-    function fetchMarkersStub() {
-        return locations;
-    }
-
-    function fetchMarkers(url) {
-        var deferred = $.Deferred(),
-            data     = {
-                published: 1
-            };
-        $.ajax(url, {data: data, dataType: 'json'}).then(function (response) {
-            var processedData = _.map(response.data || {}, function (n) {
-                if (n.data) {
-                    n.json             = JSON.parse(n.data);
-                    n.formattedAddress = _.filter([n.json.address || '', n.json.city || '', n.json.zip || '']).join(', ');
-                    n.location         = {
-                        lat: parseFloat(n.json.lat),
-                        lng: parseFloat(n.json.lng)
-                    };
-                }
-                return n;
-            });
-            deferred.resolve(processedData);
-        });
-
-        return deferred.promise();
-    }
-
     function resetMap() {
         cache.map.setCenter(mapDefault.center);
         cache.map.setZoom(mapDefault.zoom);
     }
 
     function addMarker(location) {
-        var markerSettings = {
-            position: location.location,
-            map     : cache.map,
-        };
 
-        if (icon) {
-            markerSettings.icon = icon;
-        }
+        var marker = new cache.maps.Marker({
+            position: location,
+            map     : cache.map
+        });
 
-        bindInfoWindow(new cache.maps.Marker(markerSettings), location);
+        bindInfoWindow(marker, location);
     }
 
-    function setMarkers(locations) {
+    function loadMarkers(locations) {
         locations.forEach(function (location) {
             addMarker(location);
         });
     }
 
     function changeLocation(center) {
-        gtmEvents.log('home', 'click', 'next-event');
         resetMap();
         // addMarker(center);
         setTimeout(function () {
@@ -128,7 +90,7 @@
 
     function handleZip(zip) {
         var geocoder;
-        if (zip.length < 5) {
+        if (zip.length !== 5) {
             vue.zipError = true;
             return false;
         }
@@ -152,21 +114,15 @@
     }
 
     function initMap(selector) {
-        var $el = $(selector);
+        var $el = $(selector),
+            res = mapApi('AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0').then(function (maps) {
+                cache.maps = maps;
+                cache.map  = new maps.Map($el[0], $.extend({}, mapDefault, {
+                    // option overrides
+                }));
 
-        $.when(mapApi('AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0')).done(function (maps) {
-            cache.maps = maps;
-            cache.map  = new maps.Map($el[0], $.extend({}, mapDefault, {
-            }));
-        });
-
-        // $.when(fetchMarkers('/api/markers'), mapApi('AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0')).done(function (markers, maps) {
-        //     cache.maps = maps;
-        //     cache.map  = new maps.Map($el[0], $.extend({}, mapDefault, {
-        //         // option overrides
-        //     }));
-        //     setMarkers(markers);
-        // });
+                loadMarkers(locations);
+            });
     }
 
     export default {
@@ -180,7 +136,7 @@
                     title  : '',
                     address: '',
                     info   : ''
-                },
+                }
             };
         },
         mounted() {
