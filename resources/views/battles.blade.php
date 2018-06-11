@@ -4,14 +4,22 @@
     <header>
         @include('partials.hero-battles', $hero)
     </header>
-    <section>
-    <h2 class="text-center">Coming Soon</h2>
-        <div class="row small-up-1 medium-up-3">
-            @foreach($navCards as $cards)
+    <section class="videos">
+    <h2 class="text-center">Belly of the Beast IV</h2>
+        <div class="row">
+            <div class="column small-12 medium-12">
+            <!-- @foreach($navCards as $cards)
                 <div class="column">
                     @include('partials.nav-card', $cards)
                 </div>
-            @endforeach
+            @endforeach -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RVCFDpQagU0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/I4ysphwrigw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/j979oIx8v54" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PhODNdvxL4g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hRoCHKOZOQE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2tOu2m_Iqgo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZmMq49irBwY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </section>
 @stop
