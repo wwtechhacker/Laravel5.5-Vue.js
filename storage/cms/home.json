@@ -14,7 +14,7 @@
             "class" : "ga-nav-battles",
             "buttons" : [
                 {
-                    "link" : "/resources",
+                    "link" : "/battles",
                     "content" : "watch"
                 }
             ]
