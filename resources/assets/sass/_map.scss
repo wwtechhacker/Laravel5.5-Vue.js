@@ -3,6 +3,7 @@
     max-width: 300px;
     padding-top: $global-padding;
     padding-bottom: $global-padding;
+    color: black;
     @include breakpoint(medium) {
         max-width: 400px;
     }

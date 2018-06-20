@@ -2,21 +2,11 @@
     <div id="location-finder">
         <div class="row align-middle small-collapse large-uncollapse">
             <div class="column text-center small-12 medium-6">
-                <h3>Find A<br>Local Event</h3>
+                <h3>Attend Next<br>Local Event</h3>
                 <p class="lead">
-                    Enter your zip code to <br>find participating events near you.
-                        </p>
-                <div class="row align-center">
-                    <div class="column small-10 medium-12 large-8 xlarge-8">
-                        <div class="input-group">
-                            <input v-model="zip" id="zip" v-bind:class="{error: zipError}" class="input-group-field zip-field text-center" type="text" pattern="[0-9]{5}"
-                                   placeholder="Zip" v-on:keyup.enter="searchZip">
-                            <div class="input-group-button">
-                                <input v-on:click.prevent="searchZip" type="submit" class="button" value="Search">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    Purchase tickets to <br>attend the next event near you.
+                </p>
+                <a href="https://cash.me/$ShotsFiredRap" class="button buyTickets" target="_blank">Buy Tickets $15 Each</a>
             </div>
             <div class="column small-12 medium-6">
                 <div class="map-container">
@@ -27,235 +17,41 @@
     </div>
 </template>
 
-<script>
 
+<script>
     var mapApi     = require('../google-maps'),
         vue,
         cache      = {},
-        gtmEvents  = require('../gtm-events'),
-        icon       = false,
         mapDefault = {
-            // virginia
-            center        : {
-                lat: 36.7783,
-                lng: -119.4179
+            center     : {
+                lat: 32.768380,
+                lng: -117.039478
             },
             mapTypeControl: false,
-            scrollwheel   : false,
-            zoom          : 6,
-            // styles        : [
-            //     {
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#f5f5f5"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "elementType": "labels.icon",
-            //         "stylers"    : [
-            //             {
-            //                 "visibility": "off"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#616161"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "elementType": "labels.text.stroke",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#f5f5f5"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "administrative.land_parcel",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#bdbdbd"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "administrative.province",
-            //         "elementType": "geometry.stroke",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#545454"
-            //             },
-            //             {
-            //                 "visibility": "on"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "administrative.province",
-            //         "elementType": "labels.text",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#a3a3a3"
-            //             },
-            //             {
-            //                 "visibility": "on"
-            //             },
-            //             {
-            //                 "weight": 1
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "administrative.province",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "visibility": "off"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "poi",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#eeeeee"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "poi",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#757575"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "poi.park",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#e5e5e5"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "poi.park",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#9e9e9e"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#ffffff"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road.arterial",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#757575"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road.highway",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#dadada"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road.highway",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#616161"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "road.local",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#9e9e9e"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "transit.line",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#e5e5e5"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "transit.station",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#eeeeee"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "water",
-            //         "elementType": "geometry",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#c9c9c9"
-            //             }
-            //         ]
-            //     },
-            //     {
-            //         "featureType": "water",
-            //         "elementType": "labels.text.fill",
-            //         "stylers"    : [
-            //             {
-            //                 "color": "#9e9e9e"
-            //             }
-            //         ]
-            //     }
-            // ]
+            scrollwheel: false,
+            zoom       : 10
         },
         locations  = [
-            {title: 'sample 1', lat: 37.7877522, lng: -122.43823070000002},
-            {title: 'sample 2', lat: 33.9511133, lng: -118.2497386},
-            {title: 'sample 3', lat: 34.1456654, lng: -118.1268976},
-            {title: 'sample 4', lat: 13.2066666, lng: -171.02208329999996},
-            {title: 'sample 5', lat: 33.9546403, lng: -117.39362819999997}
+            {
+                title: 'Conspiracy Theory @ MIF Studios',
+                address: '7323 El Cajon Blvd Unit D',
+                info:  'La Mesa, CA 91942',
+                date: 'Saturday, June 23, 2018 @ 6:00PM',
+                lat: 32.768380, lng: -117.039478
+             }
         ];
 
 
     function bindInfoWindow(marker, location) {
-        var $address    = $('<div>', {class: 'address'}).html('Event Address: ' + location.formattedAddress),
-            $date       = $('<div>', {class: 'date'}).html('Event Time: ' + [location.json.start, '-', location.json.end, ' ', location.json.day].join(' ')),
-            $info       = $('<p>', {class: 'details'}).html(location.json.info || ''),
-            $title      = $('<div>', {class: 'title'}).html(location.json.title),
-            $wrap       = $('<div>', {class: 'info-window'}),
-            $infoWindow = $wrap.append($title).append($info).append($address).append($date);
+        var $address    = $('<div>', {class: 'address'}).html(location.address ),
+           $date        = $('<div>', {class: 'date'}).html('Event Time: ' + location.date),
+           $info        = $('<p>', {class: 'details'}).html(location.info || ''),
+           $title       = $('<div>', {class: 'title'}).html(location.title),
+           $wrap        = $('<div>', {class: 'info-window'}),
+           $a           = $('<a>', {href: 'https://www.google.com/maps/dir//Studio+M.I.F,+7323+El+Cajon+Blvd+Unit+D,+La+Mesa,+CA+91942', target: '_blank'}),
+           $titleLink   = $a.append($title),
+           $addressLink = $a.append($address).append($info),
+           $infoWindow = $wrap.append($titleLink).append($addressLink).append($date);
 
         marker.addListener('click', function () {
             var infoWindow = new cache.maps.InfoWindow({
@@ -269,59 +65,28 @@
         });
     }
 
-    function fetchMarkersStub() {
-        return locations;
-    }
-
-    function fetchMarkers(url) {
-        var deferred = $.Deferred(),
-            data     = {
-                published: 1
-            };
-        $.ajax(url, {data: data, dataType: 'json'}).then(function (response) {
-            var processedData = _.map(response.data || {}, function (n) {
-                if (n.data) {
-                    n.json             = JSON.parse(n.data);
-                    n.formattedAddress = _.filter([n.json.address || '', n.json.city || '', n.json.zip || '']).join(', ');
-                    n.location         = {
-                        lat: parseFloat(n.json.lat),
-                        lng: parseFloat(n.json.lng)
-                    };
-                }
-                return n;
-            });
-            deferred.resolve(processedData);
-        });
-
-        return deferred.promise();
-    }
-
     function resetMap() {
         cache.map.setCenter(mapDefault.center);
         cache.map.setZoom(mapDefault.zoom);
     }
 
     function addMarker(location) {
-        var markerSettings = {
-            position: location.location,
-            map     : cache.map,
-        };
 
-        if (icon) {
-            markerSettings.icon = icon;
-        }
+        var marker = new cache.maps.Marker({
+            position: location,
+            map     : cache.map
+        });
 
-        bindInfoWindow(new cache.maps.Marker(markerSettings), location);
+        bindInfoWindow(marker, location);
     }
 
-    function setMarkers(locations) {
+    function loadMarkers(locations) {
         locations.forEach(function (location) {
             addMarker(location);
         });
     }
 
     function changeLocation(center) {
-        gtmEvents.log('home', 'click', 'rydd-link-searchevent');
         resetMap();
         // addMarker(center);
         setTimeout(function () {
@@ -334,7 +99,7 @@
 
     function handleZip(zip) {
         var geocoder;
-        if (zip.length < 5) {
+        if (zip.length !== 5) {
             vue.zipError = true;
             return false;
         }
@@ -358,15 +123,15 @@
     }
 
     function initMap(selector) {
-        var $el = $(selector);
+        var $el = $(selector),
+            res = mapApi('AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0').then(function (maps) {
+                cache.maps = maps;
+                cache.map  = new maps.Map($el[0], $.extend({}, mapDefault, {
+                    // option overrides
+                }));
 
-        $.when(fetchMarkers('/api/markers'), mapApi('AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0')).done(function (markers, maps) {
-            cache.maps = maps;
-            cache.map  = new maps.Map($el[0], $.extend({}, mapDefault, {
-                // option overrides
-            }));
-            setMarkers(markers);
-        });
+                loadMarkers(locations);
+            });
     }
 
     export default {
@@ -401,5 +166,7 @@
 
 
 <style scoped>
-
+    .buyTickets {
+        margin-top: 1em;
+    }
 </style>

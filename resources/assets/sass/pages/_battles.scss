@@ -43,4 +43,9 @@ body.battles {
             }
         }
     }
+
+    .videos {
+        background : linear-gradient(get-color(red), lighten(get-color(red), 90%));
+        box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.7);
+    }
 }

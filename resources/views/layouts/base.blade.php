@@ -14,10 +14,10 @@
 </head>
 <body class="{{$page['slug'] or 'generic'}} {{$bodyClass or ''}} brand-bg">
 <!-- Google Tag Manager (noscript) -->
-<noscript>
+<!-- <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3V8636"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+</noscript> -->
 <!-- End Google Tag Manager (noscript) -->
 
 @include('partials.facebook', ['facebookId' => env('FACEBOOK_APP_ID')])

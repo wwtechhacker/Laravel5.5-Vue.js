@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <carousel v-bind="carousel" ref="carouselRef">
         <slide v-bind:class="{'selected': activeSlide === 1}">
             <div><img src="http://via.placeholder.com/618x390" alt=""></div>
@@ -23,18 +24,35 @@
 
 <script>
     import {Carousel, Slide} from 'vue-carousel';
+=======
+    <div class="character-box"
+         :class="[{ 'active': character.active }]" @click="setActive(character.id)">
+      <img class="character-img" :src="character.smallImg" />
+      <p class="character-name">{{character.name}}</p>
+    </div>
+</template>
+
+<script>
+>>>>>>> develop
 
     var vue;
 
     export default {
+<<<<<<< HEAD
         extends   : Carousel,
         components: {
             Carousel,
             Slide
+=======
+        extends   : ,
+        components: {
+            
+>>>>>>> develop
         },
         data() {
             vue = this;
             return {
+<<<<<<< HEAD
                 carousel   : {
                     perPage            : 1,
                     paginationEnabled  : false,
@@ -55,6 +73,13 @@
                 console.log(vue.activeSlide);
                 vue.activeSlide = page + 1;
             });
+=======
+            
+            };
+        },
+        mounted() {
+            
+>>>>>>> develop
         }
     };
 </script>
