@@ -6,7 +6,7 @@
                 <p class="lead">
                     Purchase tickets to <br>attend the next event near you.
                 </p>
-                <a href="https://cash.me/$ShotsFiredRap" class="button buyTickets" target="_blank">Buy Tickets</a>
+                <a href="https://cash.me/$ShotsFiredRap" class="button buyTickets" target="_blank">Buy Tickets $15 Each</a>
             </div>
             <div class="column small-12 medium-6">
                 <div class="map-container">
