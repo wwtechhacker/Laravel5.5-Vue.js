@@ -47,5 +47,23 @@ body.battles {
     .videos {
         background : linear-gradient(get-color(red), lighten(get-color(red), 90%));
         box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.7);
+
+        .row {
+            .videoWrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 25px;
+                height: 0;
+             
+                iframe {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                }
+            }
+
+        }
     }
 }
