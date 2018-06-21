@@ -11,7 +11,7 @@ body.battles {
     .hero-content {
         background: url("/images/localEvent.gif");
         @include breakpoint(medium) {
-            padding: 12rem 0;
+            padding: 3rem 0;
             background-position: 50%;
             background-size: cover;
             box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.4);
@@ -37,7 +37,7 @@ body.battles {
     .content {
         min-height : 700px;
         @include breakpoint(medium) {
-            min-height : 1200px;
+            // min-height : 1200px;
             .required-text {
                 margin-top : 600px;
             }

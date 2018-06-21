@@ -62,3 +62,25 @@ section {
         opacity : 1;
     }
 }
+
+.orbit-controls {
+    button {
+        min-width: 25px;
+    }
+    .orbit-previous {
+        left: -50px;
+        @include breakpoint(small only) {
+            left: -40px;
+        }
+    }
+    .orbit-next {
+        left: auto;
+        right: -50px;
+        @include breakpoint(small only) {
+            right: -40px;
+        }
+    }
+}
+.responsive-embed, .flex-video {
+    padding-bottom: 56.5%;
+ }
