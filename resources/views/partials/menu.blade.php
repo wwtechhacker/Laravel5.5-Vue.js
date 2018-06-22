@@ -2,11 +2,7 @@
     <div class="title-bar-left">
         <div class="logo">
             <a class="ga-logo" href="/" data-ga-category="Navigational Clicks" data-ga-action="Click Header" data-ga-label="Logo">
-<<<<<<< HEAD
-                <img src="/images/blank.png" data-interchange="[{{ asset('images/shotsFired_logoText.png') }}, small]"alt="site logo">
-=======
                 <img src="/images/blank.png" data-interchange="[{{ asset('images/shotsFired_logoText.png') }}, small], [{{ asset('images/shotsFired_logoText.png') }}, medium]" alt="site logo">
->>>>>>> develop
             </a>
         </div>
     </div>
