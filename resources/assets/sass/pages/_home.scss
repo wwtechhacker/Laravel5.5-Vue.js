@@ -51,6 +51,11 @@ body.home {
                 margin-bottom: 1.5rem;
             }
         }
+        .heroInfo {
+            @include breakpoint(small only) { 
+                transform: translateY(20px);
+            }
+        }
     }
     .localEvent {
         background-color : rgb(0, 0, 0);

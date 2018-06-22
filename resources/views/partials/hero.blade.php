@@ -7,7 +7,7 @@
                         <img data-interchange="[/images/shotsfiredlogo-small.png, small]" alt="">
                     </div>
                 </div>
-                <div class="card-section text-center">
+                <div class="card-section text-center heroInfo">
                     <div class="row align-center">
                         <div class="small-11 large-8 column">
                             <!-- <hr> -->
