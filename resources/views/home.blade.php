@@ -9,7 +9,7 @@
             <div class="columns text-center large-8 medium-10 small-12 medium-centered">
                 <h3 class="what-is" data-scroll-target="find-a-local-event">Shots Fired <br>Battle Rap League</h3>
                 <p class="lead">
-                Shots Fired has established itself as the leading San Diego rap battle platform, and has even reached out to other communities in Orange County, Inland Empire, Los Angeles, Fresno and San Jose.
+                    Shots Fired is a provider of hip hop and poetry in its rawest form for the up and coming artists in the San Diego area. Since becoming established in 2013, Shots Fired has curated  a network within the battle rap community leading the way to the most respected stages in the culture.
                 </p>
                 <!-- <p class="lead">
                     On the same day, local organizations have the ability to execute this event to
