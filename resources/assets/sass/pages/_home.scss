@@ -9,6 +9,17 @@ body.home {
             background-position-y: -10px;
         }
     }
+        .h3 {
+            // font-family: 'Sedgwick Ave Display';
+            @include breakpoint(medium) {
+                font-family: 'Sedgwick Ave Display';
+            }
+            @include breakpoint(large) {
+                font-size: 6.125rem;
+                transform: translateY(-30px);
+            }
+            
+        }
     .hero-content {
         background: url("/images/fire-bg.gif");
         @include breakpoint(small) { 

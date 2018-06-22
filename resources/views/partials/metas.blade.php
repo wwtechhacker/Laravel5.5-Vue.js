@@ -14,6 +14,8 @@
     })(window, document, 'script', 'dataLayer', '');</script>  Enter Account ID 
 End Google Tag Manager -->
 
+<link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
+
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
 <meta name="csrf-token" content="{{ csrf_token() }}">

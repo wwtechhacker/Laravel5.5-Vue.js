@@ -9,10 +9,10 @@
                 </div>
                 <div class="card-section text-center">
                     <div class="row align-center">
-                        <div class="small-11 large-6 column">
-                            <hr>
+                        <div class="small-11 large-8 column">
+                            <!-- <hr> -->
                             <div class="h3 text-white text-center">{!! $name !!}</div>
-                            <hr>
+                            <!-- <hr> -->
                         </div>
                     </div>
                     <h4 class="headline text-white">{!! $date !!}</h4>

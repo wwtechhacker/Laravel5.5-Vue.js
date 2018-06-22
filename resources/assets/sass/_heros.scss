@@ -15,7 +15,6 @@
     }
 
     .headline {
-        font-size: .9rem;
         @include breakpoint(medium) {
             font-size: 2.7rem;
             margin-bottom: 0;
