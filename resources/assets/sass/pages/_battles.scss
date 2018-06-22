@@ -21,7 +21,13 @@ body.battles {
     .battles, .eventName {
         font-family: 'Sedgwick Ave Display';
     }
+    .eventName{
+        @include breakpoint(small only) {
+            font-size: 3rem;
+        }
+    }
     hr {
+        border-bottom-color: #F58026;
         @include breakpoint(large) {
             max-width: 65%;
         }

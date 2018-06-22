@@ -29,6 +29,7 @@ body.contact {
     .hero-bg {
         h1 {
             font-family: 'Sedgwick Ave Display';
+            color: #E13D41;
         }
         @include breakpoint(small only) {
             h1 {
@@ -36,6 +37,7 @@ body.contact {
                 margin-top : 1.5rem;
             }
             hr {
+                border-bottom-color: #F58026;
                 margin : 1rem 0 1.7rem 0;
             }
         }
