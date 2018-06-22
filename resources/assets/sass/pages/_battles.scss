@@ -6,16 +6,24 @@ body.battles {
         background-position-y: 25px;
     }
     .hero-bg {
-        background-color : get-color(purple);
+        background-color : black;
     }
     .hero-content {
         background: url("/images/localEvent.gif");
         padding: 1rem 0;
+        box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.4);
         @include breakpoint(medium) {
             padding: 3rem 0;
             background-position: 50%;
             background-size: cover;
-            box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.4);
+        }
+    }
+    .battles, .eventName {
+        font-family: 'Sedgwick Ave Display';
+    }
+    hr {
+        @include breakpoint(large) {
+            max-width: 65%;
         }
     }
 
