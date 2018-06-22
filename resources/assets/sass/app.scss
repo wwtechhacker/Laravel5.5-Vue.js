@@ -1,4 +1,4 @@
-// Settings
+ // Settings
 @import "settings";
 @import "variables";
 @import "mixins";
@@ -11,6 +11,9 @@
 @import "foundation-base";
 // Custom building blocks for foundation
 @import "./building-blocks/blocks";
+@import "../../../node_modules/motion-ui/motion-ui";
+@include motion-ui-transitions;
+@include motion-ui-animations;
 
 @import "admin";
 @import "fonts";

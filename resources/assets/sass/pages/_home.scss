@@ -9,6 +9,16 @@ body.home {
             background-position-y: -10px;
         }
     }
+    .h3 {
+        // font-family: 'Sedgwick Ave Display';
+        @include breakpoint(medium) {
+            font-family: 'Sedgwick Ave Display';
+        }
+        @include breakpoint(large) {
+            font-size: 6.125rem;
+            transform: translateY(-30px);
+        }
+    }
     .hero-content {
         background: url("/images/fire-bg.gif");
         @include breakpoint(small) { 
@@ -33,7 +43,18 @@ body.home {
         @include breakpoint(xlarge) {
             background-position: 50%;
             background-size: cover;
-            box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.3);
+            box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.2);
+        }
+
+        .card {
+            img {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .heroInfo {
+            @include breakpoint(small only) { 
+                transform: translateY(20px);
+            }
         }
     }
     .localEvent {
@@ -47,6 +68,13 @@ body.home {
         @include breakpoint(small only) {
             padding: 2.5rem 0;
         }
+    }
+    .social {
+        @include breakpoint(small only) {
+            padding: 0rem 0;
+        }
+        padding: 3rem 0;
+
     }
     .what-is {
         @include breakpoint(medium) {

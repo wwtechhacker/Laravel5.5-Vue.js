@@ -6,21 +6,33 @@ body.battles {
         background-position-y: 25px;
     }
     .hero-bg {
-        background-color : get-color(purple);
+        background-color : black;
     }
     .hero-content {
         background: url("/images/localEvent.gif");
+        padding: 1rem 0;
+        box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.4);
         @include breakpoint(medium) {
-            padding: 12rem 0;
+            padding: 3rem 0;
             background-position: 50%;
             background-size: cover;
-            box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.4);
+        }
+    }
+    .battles, .eventName {
+        font-family: 'Sedgwick Ave Display';
+    }
+    hr {
+        @include breakpoint(large) {
+            max-width: 65%;
         }
     }
 
     .headline {
         line-height : 1.50;
-        font-size   : 2rem;
+        font-size   : .9rem;
+        @include breakpoint(medium) {
+        font-size   : 1.2rem;
+        }
         @extend .HelveticaNeueLTStd-75-Bd;
     }
 
@@ -35,9 +47,9 @@ body.battles {
     }
 
     .content {
-        min-height : 700px;
+        // min-height : 700px;
         @include breakpoint(medium) {
-            min-height : 1200px;
+            // min-height : 1200px;
             .required-text {
                 margin-top : 600px;
             }
@@ -47,5 +59,23 @@ body.battles {
     .videos {
         background : linear-gradient(get-color(red), lighten(get-color(red), 90%));
         box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.7);
+
+        .row {
+            .videoWrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 25px;
+                height: 0;
+             
+                iframe {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                }
+            }
+
+        }
     }
 }

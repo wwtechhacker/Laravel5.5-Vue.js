@@ -27,9 +27,12 @@ body.contact {
         }
     }
     .hero-bg {
+        h1 {
+            font-family: 'Sedgwick Ave Display';
+        }
         @include breakpoint(small only) {
             h1 {
-                font-size  : 2rem;
+                font-size  : 3rem;
                 margin-top : 1.5rem;
             }
             hr {
