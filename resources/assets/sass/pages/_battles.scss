@@ -10,6 +10,7 @@ body.battles {
     }
     .hero-content {
         background: url("/images/localEvent.gif");
+        padding: 1rem 0;
         @include breakpoint(medium) {
             padding: 3rem 0;
             background-position: 50%;
@@ -20,7 +21,10 @@ body.battles {
 
     .headline {
         line-height : 1.50;
-        font-size   : 2rem;
+        font-size   : .9rem;
+        @include breakpoint(medium) {
+        font-size   : 1.2rem;
+        }
         @extend .HelveticaNeueLTStd-75-Bd;
     }
 
@@ -35,7 +39,7 @@ body.battles {
     }
 
     .content {
-        min-height : 700px;
+        // min-height : 700px;
         @include breakpoint(medium) {
             // min-height : 1200px;
             .required-text {

@@ -14,7 +14,7 @@
                         <div class="column small-12 medium-10 large-10">
                             <div class="card-section">
                                 <h2 class="text-center">Belly of the Beast IV</h2>
-                                <h4 class="headline text-white">{{$title}}</h4>
+                                <p class="headline text-white">{{$title}}</p>
                                 <p>
                                     {{$content}}
                                 </p>
