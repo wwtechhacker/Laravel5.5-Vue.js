@@ -21,6 +21,32 @@
     <section class="localEvent ga-find-local-event">
         <map-render></map-render>
     </section>
+
+    <section>
+    <div id="social-media">
+            <div class="row align-middle small-collapse large-uncollapse">
+                <div class="column text-center small-12 medium-6">
+                    <div class="fb-page" data-href="https://www.facebook.com/ShotsFiredRap/" data-tabs="timeline" 
+                        data-width="500" data-height="500" 
+                        data-small-header="false" data-adapt-container-width="true" 
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/ShotsFiredRap/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/ShotsFiredRap/">Shots Fired</a>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="column text-center small-12 medium-6">
+                    <a class="twitter-timeline" 
+                        href="https://twitter.com/ShotsFiredRap?ref_src=twsrc%5Etfw"  
+                        data-width="500"
+                        data-height="500">Tweets by ShotsFiredRap
+                    </a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cards">
         <div class="row small-up-1 large-up-3 nav-cards">
             @foreach($navCards as $cards)
