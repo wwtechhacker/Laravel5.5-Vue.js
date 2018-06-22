@@ -22,10 +22,10 @@
         <map-render></map-render>
     </section>
 
-    <section>
-    <div id="social-media">
+    <section class="social">
+        <div id="social-media">
             <div class="row align-middle small-collapse large-uncollapse">
-                <div class="column text-center small-12 medium-6">
+                <div class="column text-center small-12 medium-6 fb-container">
                     <div class="fb-page" data-href="https://www.facebook.com/ShotsFiredRap/" data-tabs="timeline" 
                         data-width="500" data-height="500" 
                         data-small-header="false" data-adapt-container-width="true" 
@@ -36,6 +36,7 @@
                     </div>
                 </div>
                 <div class="column text-center small-12 medium-6">
+                    <a href="https://twitter.com/intent/tweet?screen_name=shotsfiredrap&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @shotsfiredrap</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <a class="twitter-timeline" 
                         href="https://twitter.com/ShotsFiredRap?ref_src=twsrc%5Etfw"  
                         data-width="500"
