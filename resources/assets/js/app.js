@@ -7,7 +7,8 @@
 // require('./bootstrap');
 var gaEvents      = require('./ga-events.js'),
     facebookShare = require('./facebook-share.js'),
-    ScrollTo = require('./scroll-to');
+    ScrollTo = require('./scroll-to'),
+    analytics     = require('./analytics.js');
 
 window.RSCG   = {};
 window.jQuery = require('jquery');
@@ -94,6 +95,8 @@ function init() {
         bindScrollTo();
         bindHashScroll();
         foundationInit();
+        analytics.bindAnalyticsAttributes();
+        analytics.bindVimeoVideos();
     });
 
 }

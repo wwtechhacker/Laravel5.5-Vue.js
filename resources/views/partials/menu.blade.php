@@ -1,7 +1,7 @@
-<div class="title-bar" data-hide-for="medium">
+<div class="title-bar" data-hide-for="medium" data-analytics-category="main">
     <div class="title-bar-left">
         <div class="logo">
-            <a class="ga-logo" href="/" data-ga-category="Navigational Clicks" data-ga-action="Click Header" data-ga-label="Logo">
+            <a class="ga-logo" href="/" data-analytics-click data-analytics-label="Shots Fired Logo">
                 <img src="/images/blank.png" data-interchange="[{{ asset('images/shotsFired_logoText.png') }}, small], [{{ asset('images/shotsFired_logoText.png') }}, medium]" alt="site logo">
             </a>
         </div>
@@ -16,7 +16,7 @@
         <ul class="hide-for-small-only menu">
             @foreach($menu as $item)
                 <li class="{{ $item['active'] ? 'active' : '' }}">
-                    <a href="{{$item['url']}}">{{$item['name']}}</a>
+                    <a href="{{$item['url']}}" data-analytics-click data-analytics-label="{{$item['name']}}">{{$item['name']}}</a>
                 </li>
             @endforeach
         </ul>
@@ -27,7 +27,7 @@
     <ul class="dropdown menu vertical medium-horizontal ">
         @foreach($menu as $item)
             <li class="{{ $item['active'] ? 'active' : '' }}">
-                <a href="{{$item['url']}}">{{$item['name']}}</a>
+                <a href="{{$item['url']}}" data-analytics-click data-analytics-label="{{$item['name']}}">{{$item['name']}}</a>
             </li>
         @endforeach
     </ul>
