@@ -2,7 +2,7 @@
     <div class="title-bar-left">
         <div class="logo">
             <a class="ga-logo" href="/" data-analytics-click data-analytics-label="Shots Fired Logo">
-                <img src="/images/blank.png" data-interchange="[{{ asset('images/shotsFired_logoText.png') }}, small], [{{ asset('images/shotsFired_logoText.png') }}, medium]" alt="site logo">
+                <img src="/images/blank.png" data-interchange="[{{ asset('images/shotsFired_logoText.png') }}, small], [{{ asset('/images/shotsFired_logoText.png') }}, medium]" alt="site logo">
             </a>
         </div>
     </div>
