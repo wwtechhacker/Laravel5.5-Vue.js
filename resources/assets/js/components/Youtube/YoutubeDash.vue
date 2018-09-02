@@ -15,6 +15,7 @@ import YTSearch from './Youtube.js';
          YTSearch({
              apiKey: 'AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0',
              term: 'ShotsFired Rap Battle League',
+             items: 50
          });
      }
  }

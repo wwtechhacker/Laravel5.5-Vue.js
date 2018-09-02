@@ -1,5 +1,5 @@
 <!-- Google Tag Manager  -->
-<script>(function (w, d, s, l, i) {
+<!-- <script>(function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
             'gtm.start'                    :
@@ -12,9 +12,9 @@
             'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KLG6S7N');</script>
-<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121444234-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -22,7 +22,7 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-121444234-1');
-</script>
+</script> -->
 
 <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
 
@@ -33,6 +33,6 @@
 <meta property="og:url" content="{{ env('APP_URL')  }}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Shots Fired - Rap Battle League"/>
-<meta property="og:description" content="Shots Fired has established itself as the leading San Diego rap battle platform, and has even reached out to other communities in Orange County, Inland Empire, Los Angeles, Fresno and San Jose."/>
+<meta property="og:description" content="Shots Fired the leading San Diego rap battle platform,  has even reached out to other communities in Orange County, Inland Empire, Los Angeles, Fresno and San Jose."/>
 <meta property="og:image" content="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http") . '://' . $_SERVER['SERVER_NAME'];?>/images/shotsfiredlogo-small.png"/>
 <title>Shots Fired Rap Battle League</title>

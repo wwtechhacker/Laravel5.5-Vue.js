@@ -1,5 +1,5 @@
 let axios = require('axios');
-let BASE_URL = 'https://www.googleapi/youtube/v3/search';
+let BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
 
 
 module.exports = function(options, callback) {
