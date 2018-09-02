@@ -24,6 +24,9 @@ Vue.component('table-render', require('./components/Table.vue'));
 Vue.component('registration-table', require('./components/RegistationTable.vue'));
 Vue.component('model-form', require('./components/ModelForm.vue'));
 
+//Youtube
+Vue.component('youtube-videos', require('./components/Youtube/YoutubeDash.vue'));
+
 require('foundation-sites');
 require('lodash');
 // require('../../../node_modules/jquery-timepicker/jquery.timepicker');

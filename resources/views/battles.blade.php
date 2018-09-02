@@ -4,10 +4,10 @@
     <header>
         @include('partials.hero-battles', $hero)
     </header>
-    <section class="videos">
+    <!-- <section class="videos">
         <div class="row">
             <div class="columns text-center large-10 medium-10 small-12 medium-centered large-centered">
-                <!-- Should use a seperated module -->
+                <!-- Should use a seperated module 
                 <div class="orbit" role="region" aria-label="retailers" data-orbit>
                     <div class="orbit-wrapper">
                         <div class="orbit-controls">
@@ -56,5 +56,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <youtube-videos></youtube-videos>
 @stop
