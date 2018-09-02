@@ -22,8 +22,8 @@ import VideoGroup from './VideoGroup.vue';
     created() {
         YoutubeAPI({
              apiKey: 'AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0',
-             term: 'ShotsFired Rap Battle League',
-             items: 5
+             term: 'Shots Fired Battle League',
+             items: 50
         }, response => this.videos = response);
     },
     methods() {
