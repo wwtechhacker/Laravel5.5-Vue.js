@@ -8,16 +8,24 @@
 
 <script>
 
-import YTSearch from './Youtube.js';
+import YoutubeAPI from './Youtube.js';
 
  export default {
-     created() {
-         YTSearch({
+    data() {
+         return  {
+             videos: null
+         }
+    },
+    created() {
+        YoutubeAPI({
              apiKey: 'AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0',
              term: 'ShotsFired Rap Battle League',
              items: 50
-         });
-     }
+        }, response => this.videos = response);
+    },
+    methods() {
+
+    }
  }
 
 </script>
