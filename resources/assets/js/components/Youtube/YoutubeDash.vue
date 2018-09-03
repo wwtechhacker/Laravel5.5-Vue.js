@@ -7,7 +7,7 @@
 
 <script>
 
-import YoutubeAPI from './Youtube.js';
+import Youtube_Search from './Youtube_Search.js';
 import VideoGroup from './VideoGroup.vue';
 
  export default {
@@ -20,7 +20,7 @@ import VideoGroup from './VideoGroup.vue';
          }
     },
     created() {
-        YoutubeAPI({
+        Youtube_Search({
              apiKey: 'AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0',
              term: 'Shots Fired Battle League',
              items: 50

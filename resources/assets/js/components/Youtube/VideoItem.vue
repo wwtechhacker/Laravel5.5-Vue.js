@@ -1,6 +1,6 @@
 <template>
     <div class="videoItem-wrapper">
-        <div class="card" style="width: 300px;">
+        <div class="card">
             <div class="card-divider">
                 {{ videoTitle }}
             </div>
@@ -31,3 +31,15 @@
     }
 
 </script>
+
+<style lang="scss">
+.videoItem-wrapper {
+    .card {
+        width: 300px;
+        .card-section p {
+            color: black;
+        }
+    } 
+    
+}
+</style>
