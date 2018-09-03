@@ -9,9 +9,9 @@
 
 <script>
 
-// import Youtube_Search from './Youtube_Search.js';
+import Youtube_Search from './Youtube_Search.js';
 import Youtube_Playlists from './Youtube_Playlists.js';
-import Youtube_Videos from './Youtube_Videos.js';
+// import Youtube_Videos from './Youtube_Videos.js';
 
 import VideoGroup from './VideoGroup.vue';
 
@@ -22,8 +22,7 @@ import VideoGroup from './VideoGroup.vue';
     data() {
          return  {
              videos: null,
-             playlists: null,
-             videoList: null
+             playlists: null
          }
     },
     created() {
@@ -34,15 +33,7 @@ import VideoGroup from './VideoGroup.vue';
         // }, response => this.videos = response);
         Youtube_Playlists({
             channelID: 'UCKNI-azGi0HPo072EwKwMbA'
-        }, data => {
-                this.playlists = data;
-                $.each(data, function(i, list) {
-                    Youtube_Videos(list.id, response => {
-                        this.videoList = response;
-                    });
-                });
-            }
-        );
+        }, data => this.playlists = data);
     },
     methods() {
 

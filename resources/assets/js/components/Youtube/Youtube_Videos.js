@@ -13,8 +13,8 @@ module.exports = function(playListID, callback) {
 
     axios.get(items_URL, { params })
     .then((response) => {
-        console.log(response);
         if (callback) {
+            console.log('videos', response.data.items);
             callback(response.data.items)
         }
         

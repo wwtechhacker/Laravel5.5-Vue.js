@@ -18,9 +18,10 @@ module.exports = function(options, callback) {
 
     axios.get(list_URL, { params })
     .then((response) => {
-        console.log(response);
+
         if (callback) {
-            callback(response.data.items)
+            console.log('Playlists', response.data.items);
+            callback(response.data.items);
         }
         
     })

@@ -18,7 +18,7 @@
     import VideoItem from './VideoItem.vue'
 
     export default {
-        props: ['videos', 'playlists'],
+        props: ['videos', 'playlists', 'videoList'],
         components: {
             VideoItem
         }
