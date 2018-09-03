@@ -8,10 +8,10 @@ module.exports = function(options, callback) {
 
         throw new Error('Youtube search requires a valid API key');
     }
-    
+
     let params = {
         part: 'snippet',
-        key: options.apiKey,
+        key: 'AIzaSyC8WKYsviUaFQaTvASiC7GhA6ytHkuKhe0',
         q: options.term,
         maxResults: (options.items) ? options.items : 25,
         type: 'video'

@@ -1,22 +1,33 @@
 <template>
-    <div class="videoItem-wrapper">
-        <div class="card">
-            <div class="card-divider">
-                {{ videoTitle }}
-            </div>
-            <img :src="imgSrc" :alt="videoTitle">
-            <div class="card-section">
-                <p>
-                    {{ videoDescription }}
-                </p>
+    <a :href="playlistLink">
+        <div class="videoItem-wrapper">
+            <div class="card">
+                <!-- <div class="card-divider">
+                    {{ videoTitle }}
+                </div>
+                <img :src="imgSrc" :alt="videoTitle">
+                <div class="card-section">
+                    <p>
+                        {{ videoDescription }}
+                    </p>
+                </div> -->
+                <div class="card-divider">
+                    {{ playlistTitle }}
+                </div>
+                <img :src="playlistIMGSrc" :alt="playlistTitle">
+                <!-- <div class="card-section">
+                    <p>
+                        {{ videoDescription }}
+                    </p>
+                </div> -->
             </div>
         </div>
-    </div>
+    </a>
 </template>
 
 <script>
     export default {
-        props: ['video'],
+        props: ['video', 'playlist'],
         computed: {
             videoTitle() {
                 return this.video.snippet.title;
@@ -26,6 +37,15 @@
             },
             imgSrc() {
                 return this.video.snippet.thumbnails.high.url;
+            },
+            playlistTitle() {
+                return this.playlist.snippet.title;
+            },
+            playlistIMGSrc() {
+                return this.playlist.snippet.thumbnails.high.url;
+            },
+            playlistLink() {
+                return 'https://www.youtube.com/playlist?list=' + this.playlist.id;
             }
         }
     }

@@ -1,9 +1,14 @@
 <template>
     <div class="videoGroup-wrapper">
-        <video-item 
+        <!-- <video-item 
             v-for="video in videos" 
             :video="video"
             :key="video.id.videoId">
+        </video-item> -->
+        <video-item 
+            v-for="playlist in playlists" 
+            :playlist="playlist"
+            :key="playlist.snippet.title">
         </video-item>
     </div>
 </template>
@@ -13,7 +18,7 @@
     import VideoItem from './VideoItem.vue'
 
     export default {
-        props: ['videos'],
+        props: ['videos', 'playlists'],
         components: {
             VideoItem
         }
