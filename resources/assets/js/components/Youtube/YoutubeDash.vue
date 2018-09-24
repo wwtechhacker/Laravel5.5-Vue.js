@@ -22,7 +22,7 @@ import VideoGroup from './VideoGroup.vue';
     data() {
          return  {
              videos: null,
-             playlists: null
+             playlists: []
          }
     },
     created() {
@@ -33,7 +33,16 @@ import VideoGroup from './VideoGroup.vue';
         // }, response => this.videos = response);
         Youtube_Playlists({
             channelID: 'UCKNI-azGi0HPo072EwKwMbA'
-        }, data => this.playlists = data);
+        }, (data) => {
+                this.playlists = data;
+                console.log('local instance',this.playlists);
+                this.playlists.sort(function(a,b) {
+                    let dateA = new Date(a.snippet.publishedAt);
+                    let dateB = new Date(b.snippet.publishedAt);
+                    return dateB - dateA
+                })
+                console.log('sorted dates', this.playlists);
+        });
     },
     methods() {
 
