@@ -35,17 +35,30 @@ import VideoGroup from './VideoGroup.vue';
             channelID: 'UCKNI-azGi0HPo072EwKwMbA'
         }, (data) => {
                 this.playlists = data;
-                console.log('local instance',this.playlists);
-                this.playlists.sort(function(a,b) {
-                    let dateA = new Date(a.snippet.publishedAt);
-                    let dateB = new Date(b.snippet.publishedAt);
-                    return dateB - dateA
-                })
-                console.log('sorted dates', this.playlists);
+                this.byName(this.playlists);
         });
     },
-    methods() {
-
+    methods: {
+        byDate(data) {
+            data.sort(function(a,b) {
+                let dateA = new Date(a.snippet.publishedAt);
+                let dateB = new Date(b.snippet.publishedAt);
+                return dateB - dateA
+            })
+        },
+        byName(data) {
+            data.sort(function(a,b) {
+                let nameA = a.snippet.title
+                let nameB = b.snippet.title
+                if(nameA < nameB) {
+                    return -1;
+                } else if (nameA > nameB) {
+                    return 1;
+                } else {
+                    return 0
+                }
+            })
+        }
     }
  }
 
