@@ -3,7 +3,7 @@
          <!-- Videos Search
          <video-group :videos="videos"></video-group> -->
          Video Playlists
-         <video-group :playlists="playlists"></video-group>
+         <video-group :playlists="filtered"></video-group>
     </div>
 </template>
 
@@ -22,7 +22,8 @@ import VideoGroup from './VideoGroup.vue';
     data() {
          return  {
              videos: null,
-             playlists: []
+             playlists: [],
+             filtered: null
          }
     },
     created() {
@@ -36,6 +37,15 @@ import VideoGroup from './VideoGroup.vue';
         }, (data) => {
                 this.playlists = data;
                 this.byName(this.playlists);
+                this.filtered = this.playlists.filter(function(item) {
+                    return item.snippet.title !== 'Gryffin';
+                });
+                this.filtered = this.playlists.filter(function(item) {
+                    return item.snippet.title !== 'Tony T';
+                });
+                this.filtered = this.playlists.filter(function(item) {
+                    return item.snippet.title !== 'K Philosophy';
+                });
         });
     },
     methods: {
@@ -58,6 +68,9 @@ import VideoGroup from './VideoGroup.vue';
                     return 0
                 }
             })
+        },
+        removeLists(arr, list) {
+            
         }
     }
  }
