@@ -3,7 +3,7 @@
          <!-- Videos Search
          <video-group :videos="videos"></video-group> -->
          Video Playlists
-         <video-group :playlists="filtered"></video-group>
+         <video-group :playlists="filteredPlaylists"></video-group>
     </div>
 </template>
 
@@ -22,8 +22,8 @@ import VideoGroup from './VideoGroup.vue';
     data() {
          return  {
              videos: null,
-             playlists: [],
-             filtered: null
+             videoPlaylists: [],
+             filteredPlaylists: null
          }
     },
     created() {
@@ -35,17 +35,11 @@ import VideoGroup from './VideoGroup.vue';
         Youtube_Playlists({
             channelID: 'UCKNI-azGi0HPo072EwKwMbA'
         }, (data) => {
-                this.playlists = data;
-                this.byName(this.playlists);
-                this.filtered = this.playlists.filter(function(item) {
-                    return item.snippet.title !== 'Gryffin';
+                this.videoPlaylists = data;
+                this.filteredPlaylists = this.videoPlaylists.filter(function(item) {
+                    return item.snippet.title !== 'Gryffin' && item.snippet.title !== 'K Philosophy' && item.snippet.title !== 'Tony T' && item.snippet.title !== 'Zevil';
                 });
-                this.filtered = this.playlists.filter(function(item) {
-                    return item.snippet.title !== 'Tony T';
-                });
-                this.filtered = this.playlists.filter(function(item) {
-                    return item.snippet.title !== 'K Philosophy';
-                });
+                this.byName(this.filteredPlaylists);
         });
     },
     methods: {
@@ -69,7 +63,7 @@ import VideoGroup from './VideoGroup.vue';
                 }
             })
         },
-        removeLists(arr, list) {
+        removeLists(arr) {
             
         }
     }
