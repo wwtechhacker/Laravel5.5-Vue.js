@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16"/>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     @stack('stylesheets')
     @yield('css')

@@ -15,6 +15,7 @@
                     {{ playlistTitle }}
                 </div>
                 <img :src="playlistIMGSrc" :alt="playlistTitle">
+               <i class="far fa-play-circle"></i>
                 <!-- <div class="card-section">
                     <p>
                         {{ videoDescription }}
@@ -57,8 +58,19 @@
     .card {
         width: 96%;
         transform: translateX(5px);
+
         .card-section p {
             color: black;
+        }
+
+        svg.fa-play-circle {
+            position: absolute;
+            font-size: 75px;
+            top: 50%;
+            left: 50%;
+            margin-left: -33px;
+            margin-top: -33px;
+            color: white;
         }
     } 
     

@@ -13,9 +13,6 @@
                     <div class="row align-center">
                         <div class="column small-12 medium-10 large-10">
                             <div class="card-section">
-                                <hr>
-                                    <h2 class="text-center eventName">Belly of the Beast IV</h2>
-                                 <hr>
                                 <p class="headline text-white">{{$title}}</p>
                                 <p>
                                     {{$content}}
