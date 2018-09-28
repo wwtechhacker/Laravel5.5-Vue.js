@@ -55,7 +55,7 @@
 <style lang="scss">
 .videoItem-wrapper {
     .card {
-        width: 300px;
+        width: 96%;
         .card-section p {
             color: black;
         }

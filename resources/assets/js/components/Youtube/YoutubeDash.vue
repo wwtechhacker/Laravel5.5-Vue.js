@@ -2,7 +2,6 @@
     <div class="YoutubeDash-wrapper">
          <!-- Videos Search
          <video-group :videos="videos"></video-group> -->
-         Video Playlists
          <video-group :playlists="filteredPlaylists"></video-group>
     </div>
 </template>
@@ -37,9 +36,9 @@ import VideoGroup from './VideoGroup.vue';
         }, (data) => {
                 this.videoPlaylists = data;
                 this.filteredPlaylists = this.videoPlaylists.filter(function(item) {
-                    return item.snippet.title !== 'Gryffin' && item.snippet.title !== 'K Philosophy' && item.snippet.title !== 'Tony T' && item.snippet.title !== 'Zevil';
+                    return item.snippet.title !== 'Gryffin' && item.snippet.title !== 'K Philosophy' && item.snippet.title !== 'Tony T' && item.snippet.title !== 'Zevil' && item.snippet.title !== '#SDiferente Match Up Announcements' && item.snippet.title !== 'SPRING CLEANING MATCH UP ANNOUNCEMENTS';
                 });
-                this.byName(this.filteredPlaylists);
+                this.AtoZ(this.filteredPlaylists, false);
         });
     },
     methods: {
@@ -50,21 +49,25 @@ import VideoGroup from './VideoGroup.vue';
                 return dateB - dateA
             })
         },
-        byName(data) {
+        AtoZ(data, reverse) {
             data.sort(function(a,b) {
                 let nameA = a.snippet.title
                 let nameB = b.snippet.title
+                
                 if(nameA < nameB) {
+                    if(reverse) {
+                        return 1;
+                    }
                     return -1;
                 } else if (nameA > nameB) {
+                    if(reverse) {
+                        return -1;
+                    }
                     return 1;
                 } else {
                     return 0
                 }
             })
-        },
-        removeLists(arr) {
-            
         }
     }
  }
