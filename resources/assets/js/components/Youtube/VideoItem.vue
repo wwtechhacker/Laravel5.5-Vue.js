@@ -56,6 +56,7 @@
 .videoItem-wrapper {
     .card {
         width: 96%;
+        transform: translateX(5px);
         .card-section p {
             color: black;
         }
