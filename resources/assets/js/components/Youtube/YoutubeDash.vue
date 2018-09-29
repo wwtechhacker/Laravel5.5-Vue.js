@@ -1,18 +1,18 @@
 <template>
     <div class="YoutubeDash-wrapper">
-         <!-- Videos Search
-         <video-group :videos="videos"></video-group> -->
-         <video-group :playlists="filteredPlaylists"></video-group>
+        <sidebar :playlists="filteredPlaylists"></sidebar>
+        <video-group :playlists="filteredPlaylists"></video-group>
     </div>
 </template>
 
 <script>
 
-import Youtube_Search from './Youtube_Search.js';
+// import Youtube_Search from './Youtube_Search.js';
 import Youtube_Playlists from './Youtube_Playlists.js';
 // import Youtube_Videos from './Youtube_Videos.js';
 
 import VideoGroup from './VideoGroup.vue';
+import SideBar from './sidebar.vue'
 
  export default {
     components: {
@@ -36,9 +36,9 @@ import VideoGroup from './VideoGroup.vue';
         }, (data) => {
                 this.videoPlaylists = data;
                 this.filteredPlaylists = this.videoPlaylists.filter(function(item) {
-                    return item.snippet.title !== 'Gryffin' && item.snippet.title !== 'K Philosophy' && item.snippet.title !== 'Tony T' && item.snippet.title !== 'Zevil' && item.snippet.title !== '#SDiferente Match Up Announcements' && item.snippet.title !== 'SPRING CLEANING MATCH UP ANNOUNCEMENTS';
+                    return item.snippet.title !== 'Gryffin' && item.snippet.title !== 'K Philosophy' && item.snippet.title !== 'Tony T' && item.snippet.title !== 'Zevil' && item.snippet.title !== '#SDiferente Match Up Announcements' && item.snippet.title !== 'SPRING CLEANING MATCH UP ANNOUNCEMENTS' && item.snippet.title !== 'Top 10 Battles';
                 });
-                this.AtoZ(this.filteredPlaylists, false);
+                this.byDate(this.filteredPlaylists);
         });
     },
     methods: {
