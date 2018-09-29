@@ -24,4 +24,5 @@
             </div>
         </div>
     </div>
+    <youtube-videos></youtube-videos>
 </div>
