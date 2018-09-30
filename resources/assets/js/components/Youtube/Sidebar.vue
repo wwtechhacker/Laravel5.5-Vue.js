@@ -14,7 +14,6 @@ import SidebarItem from './SidebarItem.vue';
 
  export default {
     components: {
-        VideoGroup
     },
     data() {
          return  {

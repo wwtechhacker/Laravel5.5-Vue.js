@@ -4,5 +4,5 @@
     <header>
         @include('partials.hero-battles', $hero)
     </header>
-    <!-- <youtube-videos></youtube-videos> -->
+    <router-view></router-view>
 @stop

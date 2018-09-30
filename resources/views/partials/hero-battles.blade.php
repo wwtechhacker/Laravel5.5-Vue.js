@@ -24,5 +24,5 @@
             </div>
         </div>
     </div>
-    <youtube-videos></youtube-videos>
+    <router-view></router-view>
 </div>

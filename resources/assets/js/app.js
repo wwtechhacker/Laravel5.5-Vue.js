@@ -16,6 +16,8 @@ window.$      = window.jQuery;
 window.Vue    = require('vue');
 require('svg.js');
 Vue.config.silent = true;
+
+// Components
 Vue.component('day-carousel', require('./components/DayCarousel.vue'));
 Vue.component('day-registration', require('./components/Registration.vue'));
 Vue.component('marker-create', require('./components/MarkerCreate.vue'));
@@ -24,8 +26,21 @@ Vue.component('table-render', require('./components/Table.vue'));
 Vue.component('registration-table', require('./components/RegistationTable.vue'));
 Vue.component('model-form', require('./components/ModelForm.vue'));
 
-//Youtube
-Vue.component('youtube-videos', require('./components/Youtube/YoutubeDash.vue'));
+Vue.component('youtube', require('./components/Youtube/YoutubeDash.vue'));
+
+import Youtube from './components/Youtube/YoutubeDash'
+
+// Router
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+
+const routes = [
+    { path: '/', component: Youtube, 'name': '/latest' }
+  ];
+const router = new VueRouter({
+    routes
+}); 
+
 
 require('foundation-sites');
 require('lodash');
@@ -41,10 +56,13 @@ require('timepicker');
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-const app = new Vue({
-    el: '#myApp'
-});
+// const app = new Vue({
+//     el: '#myApp'
+// });
 
+const app = new Vue({
+   router
+}).$mount('#myApp');
 // Required for laravel ajax calls
 function ajaxCsrfSetup() {
     $.ajaxSetup({

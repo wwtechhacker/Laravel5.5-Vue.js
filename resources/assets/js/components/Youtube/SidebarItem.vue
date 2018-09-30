@@ -8,7 +8,7 @@
 
  export default {
     components: {
-        VideoGroup
+        // VideoGroup
     },
     data() {
          return  {
