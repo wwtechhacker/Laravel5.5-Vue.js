@@ -4,5 +4,4 @@
     <header>
         @include('partials.hero-battles', $hero)
     </header>
-    <router-view></router-view>
 @stop
