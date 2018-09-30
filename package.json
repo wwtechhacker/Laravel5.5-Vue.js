@@ -30,6 +30,7 @@
     "vuejs-datepicker": "^0.9.9"
   },
   "dependencies": {
+    "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.16"
   }
 }
