@@ -26,16 +26,18 @@ Vue.component('table-render', require('./components/Table.vue'));
 Vue.component('registration-table', require('./components/RegistationTable.vue'));
 Vue.component('model-form', require('./components/ModelForm.vue'));
 
-Vue.component('youtube', require('./components/Youtube/YoutubeDash.vue'));
+Vue.component('battles', require('./components/battles.vue'));
 
-import Youtube from './components/Youtube/YoutubeDash'
+import VideoDetail from './components/Youtube/VideoDetail.vue';
+import YoutubeDash from './components/Youtube/YoutubeDash.vue';
 
 // Router
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/', component: Youtube, 'name': '/latest' }
+    { path: '/', component: YoutubeDash},
+    { path: '/playlist', component: VideoDetail}
   ];
 const router = new VueRouter({
     routes

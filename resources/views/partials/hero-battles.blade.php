@@ -24,5 +24,5 @@
             </div>
         </div>
     </div>
-    <router-view></router-view>
+    <battles></battles>
 </div>
