@@ -1,6 +1,5 @@
 <template>
 <div>
-        <router-link to="/playlist"></router-link>
         <router-view></router-view>
 </div>
 </template>
