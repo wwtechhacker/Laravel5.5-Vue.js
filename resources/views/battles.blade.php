@@ -4,7 +4,5 @@
     <header>
         @include('partials.hero-battles', $hero)
     </header>
-    <div id="youtubeApp">
-        <youtubeApp></youtubeApp>
-    </div>
+    <battles></battles>
 @stop

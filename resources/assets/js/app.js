@@ -26,14 +26,13 @@ Vue.component('table-render', require('./components/Table.vue'));
 Vue.component('registration-table', require('./components/RegistationTable.vue'));
 Vue.component('model-form', require('./components/ModelForm.vue'));
 
-// Vue.component('battles', require('./components/battles.vue'));
+Vue.component('battles', require('./components/battles.vue'));
 
 // Router
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 // Router Views
-import battles from './components/battles.vue';
 import VideoDetail from './components/Youtube/VideoDetail.vue';
 import YoutubeDash from './components/Youtube/YoutubeDash.vue';
 
@@ -41,10 +40,9 @@ const routes = [
     { path: '/', component: YoutubeDash},
     { path: '/playlist', component: VideoDetail}
   ];
-
+  
 const router = new VueRouter({
-    mode: 'history',
-    routes: routes
+    routes
 }); 
 
 
@@ -65,15 +63,10 @@ require('timepicker');
 // const app = new Vue({
 //     el: '#myApp'
 // });
-const app = new Vue({
-    el: '#myApp'
-});
 
-const youtubeApp = new Vue({
-    el: '#youtubeApp',
-    components: { battles },
-    router
-})
+const app = new Vue({
+   router
+}).$mount('#myApp');
 // Required for laravel ajax calls
 function ajaxCsrfSetup() {
     $.ajaxSetup({
