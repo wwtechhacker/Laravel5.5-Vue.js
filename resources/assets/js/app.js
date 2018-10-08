@@ -40,7 +40,6 @@ const routes = [
     { path: '/', component: YoutubeDash},
     { path: '/playlist', component: VideoDetail}
   ];
-  
 const router = new VueRouter({
     routes
 }); 
