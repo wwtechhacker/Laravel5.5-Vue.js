@@ -41,6 +41,7 @@ const routes = [
     { path: '/playlist', component: VideoDetail}
   ];
 const router = new VueRouter({
+    mode: 'history',
     routes
 }); 
 
