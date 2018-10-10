@@ -7,7 +7,7 @@
 // require('./bootstrap');
 var gaEvents      = require('./ga-events.js'),
     facebookShare = require('./facebook-share.js'),
-    ScrollTo = require('./scroll-to'),
+    ScrollTo      = require('./scroll-to'),
     analytics     = require('./analytics.js');
 
 window.RSCG   = {};
@@ -37,8 +37,9 @@ import VideoDetail from './components/Youtube/VideoDetail.vue';
 import YoutubeDash from './components/Youtube/YoutubeDash.vue';
 
 const routes = [
-    { path: '/', component: YoutubeDash},
-    { path: '/playlist', component: VideoDetail}
+    { path: '/battles', redirect: '/battles/events'},  
+    { path: '/battles/events', component: YoutubeDash},
+    { path: '/battles/playlist', component: VideoDetail}
   ];
 const router = new VueRouter({
     mode: 'history',

@@ -36,10 +36,10 @@ class AppController extends Controller
     {
         // @todo menu urls
         $menu = [
-            // [
-            //     'name' => 'Battles',
-            //     'url'  => '/battles',
-            // ],
+            [
+                'name' => 'Battles',
+                'url'  => '/battles',
+            ],
             [
                 'name' => 'Store',
                 'url'  => '/',
