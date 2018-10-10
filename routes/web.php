@@ -50,3 +50,7 @@ Route::resource('/api/markers', 'MarkerController');
 // Logout route
 Route::get('/admin/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
+Route::get('/{vue_capture?}', function () {
+    return view('battles');
+   })->where('vue_capture', '[\/\w\.-]*');
+
