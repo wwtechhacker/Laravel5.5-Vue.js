@@ -27,6 +27,7 @@ body.home {
             background-position: 50%;
             background-position-y: -20px;
             background-repeat: repeat-x;
+            height: 60vh;
         }
         @include breakpoint(425px) { 
             height: 65vh;

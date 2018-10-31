@@ -35,7 +35,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
 .sourceMaps()
 .version()
 .browserSync({
-    proxy: 'shotsfiredbattle.lcl',
+    proxy: 'shotsfiredbattle.lcl:8888',
     open : false,
     files: [
         'public/**/app.css'
