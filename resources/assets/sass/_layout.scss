@@ -5,8 +5,9 @@ section {
         padding : 5 * $global-padding 0;
     }
 }
+body,
 .content {
-    background-color: black;
+    background-color: black !important;
 }
 .content,
 .footer {
