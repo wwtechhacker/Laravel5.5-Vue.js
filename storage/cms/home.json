@@ -1,9 +1,11 @@
 {
     "hero" : {
-        "name": "Conspiracy Theory",
-        "date": "06.23.18",
+        "name": "Chronicle",
+        "date": "11.17.18",
         "venue": "Saturday @ 6:00PM",
-        "content": ""
+        "content": "",
+        "background": "/images/events/chronicle_111718.jpg",
+        "onsale" : true
     },
     "navCards": [
         {

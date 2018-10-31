@@ -20,35 +20,40 @@ body.home {
         }
     }
     .hero-content {
-        background: url("/images/fire-bg.gif");
+        // background: url("/images/fire-bg.gif");
+        background-size: cover;
         @include breakpoint(small) { 
+            background-size: cover;
             background-position: 50%;
             background-position-y: -20px;
-        }
-        @include breakpoint(375px) { 
-            background-size: cover;
-            background-position: 127vw 80vh;
+            background-repeat: repeat-x;
         }
         @include breakpoint(425px) { 
-            background-position: 117vw 79vh;
+            height: 65vh;
+            // background-position: 117vw 79vh;
         }
-        @include breakpoint(550px) { 
-            background-position: 100vw 79vh;
-        }
+        // @include breakpoint(550px) { 
+        //     background-position: 100vw 79vh;
+        // }
         @include breakpoint(medium) {
-            background-position: 50%;
-            background-position-y: -120px;
-            background-size: contain;
+            height: 121vh;
+            // background-position: 50%;
+            // background-position-y: -120px;
+            // background-size: contain;
         }
-        @include breakpoint(xlarge) {
-            background-position: 50%;
-            background-size: cover;
-            box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.2);
+        @include breakpoint(large) {
+            height: 150vh;
+            // background-position: 50%;
+            // background-size: cover;
+            // box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.2);
         }
 
         .card {
             img {
                 margin-bottom: 1.5rem;
+                @include breakpoint(small) { 
+                    width: 34%;
+                }
             }
         }
         .heroInfo {

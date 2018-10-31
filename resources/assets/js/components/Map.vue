@@ -2,11 +2,13 @@
     <div id="location-finder">
         <div class="row align-middle small-collapse large-uncollapse">
             <div class="column text-center small-12 medium-6">
-                <h3>Attend Next<br>Local Event</h3>
-                <p class="lead">
-                    Purchase tickets to <br>attend the next event near you.
-                </p>
-                <a href="https://cash.me/$ShotsFiredRap" class="button buyTickets" target="_blank">Buy Tickets $15 Each</a>
+                <div class="buyTickets">
+                    <h3>PPV Link<br>Coming soon</h3>
+                    <p class="lead">
+                    Purchase pre-sale tickets
+                    </p>
+                    <a href="https://cash.me/$ShotsFiredRap" class="button buyTickets" target="_blank">Tickets $15 Each</a>
+                </div>
             </div>
             <div class="column small-12 medium-6">
                 <div class="map-container">
@@ -33,10 +35,10 @@
         },
         locations  = [
             {
-                title: 'Conspiracy Theory @ MIF Studios',
+                title: 'Chronicle @ MIF Studios',
                 address: '7323 El Cajon Blvd Unit D',
                 info:  'La Mesa, CA 91942',
-                date: 'Saturday, June 23, 2018 @ 6:00PM',
+                date: 'Saturday, November 17, 2018 @ 6:00PM',
                 lat: 32.768380, lng: -117.039478
              }
         ];
@@ -136,20 +138,25 @@
 
     export default {
         name   : "map",
+        props  : ['data'],
         data() {
             vue = this;
             return {
-                zip     : '',
-                zipError: false,
-                location: {
-                    title  : '',
-                    address: '',
-                    info   : ''
-                }
+                zip         : '',
+                zipError    : false,
+                location    : {
+                    title   : '',
+                    address : '',
+                    info    : ''
+                },
+                event       : {}
             };
         },
         mounted() {
             initMap('#map');
+        },
+        computed() {
+            this.event = this.data;
         },
         methods: {
             searchZip: function () {

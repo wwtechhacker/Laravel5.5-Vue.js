@@ -4,22 +4,15 @@
     <header>
         @include('partials.hero', $hero)
     </header>
-    <section class="ga-what-is-rethink">
+    <!-- <section class="ga-what-is-rethink">
         <div class="row">
             <div class="columns text-center large-8 medium-10 small-12 medium-centered">
-                <h3 class="what-is" data-scroll-target="find-a-local-event">Shots Fired <br>Battle Rap League</h3>
-                <p class="lead">
-                    Shots Fired is a provider of hip hop and poetry in its rawest form for the up and coming artists in the San Diego area. Since becoming established in 2013, Shots Fired has curated  a network within the battle rap community leading the way to the most respected stages in the culture.
-                </p>
-                <!-- <p class="lead">
-                    On the same day, local organizations have the ability to execute this event to
-                    promote healthy living across the entire state of California.
-                </p> -->
+                <img src="/images/events/chronicle_111718.jpg">
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="localEvent ga-find-local-event">
-        <map-render></map-render>
+        <map-render :data="{{ json_encode($hero) }}"></map-render>
     </section>
 
     <section class="social">
