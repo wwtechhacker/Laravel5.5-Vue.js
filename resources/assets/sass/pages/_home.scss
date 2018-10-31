@@ -149,11 +149,12 @@ body.home {
         .column {
             &:nth-child(1) {
                 .card {
-                    background : linear-gradient(get-color(red), darken(get-color(red), 20%));
+                    // background : linear-gradient(get-color(red), darken(get-color(red), 20%));
                     @include breakpoint(small) {
                         background: url("/images/battles-mobile.png");
                         background-size: cover;
                         background-position-y: -104px;
+                        
                     }
                     @include breakpoint(375px) {
                         background-position-y: -155px;
@@ -170,7 +171,7 @@ body.home {
             }
             &:nth-child(2) {
                 .card {
-                    background : linear-gradient(get-color(red), darken(get-color(red), 20%));
+                    // background : linear-gradient(get-color(red), darken(get-color(red), 20%));
                     @include breakpoint(small) {
                         background: url("/images/store-mobile.png");
                         background-size: cover;
@@ -193,7 +194,7 @@ body.home {
             }
             &:nth-child(3) {
                 .card {
-                    background : linear-gradient(get-color(red), darken(get-color(red), 20%));
+                    // background : linear-gradient(get-color(red), darken(get-color(red), 20%));
                     @include breakpoint(small) {
                         background: url("/images/contact-mobile.png");
                         background-size: cover;
@@ -211,7 +212,9 @@ body.home {
                         background-position-y: 50px;
                     }
                 }
-
+            }
+            .card {
+                background-repeat: no-repeat !important; 
             }
         }
 
