@@ -39,14 +39,6 @@ class AppController extends Controller
             [
                 'name' => 'Battles',
                 'url'  => '/battles',
-            ],
-            [
-                'name' => 'Store',
-                'url'  => '/',
-            ],
-            [
-                'name' => 'Contact',
-                'url'  => '/contact',
             ]
         ];
 

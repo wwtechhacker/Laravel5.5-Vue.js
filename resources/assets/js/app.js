@@ -37,9 +37,9 @@ import VideoDetail from './components/Youtube/VideoDetail.vue';
 import YoutubeDash from './components/Youtube/YoutubeDash.vue';
 
 const routes = [
-    { path: '/battles', redirect: '/battles/events'},  
-    { path: '/battles/events', component: YoutubeDash},
-    { path: '/battles/playlist', component: VideoDetail}
+//     { path: '/battles', redirect: '/battles/events'},  
+//    { path: '/battles/playlist', component: VideoDetail},
+    { path: '/battles', component: YoutubeDash}
   ];
 const router = new VueRouter({
     mode: 'history',

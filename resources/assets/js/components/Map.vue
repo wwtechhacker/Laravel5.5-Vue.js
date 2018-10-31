@@ -54,11 +54,13 @@
            $titleLink   = $a.append($title),
            $addressLink = $a.append($address).append($info),
            $infoWindow = $wrap.append($titleLink).append($addressLink).append($date);
-
+        
+        var infoWindow = new cache.maps.InfoWindow({
+            content: $infoWindow[0]
+        });
+        infoWindow.open(cache.map, marker);
+        
         marker.addListener('click', function () {
-            var infoWindow = new cache.maps.InfoWindow({
-                content: $infoWindow[0]
-            });
             if (cache.infoWindow) {
                 cache.infoWindow.close();
             }

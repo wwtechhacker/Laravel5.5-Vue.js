@@ -5,7 +5,9 @@ section {
         padding : 5 * $global-padding 0;
     }
 }
-
+.content {
+    background-color: black;
+}
 .content,
 .footer {
     position:relative;
