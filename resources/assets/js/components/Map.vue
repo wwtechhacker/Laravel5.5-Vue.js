@@ -3,7 +3,7 @@
         <div class="row align-middle small-collapse large-uncollapse">
             <div class="column text-center small-12 medium-6">
                 <div class="buyTickets">
-                    <h3>PPV Link<br>Coming soon</h3>
+                     <a href="/ppv" class="button buyTickets">Watch PPV</a>
                     <p class="lead">
                     Purchase pre-sale tickets
                     </p>

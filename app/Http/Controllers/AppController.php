@@ -39,6 +39,10 @@ class AppController extends Controller
             [
                 'name' => 'Battles',
                 'url'  => '/battles',
+            ],
+            [
+                'name' => 'PPV',
+                'url'  => '/ppv',
             ]
         ];
 
