@@ -1,4 +1,4 @@
-@extends('layouts.site', ['bodyClass' => 'home'])
+@extends('layouts.site', ['bodyClass' => 'ppv'])
 
 @section ('content')
     <header>
