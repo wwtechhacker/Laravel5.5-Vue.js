@@ -33,6 +33,6 @@
 <meta property="og:url" content="{{ env('APP_URL')  }}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Shots Fired - Rap Battle League"/>
-<meta property="og:description" content="Shots Fired the leading San Diego rap battle platform,  has even reached out to other communities in Orange County, Inland Empire, Los Angeles, Fresno and San Jose."/>
+<meta property="og:description" content="Shots Fired is the premier battle league in San Diego representing for the WEST and cultivating the stars of tomorrow."/>
 <meta property="og:image" content="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http") . '://' . $_SERVER['SERVER_NAME'];?>/images/shotsfiredlogo-small.png"/>
 <title>Shots Fired Rap Battle League</title>
