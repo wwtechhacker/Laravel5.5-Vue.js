@@ -1,0 +1,69 @@
+body.home {
+    .title-bar {
+        background: url("/images/fire-bg.gif");
+        background-size: cover;
+        @include breakpoint(small) {
+            background-position-y: 40px;
+        }
+        @include breakpoint(large) {
+            background-position-y: -10px;
+        }
+    }
+    .h3 {
+        // font-family: 'Sedgwick Ave Display';
+        @include breakpoint(medium) {
+            font-family: 'Sedgwick Ave Display';
+        }
+        @include breakpoint(large) {
+            font-size: 6.125rem;
+            transform: translateY(-30px);
+        }
+    }
+    .hero-content {
+        // background: url("/images/fire-bg.gif");
+        background-size: cover;
+        @include breakpoint(small) { 
+            background-size: cover;
+            background-position: 50%;
+            background-position-y: -20px;
+            background-repeat: repeat-x;
+            height: 60vh;
+        }
+        @include breakpoint(425px) { 
+            height: 65vh;
+            // background-position: 117vw 79vh;
+        }
+        // @include breakpoint(550px) { 
+        //     background-position: 100vw 79vh;
+        // }
+        @include breakpoint(medium) {
+            height: 121vh;
+            // background-position: 50%;
+            // background-position-y: -120px;
+            // background-size: contain;
+        }
+        @include breakpoint(large) {
+            height: 150vh;
+            // background-position: 50%;
+            // background-size: cover;
+            // box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.2);
+        }
+
+        .card {
+            img {
+                margin-bottom: 1.5rem;
+                @include breakpoint(small) { 
+                    width: 20%;
+                }
+            }
+        }
+        .heroInfo {
+            @include breakpoint(small only) { 
+                transform: translateY(20px);
+            }
+        }
+    }
+    iframe {
+        min-height: -webkit-fill-available !important;
+    }
+}
