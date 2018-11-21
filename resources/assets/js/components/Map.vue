@@ -3,11 +3,11 @@
         <div class="row align-middle small-collapse large-uncollapse">
             <div class="column text-center small-12 medium-6">
                 <div class="buyTickets">
-                     <a href="/ppv" class="button buyTickets">Watch PPV</a>
-                    <p class="lead">
+                     <a href="/ppv" class="button buyTickets">Watch PPV On Demand</a>
+                    <!-- <p class="lead">
                     Purchase pre-sale tickets
                     </p>
-                    <a href="https://cash.me/$ShotsFiredRap" class="button buyTickets" target="_blank">Tickets $15 Each</a>
+                    <a href="https://cash.me/$ShotsFiredRap" class="button buyTickets" target="_blank">Tickets $15 Each</a> -->
                 </div>
             </div>
             <div class="column small-12 medium-6">
