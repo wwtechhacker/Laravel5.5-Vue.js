@@ -15,7 +15,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
 .extract(['vue', 'jquery'])
 .version()
 .sass('resources/assets/sass/app.scss', 'public/css')
-.sass('public/beverage-breakdown/scss/app.scss', 'public/beverage-breakdown/css')
 .webpackConfig({
     module: {
         rules: [

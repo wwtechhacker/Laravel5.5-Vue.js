@@ -5,7 +5,7 @@
         "venue": "Saturday @ 6:00PM",
         "content": "",
         "background": "/images/events/chronicle_111718.jpg",
-        "onsale" : true
+        "iframe" : "https://www.youtube.com/embed/4X1KPUtxo94"
     },
     "navCards": [
         {
