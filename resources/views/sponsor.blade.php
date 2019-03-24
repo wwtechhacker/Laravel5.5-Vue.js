@@ -20,17 +20,17 @@
     </section>
     <section class="formBG">
         <div class="row">
-            <div class="iframe column medium-4">
+            <div class="iframe column small-12 medium-4">
                 <div class="responsive-embed">
                     <iframe width="100%" height="100%" src="{{ $iframe1 }}" frameborder="0" style="margin: 0 auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="iframe column medium-4">
+            <div class="iframe column small-12 medium-4">
                 <div class="responsive-embed">
                     <iframe width="100%" height="100%" src="{{ $iframe2 }}" frameborder="0" style="margin: 0 auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="iframe column medium-4">
+            <div class="iframe column small-12 medium-4">
                 <div class="responsive-embed">
                     <iframe width="100%" height="100%" src="{{ $iframe3 }}" frameborder="0" style="margin: 0 auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
