@@ -4,49 +4,8 @@
         "date": "11.17.18",
         "venue": "Saturday @ 6:00PM",
         "content": "",
-        "background": "/images/events/chronicle-card.jpg",
+        "background": "/images/events/041319-mt-olympus.png",
         "onsale" : true,
         "embed" :  true
-    },
-    "navCards": [
-        {
-            "title"      : "Battles",
-            "imageSrc"   : "",
-            "imageAlt"   : "",
-            "content"    : " ",
-            "class" : "ga-nav-battles",
-            "buttons" : [
-                {
-                    "link" : "/battles",
-                    "content" : "watch"
-                }
-            ]
-        },
-        {
-            "title"      : "Store",
-            "imageSrc"   : "",
-            "imageAlt"   : "",
-            "content"   : " ",
-            "class" : "ga-nav-store",
-            "buttons" : [
-                {
-                    "link" : "/",
-                    "content" : "Buy"
-                }
-            ]
-        },
-        {
-            "title"     : "Contact",
-            "imageSrc"  : "",
-            "imageAlt"  : "",
-            "content": " ",
-            "class": "ga-nav-contact",
-            "buttons": [
-                {
-                    "link": "/contact",
-                    "content": "message"
-                }
-            ]
-        }
-    ]
+    }
 }

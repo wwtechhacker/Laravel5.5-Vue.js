@@ -39,11 +39,11 @@ class AppController extends Controller
             [
                 'name' => 'Battles',
                 'url'  => '/battles',
+            ],
+            [
+                'name' => 'PPV',
+                'url'  => '/ppv',
             ]
-            // [
-            //     'name' => 'PPV',
-            //     'url'  => '/ppv',
-            // ]
         ];
 
         $url     = $this->request->segment(1);
