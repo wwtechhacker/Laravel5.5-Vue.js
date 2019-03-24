@@ -26,7 +26,7 @@
                 </div> -->
             </div>
             @if(isset($iframe))
-            <div class="iframe column large-9">
+            <div class="iframe column large-5">
                 <div class="responsive-embed">
                     <iframe width="100%" height="100%" src="{{ $iframe }}" frameborder="0" style="margin: 0 auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
