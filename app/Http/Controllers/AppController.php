@@ -43,7 +43,11 @@ class AppController extends Controller
             [
                 'name' => 'PPV',
                 'url'  => '/ppv',
-            ]
+            ],
+            [
+                'name' => 'Sponsor',
+                'url'  => '/sponsor',
+            ],
         ];
 
         $url     = $this->request->segment(1);

@@ -11,6 +11,9 @@
             </div>
         </div>
     </section> -->
+    <section class="localEvent ga-find-local-event">
+        <map-render :data="{{ json_encode($hero) }}"></map-render>
+    </section>
 
     <section class="social">
         <div id="social-media">
@@ -37,19 +40,16 @@
             </div>
         </div>
     </section>
-    <section class="cards">
-        <div class="row small-up-1 large-up-3 nav-cards">
-            @foreach($navCards as $cards)
-                <div class="column">
-                    @include('partials.nav-card', $cards)
-                </div>
-            @endforeach
-        </div>
-    </section>
-    <section class="localEvent ga-find-local-event">
-        <map-render :data="{{ json_encode($hero) }}"></map-render>
-    </section>
-
-
+    @if(isset($navCards))
+        <section class="cards">
+            <div class="row small-up-1 large-up-3 nav-cards">
+                @foreach($navCards as $cards)
+                    <div class="column">
+                        @include('partials.nav-card', $cards)
+                    </div>
+                @endforeach
+            </div>
+        </section>
+    @endif
     <hr class="bottom">
 @stop
