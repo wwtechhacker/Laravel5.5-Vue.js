@@ -35,10 +35,10 @@
         },
         locations  = [
             {
-                title: 'Chronicle @ MIF Studios',
+                title: 'Mt. Olympus @ MIF Studios',
                 address: '7323 El Cajon Blvd Unit D',
                 info:  'La Mesa, CA 91942',
-                date: 'Saturday, November 17, 2018 @ 6:00PM',
+                date: 'Saturday, April 13th, 2019 @ 7:00PM',
                 lat: 32.768380, lng: -117.039478
              }
         ];
