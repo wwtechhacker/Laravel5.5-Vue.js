@@ -6,14 +6,14 @@
     </header>
     <section class="localEvent">
         <div class="row">
-            <div class="boxEvent column text-center small-12 medium-6 medium-push-6 align-self-middle">
+            <div class="boxEvent column text-center small-12 medium-6 medium-push-6 align-self-middle margin-bottom-2">
                 <!-- <h4 class="text-white">
                     Sponsor an upcoming event by completing the form below.
                 </h4> -->
                 <!-- <p class="registerText text-white disclaimer">*Availability may change</p> -->
                 <img src="/images/sponsor/opportunity.png" alt="ShotsFired">
             </div>
-            <div class="column small-12 medium-6 medium-pull-6">
+            <div class="column small-12 medium-6 medium-pull-6 margin-bottom-2">
                 <img src="/images/sponsor/analytics.png" alt="ShotsFired">
             </div>
         </div>
