@@ -25,12 +25,12 @@ body.home {
         @include breakpoint(small) { 
             background-size: cover;
             background-position: 50%;
-            background-position-y: -20px;
             background-repeat: repeat-x;
-            height: 60vh;
+            height: 75vh;
         }
         @include breakpoint(425px) { 
             height: 65vh;
+            background-position-y: -20px;
             // background-position: 117vw 79vh;
         }
         // @include breakpoint(550px) { 
